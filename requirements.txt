@@ -9,3 +9,4 @@ black
 bandit
 flake8
 setuptools>=78.1.1
+pytest
