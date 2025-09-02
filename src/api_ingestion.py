@@ -20,9 +20,9 @@ minio_client = get_minio_client()
 
 
 def _default_fars_zip_url(year: int, scope: str = "National") -> str:
-    y = str(year)
-    scope_clean = scope.strip().title()  # "National"
-    return f"https://static.nhtsa.gov/nhtsa/downloads/FARS/{y}/{scope_clean}/FARS{y}{scope_clean}CSV.zip"
+    year = str(year)
+    scope_clean = scope.strip().title()
+    return f"https://static.nhtsa.gov/nhtsa/downloads/FARS/{year}/{scope_clean}/FARS{year}{scope_clean}CSV.zip"
 
 
 def ingest_fars_zip_to_minio(
@@ -67,15 +67,15 @@ def ingest_fars_zip_to_minio(
         print("[FARS] ZIP downloaded. Unzipping & uploading…")
         logger.info("ZIP downloaded; starting unzip/upload phase")
 
-        with zipfile.ZipFile(tmp_path) as zf:
-            files = [zi for zi in zf.infolist() if not zi.is_dir()]
+        with zipfile.ZipFile(tmp_path) as zipfile:
+            files = [zip_info for zip_info in zipfile.infolist() if not zip_info.is_dir()]
             if not files:
                 msg = "ZIP contained no files"
                 print(msg); logger.error(msg); return []
 
-            for zi in files:
-                name_in_zip = zi.filename
-                size = zi.file_size
+            for file in files:
+                name_in_zip = file.filename
+                size = file.file_size
                 if size == 0:
                     logger.warning(f"Skipping empty file: {name_in_zip}")
                     continue
@@ -90,7 +90,7 @@ def ingest_fars_zip_to_minio(
                 print(f"  → {name_in_zip}  ->  {object_key}  ({size/1_048_576:.2f} MB)")
                 logger.info(f"Uploading {name_in_zip} to {object_key} (size={size})")
 
-                with zf.open(zi, "r") as f:
+                with zipfile.open(file, "r") as f:
                     data_stream = BufferedReader(f)
                     minio_client.put_object(
                         bucket_name=bucket,
@@ -119,13 +119,12 @@ def ingest_fars_zip_to_minio(
 
 def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | None:
     try:
-        resp = minio_client.get_object(bucket_name, csv_object_name)
-        data = resp.read()
+        minio_object_response = minio_client.get_object(bucket_name, csv_object_name)
+        data = minio_object_response.read()
         if not data:
             logger.warning(f"{csv_object_name} is empty; skipping parquet conversion.")
             return None
 
-        # Use encoding="latin1", low_memory=False, and dtype=str to handle FARS CSVs robustly
         ftp_call = pd.read_csv(BytesIO(data), encoding="latin1", low_memory=False, dtype=str)
         parquet_buf = BytesIO()
         ftp_call.to_parquet(parquet_buf, index=False, engine="pyarrow")
@@ -151,7 +150,7 @@ def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | Non
         print(f"Parquet conversion failed: {e}")
     finally:
         try:
-            resp.close()
+            minio_object_response.close()
         except Exception:
             pass
 

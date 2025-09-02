@@ -3,3 +3,4 @@ pandas
 minio
 requests
 pyarrow
+beautifulsoup4
