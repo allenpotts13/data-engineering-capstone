@@ -67,7 +67,7 @@ def test_ingest_fars_zip_to_minio_success(monkeypatch):
     monkeypatch.setattr("src.api_ingestion.zipfile.ZipFile", MockZipFile)
 
     mock_minio_client = MagicMock()
-    monkeypatch.setattr("src.api_ingestion.minio_client", mock_minio_client)
+    monkeypatch.setattr("src.api_ingestion.get_minio_client", lambda: mock_minio_client)
 
     uploaded = ingest_fars_zip_to_minio(2022, "National")
     assert uploaded == ["raw/fars/2022/National/test.csv"]
@@ -78,7 +78,7 @@ def test_upload_to_minio_parquet_success(monkeypatch):
     mock_minio_object_response = MagicMock()
     mock_minio_object_response.read.return_value = b"col1,col2\n1,2\n3,4"
     mock_minio_client.get_object.return_value = mock_minio_object_response
-    monkeypatch.setattr("src.api_ingestion.minio_client", mock_minio_client)
+    monkeypatch.setattr("src.api_ingestion.get_minio_client", lambda: mock_minio_client)
 
     mock_df = MagicMock()
     monkeypatch.setattr("pandas.read_csv", lambda *a, **kw: mock_df)
