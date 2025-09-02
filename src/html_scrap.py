@@ -7,6 +7,9 @@ from datetime import datetime
 from utils.minio_client import get_minio_client
 from dotenv import load_dotenv
 import re
+import io
+import tempfile
+import pandas as pd
 
 load_dotenv()
 
@@ -90,30 +93,45 @@ def scrape_helmet_laws():
             })
     return ["State", "Required to wear helmet", "Motorcycle-type vehicles not covered", "Footnotes"], data
 
+def upload_csv_to_minio(headers, helmet_laws, minio_client, bucket_name, csv_filename):
+    with tempfile.NamedTemporaryFile(mode='w', newline='', encoding='utf-8', delete=False) as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(helmet_laws)
+        temp_csv_path = csvfile.name
+    minio_csv_path = f"raw/{csv_filename}"
+    found = minio_client.bucket_exists(bucket_name)
+    if not found:
+        minio_client.make_bucket(bucket_name)
+    minio_client.fput_object(bucket_name, minio_csv_path, temp_csv_path)
+    print(f"Uploaded CSV to MinIO: {bucket_name}/{minio_csv_path}")
+    return minio_csv_path
+
+def csv_to_parquet_and_upload(minio_client, bucket_name, minio_csv_path, parquet_filename):
+            response = minio_client.get_object(bucket_name, minio_csv_path)
+            csv_bytes = response.read()
+            helmet_law_csv = pd.read_csv(io.BytesIO(csv_bytes))
+            with tempfile.NamedTemporaryFile(suffix='.parquet', delete=False) as pqfile:
+                helmet_law_csv.to_parquet(pqfile.name, index=False)
+                temp_parquet_path = pqfile.name
+            minio_parquet_path = f"parquet/{parquet_filename}"
+            minio_client.fput_object(bucket_name, minio_parquet_path, temp_parquet_path)
+            print(f"Uploaded Parquet to MinIO: {bucket_name}/{minio_parquet_path}")
+
+        
+
 def main():
     result = scrape_helmet_laws()
-    if result:
-        headers, helmet_laws = result
-        date_str = datetime.now().strftime('%Y%m%d')
-        csv_filename = f"motorcycle_helmet_laws_{date_str}.csv"
-        local_csv_path = os.path.join(os.getcwd(), csv_filename)
-        with open(local_csv_path, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=headers)
-            writer.writeheader()
-            writer.writerows(helmet_laws)
-        print(f"Saved CSV locally: {local_csv_path}")
-
-        minio_client = get_minio_client()
-        bucket_name = os.getenv("MINIO_BUCKET_NAME", "default-bucket")
-        minio_path = f"raw/{csv_filename}"
-        try:
-            found = minio_client.bucket_exists(bucket_name)
-            if not found:
-                minio_client.make_bucket(bucket_name)
-            minio_client.fput_object(bucket_name, minio_path, local_csv_path)
-            print(f"Uploaded to MinIO: {bucket_name}/{minio_path}")
-        except Exception as e:
-            print(f"Failed to upload to MinIO: {e}")
+    if not result:
+        return
+    headers, helmet_laws = result
+    date_str = datetime.now().strftime('%Y%m%d')
+    csv_filename = f"motorcycle_helmet_laws_{date_str}.csv"
+    parquet_filename = f"motorcycle_helmet_laws_{date_str}.parquet"
+    minio_client = get_minio_client()
+    bucket_name = os.getenv("MINIO_BUCKET_NAME", "default-bucket")
+    minio_csv_path = upload_csv_to_minio(headers, helmet_laws, minio_client, bucket_name, csv_filename)
+    csv_to_parquet_and_upload(minio_client, bucket_name, minio_csv_path, parquet_filename)
 
 
 if __name__ == "__main__":
