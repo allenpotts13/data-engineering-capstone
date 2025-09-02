@@ -4,3 +4,7 @@ minio
 requests
 pyarrow
 beautifulsoup4
+isort
+black
+bandit
+flake8

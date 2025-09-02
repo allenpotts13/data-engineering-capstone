@@ -1,5 +1,6 @@
-import os
 import logging
+import os
+
 
 def setup_logger(name: str, log_file: str = "pipeline.log"):
     logger = logging.getLogger(name)
@@ -24,7 +25,7 @@ def setup_logger(name: str, log_file: str = "pipeline.log"):
 
     # Formatter
     formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
     file_handler.setFormatter(formatter)
     console_handler.setFormatter(formatter)

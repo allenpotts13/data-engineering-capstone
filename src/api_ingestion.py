@@ -1,18 +1,16 @@
 import os
-import mimetypes
-import zipfile
 import tempfile
-import pandas as pd
-from io import BufferedReader
-from typing import Iterable, List, Optional
-from io import BytesIO
-from minio import S3Error
-from dotenv import load_dotenv
+import zipfile
+from io import BufferedReader, BytesIO
+from typing import List, Optional
 
+import pandas as pd
+from dotenv import load_dotenv
+from minio import S3Error
+
+from utils.http_utils import guess_content_type, requests_session_with_retries
 from utils.logger import setup_logger
 from utils.minio_client import get_minio_client
-from utils.http_utils import requests_session_with_retries, guess_content_type
-
 
 load_dotenv()
 logger = setup_logger(__name__, log_file="src/logs/api_ingestion.log")
@@ -22,7 +20,8 @@ minio_client = get_minio_client()
 def _default_fars_zip_url(year: int, scope: str = "National") -> str:
     year = str(year)
     scope_clean = scope.strip().title()
-    return f"https://static.nhtsa.gov/nhtsa/downloads/FARS/{year}/{scope_clean}/FARS{year}{scope_clean}CSV.zip"
+    return (f"https://static.nhtsa.gov/nhtsa/downloads/FARS/{year}/"
+            f"{scope_clean}/FARS{year}{scope_clean}CSV.zip")
 
 
 def ingest_fars_zip_to_minio(
@@ -36,7 +35,7 @@ def ingest_fars_zip_to_minio(
 ) -> List[str]:
     bucket = bucket or os.getenv("MINIO_BUCKET_NAME", "capstone")
     zip_url = zip_url or _default_fars_zip_url(year, scope)
-    prefix = f"{prefix_root}/{year}/{scope.strip().title()}/" 
+    prefix = f"{prefix_root}/{year}/{scope.strip().title()}/"
 
     print(f"[FARS] Downloading {year} {scope} ZIP: {zip_url}")
     logger.info(f"Downloading FARS {year} {scope} ZIP from {zip_url}")
@@ -52,7 +51,10 @@ def ingest_fars_zip_to_minio(
                 downloaded = 0
                 chunk_size = 1024 * 1024
 
-                with tempfile.NamedTemporaryFile(delete=False, suffix=".zip") as tmp:
+                with tempfile.NamedTemporaryFile(
+                    delete=False,
+                    suffix=".zip"
+                ) as tmp:
                     tmp_path = tmp.name
                     for chunk in r.iter_content(chunk_size=chunk_size):
                         if not chunk:
@@ -61,19 +63,27 @@ def ingest_fars_zip_to_minio(
                         downloaded += len(chunk)
                         if total:
                             pct = downloaded / total * 100
-                            print(f"  ... {downloaded/1_048_576:.1f} MB ({pct:.1f}%)", end="\r")
+                            print(
+                                f"  ... {downloaded/1_048_576:.1f} MB "
+                                f"({pct:.1f}%)",
+                                end="\r",
+                            )
                     print()
 
         print("[FARS] ZIP downloaded. Unzipping & uploading…")
         logger.info("ZIP downloaded; starting unzip/upload phase")
 
-        with zipfile.ZipFile(tmp_path) as zipfile:
-            files = [zip_info for zip_info in zipfile.infolist() if not zip_info.is_dir()]
-            if not files:
+        with zipfile.ZipFile(tmp_path) as zip_file:
+            zip_file_list = [
+                zip_info for zip_info in zip_file.infolist() if not zip_info.is_dir()
+            ]
+            if not zip_file_list:
                 msg = "ZIP contained no files"
-                print(msg); logger.error(msg); return []
+                print(msg)
+                logger.error(msg)
+                return []
 
-            for file in files:
+            for file in zip_file_list:
                 name_in_zip = file.filename
                 size = file.file_size
                 if size == 0:
@@ -90,7 +100,7 @@ def ingest_fars_zip_to_minio(
                 print(f"  → {name_in_zip}  ->  {object_key}  ({size/1_048_576:.2f} MB)")
                 logger.info(f"Uploading {name_in_zip} to {object_key} (size={size})")
 
-                with zipfile.open(file, "r") as f:
+                with zip_file.open(file, "r") as f:
                     data_stream = BufferedReader(f)
                     minio_client.put_object(
                         bucket_name=bucket,
@@ -113,8 +123,8 @@ def ingest_fars_zip_to_minio(
         try:
             if tmp_path and os.path.exists(tmp_path):
                 os.remove(tmp_path)
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Error removing temporary file {tmp_path}: {e}")
 
 
 def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | None:
@@ -125,11 +135,15 @@ def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | Non
             logger.warning(f"{csv_object_name} is empty; skipping parquet conversion.")
             return None
 
-        ftp_call = pd.read_csv(BytesIO(data), encoding="latin1", low_memory=False, dtype=str)
+        ftp_call = pd.read_csv(
+            BytesIO(data), encoding="latin1", low_memory=False, dtype=str
+        )
         parquet_buf = BytesIO()
         ftp_call.to_parquet(parquet_buf, index=False, engine="pyarrow")
         parquet_buf.seek(0)
-        parquet_key = csv_object_name.replace(".csv", ".parquet").replace("raw/", "parquet/")
+        parquet_key = csv_object_name.replace(".csv", ".parquet").replace(
+            "raw/", "parquet/"
+        )
 
         minio_client.put_object(
             bucket_name,
@@ -138,7 +152,9 @@ def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | Non
             length=parquet_buf.getbuffer().nbytes,
             content_type="application/octet-stream",
         )
-        logger.info(f"Uploaded Parquet file as {parquet_key} to MinIO bucket {bucket_name}.")
+        logger.info(
+            f"Uploaded Parquet file as {parquet_key} to MinIO bucket {bucket_name}."
+        )
         print(f"Uploaded Parquet file as {parquet_key} to MinIO.")
         return parquet_key
 
@@ -151,10 +167,11 @@ def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | Non
     finally:
         try:
             minio_object_response.close()
-        except Exception:
-            pass
+        except Exception as e:
+            logger.error(f"Error closing MinIO object response: {e}")
 
     return None
+
 
 def main():
     print("Starting API ingestion...")
@@ -162,7 +179,7 @@ def main():
     logger.info(f"MINIO_BUCKET_NAME: {os.getenv('MINIO_BUCKET_NAME')}")
 
     bucket_name = os.getenv("MINIO_BUCKET_NAME", "capstone")
-    for year in range(2019, 2024): 
+    for year in range(2019, 2024):
         print(f"\nProcessing year: {year}")
         uploaded_csvs = ingest_fars_zip_to_minio(year=year, scope="National")
         if not uploaded_csvs:
@@ -174,5 +191,7 @@ def main():
             upload_to_minio_parquet(csv_object_name, bucket_name)
 
     print("API ingestion and Parquet upload complete.")
+
+
 if __name__ == "__main__":
     main()
