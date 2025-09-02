@@ -3,8 +3,11 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.api_ingestion import (_default_fars_zip_url, ingest_fars_zip_to_minio,
-                               upload_to_minio_parquet)
+from src.api_ingestion import (
+    _default_fars_zip_url,
+    ingest_fars_zip_to_minio,
+    upload_to_minio_parquet,
+)
 
 
 def test_default_fars_zip_url_national():
