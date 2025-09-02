@@ -1070,3 +1070,31 @@ urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal'
 2025-09-02 13:25:17,200 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
 2025-09-02 13:25:17,449 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
 2025-09-02 13:25:17,551 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 17:55:18,380 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 17:55:18,382 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 17:55:18,382 - src.api_ingestion - ERROR - ZIP contained no files
+2025-09-02 17:55:18,572 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-02 17:56:29,824 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 17:56:29,826 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 17:56:29,827 - src.api_ingestion - ERROR - ZIP contained no files
+2025-09-02 17:56:30,032 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-02 17:57:42,069 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 17:57:42,071 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 17:57:42,108 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-02 17:57:42,108 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-02 17:57:42,110 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-02 17:59:57,226 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 17:59:57,228 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 17:59:57,264 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-02 17:59:57,264 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-02 17:59:57,266 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-02 18:00:41,158 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 18:00:41,160 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 18:00:41,196 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-02 18:00:41,196 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-02 18:00:41,198 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-02 18:01:51,242 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 18:01:51,243 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 18:01:51,283 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-02 18:01:51,284 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-02 18:01:51,286 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.

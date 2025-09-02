@@ -1,13 +1,15 @@
+import os
+import sys
 from io import BytesIO
-from unittest.mock import MagicMock, patch
-
-import pytest
+from unittest.mock import MagicMock
 
 from src.api_ingestion import (
     _default_fars_zip_url,
     ingest_fars_zip_to_minio,
     upload_to_minio_parquet,
 )
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 def test_default_fars_zip_url_national():
@@ -38,14 +40,31 @@ def test_ingest_fars_zip_to_minio_success(monkeypatch):
         "src.api_ingestion.requests_session_with_retries", lambda: mock_session
     )
 
-    mock_zipfile = MagicMock()
-    mock_zipinfo = MagicMock()
-    mock_zipinfo.is_dir.return_value = False
-    mock_zipinfo.filename = "test.csv"
-    mock_zipinfo.file_size = 4
-    mock_zipfile.infolist.return_value = [mock_zipinfo]
-    mock_zipfile.open.return_value = BytesIO(b"data")
-    monkeypatch.setattr("zipfile.ZipFile", lambda *a, **kw: mock_zipfile)
+    class MockZipInfo:
+        def __init__(self, filename, file_size):
+            self.filename = filename
+            self.file_size = file_size
+
+        def is_dir(self):
+            return False
+
+    class MockZipFile:
+        def __init__(self, *a, **kw):
+            self._files = [MockZipInfo("test.csv", 4)]
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, exc_type, exc_val, exc_tb):
+            pass
+
+        def infolist(self):
+            return self._files
+
+        def open(self, file, mode):
+            return BytesIO(b"data")
+
+    monkeypatch.setattr("src.api_ingestion.zipfile.ZipFile", MockZipFile)
 
     mock_minio_client = MagicMock()
     monkeypatch.setattr("src.api_ingestion.minio_client", mock_minio_client)

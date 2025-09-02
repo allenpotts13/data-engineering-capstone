@@ -10,12 +10,12 @@ import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
-from utils.logger import get_logger
-from utils.minio_client import get_minio_client
+from src.utils.logger import setup_logger
+from src.utils.minio_client import get_minio_client
 
 load_dotenv()
 
-logger = get_logger(__name__, log_file="src/logs/html_scraping.log")
+logger = setup_logger(__name__, log_file="src/logs/html_scraping.log")
 minio_client = get_minio_client()
 
 

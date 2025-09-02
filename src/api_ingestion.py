@@ -8,9 +8,9 @@ import pandas as pd
 from dotenv import load_dotenv
 from minio import S3Error
 
-from utils.http_utils import guess_content_type, requests_session_with_retries
-from utils.logger import setup_logger
-from utils.minio_client import get_minio_client
+from src.utils.http_utils import guess_content_type, requests_session_with_retries
+from src.utils.logger import setup_logger
+from src.utils.minio_client import get_minio_client
 
 load_dotenv()
 logger = setup_logger(__name__, log_file="src/logs/api_ingestion.log")
