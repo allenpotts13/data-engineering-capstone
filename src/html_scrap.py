@@ -16,7 +16,6 @@ from src.utils.minio_client import get_minio_client
 load_dotenv()
 
 logger = setup_logger(__name__, log_file="src/logs/html_scraping.log")
-minio_client = get_minio_client()
 
 
 def can_scrape(url):

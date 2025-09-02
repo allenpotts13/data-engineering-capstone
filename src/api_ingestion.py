@@ -14,7 +14,6 @@ from src.utils.minio_client import get_minio_client
 
 load_dotenv()
 logger = setup_logger(__name__, log_file="src/logs/api_ingestion.log")
-minio_client = get_minio_client()
 
 
 def _default_fars_zip_url(year: int, scope: str = "National") -> str:
@@ -71,6 +70,7 @@ def ingest_fars_zip_to_minio(
         print("[FARS] ZIP downloaded. Unzipping & uploading…")
         logger.info("ZIP downloaded; starting unzip/upload phase")
 
+        minio_client = get_minio_client()
         with zipfile.ZipFile(tmp_path) as zip_file:
             zip_file_list = [
                 zip_info for zip_info in zip_file.infolist() if not zip_info.is_dir()
@@ -127,6 +127,7 @@ def ingest_fars_zip_to_minio(
 
 def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | None:
     try:
+        minio_client = get_minio_client()
         minio_object_response = minio_client.get_object(bucket_name, csv_object_name)
         data = minio_object_response.read()
         if not data:
