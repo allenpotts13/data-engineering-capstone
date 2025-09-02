@@ -1,0 +1,1072 @@
+2025-09-02 11:07:59,849 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:07:59,850 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:07:59,850 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:11:48,770 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:11:48,771 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=47&format=csv
+2025-09-02 11:11:48,771 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:14:03,013 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:14:03,013 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=47&format=csv
+2025-09-02 11:14:03,013 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:14:03,013 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=47&format=csv?offset=0&limit=50000
+2025-09-02 11:14:33,978 - __main__ - ERROR - Error fetching API data: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=30)
+2025-09-02 11:14:33,978 - __main__ - INFO - API ingestion complete. Total chunks: 0, total rows: 0.
+2025-09-02 11:14:33,978 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:14:33,978 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:16:38,286 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:16:38,286 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:16:38,286 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:16:38,286 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:17:39,067 - __main__ - ERROR - Error fetching API data: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:17:39,067 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:23:33,810 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:23:33,810 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:23:33,810 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:23:33,810 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2023&State=*&format=csv
+2025-09-02 11:24:34,621 - __main__ - ERROR - Error fetching API data for years 2019-2023: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:24:34,622 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:25:33,550 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:25:33,551 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:25:33,551 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:25:33,551 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2019&State=*&format=csv
+2025-09-02 11:26:34,410 - __main__ - ERROR - Error fetching API data for year 2019: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:26:34,410 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2020&ToYear=2020&State=*&format=csv
+2025-09-02 11:27:35,128 - __main__ - ERROR - Error fetching API data for year 2020: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:27:35,128 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2021&ToYear=2021&State=*&format=csv
+2025-09-02 11:28:35,944 - __main__ - ERROR - Error fetching API data for year 2021: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:28:35,944 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2022&ToYear=2022&State=*&format=csv
+2025-09-02 11:29:36,623 - __main__ - ERROR - Error fetching API data for year 2022: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:29:36,624 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=*&format=csv
+2025-09-02 11:30:37,333 - __main__ - ERROR - Error fetching API data for year 2023: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:30:37,333 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:32:43,167 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:32:43,167 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:32:43,168 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:32:43,168 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2019&State=1&format=csv
+2025-09-02 11:33:43,856 - __main__ - ERROR - Error fetching API data for year 2019, state 1: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:33:43,856 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2019&State=2&format=csv
+2025-09-02 11:34:44,559 - __main__ - ERROR - Error fetching API data for year 2019, state 2: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:34:44,560 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2019&State=4&format=csv
+2025-09-02 11:35:45,223 - __main__ - ERROR - Error fetching API data for year 2019, state 4: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:35:45,223 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2019&State=5&format=csv
+2025-09-02 11:36:36,351 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:36:36,351 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:36:36,351 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:36:36,351 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2019&State=47&format=csv
+2025-09-02 11:36:57,105 - __main__ - ERROR - Timeout fetching API data for year 2019, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=20)
+2025-09-02 11:36:57,105 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2020&ToYear=2020&State=47&format=csv
+2025-09-02 11:37:17,890 - __main__ - ERROR - Timeout fetching API data for year 2020, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=20)
+2025-09-02 11:37:17,890 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2021&ToYear=2021&State=47&format=csv
+2025-09-02 11:37:38,603 - __main__ - ERROR - Timeout fetching API data for year 2021, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=20)
+2025-09-02 11:37:38,603 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2022&ToYear=2022&State=47&format=csv
+2025-09-02 11:37:59,367 - __main__ - ERROR - Timeout fetching API data for year 2022, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=20)
+2025-09-02 11:37:59,367 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=csv
+2025-09-02 11:38:20,031 - __main__ - ERROR - Timeout fetching API data for year 2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=20)
+2025-09-02 11:38:20,032 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:40:04,124 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:40:04,124 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:40:04,124 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:40:04,125 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2019&ToYear=2023&State=47&format=csv
+2025-09-02 11:42:04,876 - __main__ - ERROR - Error fetching API data for years 2019-2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=120)
+2025-09-02 11:42:04,877 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:44:11,910 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:44:11,911 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:44:11,911 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:44:11,911 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=csv
+2025-09-02 11:45:12,608 - __main__ - ERROR - Error fetching API data for year 2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:45:12,609 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:46:36,607 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:46:36,607 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:46:36,608 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:46:36,608 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=csv
+2025-09-02 11:47:36,868 - __main__ - ERROR - Error fetching API data for year 2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:47:36,868 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:51:50,626 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:51:50,626 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:51:50,626 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:51:50,627 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=csv&offset=0&limit=5000
+2025-09-02 11:52:50,932 - __main__ - ERROR - Error fetching API data for offset 0: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:52:50,933 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:52:50,933 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:55:49,314 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:55:49,314 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:55:49,314 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:55:49,314 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=csv&offset=0&limit=5000
+2025-09-02 11:56:49,517 - __main__ - ERROR - Error fetching API data for offset 0: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:56:49,517 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:56:49,517 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:57:10,835 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 11:57:10,835 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 11:57:10,835 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 11:57:10,835 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=csv&offset=0&limit=5000
+2025-09-02 11:58:11,556 - __main__ - ERROR - Error fetching API data for offset 0: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 11:58:11,557 - __main__ - WARNING - No data ingested from API.
+2025-09-02 11:58:11,557 - __main__ - WARNING - No data ingested from API.
+2025-09-02 12:01:45,945 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 12:01:45,945 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 12:01:45,946 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 12:01:45,946 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=json
+2025-09-02 12:02:46,154 - __main__ - ERROR - Error fetching API data for year 2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 12:02:46,154 - __main__ - WARNING - No data ingested from API.
+2025-09-02 12:03:29,603 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 12:03:29,603 - __main__ - INFO - API_FARS_DATA_BY_YEAR: /FARSData/GetFARSData?dataset=Accident&FromYear=2019&ToYear=2024&State=*&format=csv
+2025-09-02 12:03:29,603 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 12:03:29,604 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=ACCIDENT&FromYear=2023&ToYear=2023&State=47&format=json
+2025-09-02 12:04:30,349 - __main__ - ERROR - Error fetching API data for year 2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=60)
+2025-09-02 12:04:30,349 - __main__ - WARNING - No data ingested from API.
+2025-09-02 12:13:03,247 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 12:13:03,248 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 12:13:03,248 - __main__ - INFO - Requesting URL: https://crashviewer.nhtsa.dot.gov/CrashAPI/FARSData/GetFARSData?dataset=Accident&FromYear=2023&ToYear=2023&State=47&format=csv
+2025-09-02 12:31:52,918 - __main__ - ERROR - Error fetching API data for 2023, state 47: HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Max retries exceeded with url: /CrashAPI/FARSData/GetFARSData?dataset=Accident&FromYear=2023&ToYear=2023&State=47&format=csv (Caused by ReadTimeoutError("HTTPSConnectionPool(host='crashviewer.nhtsa.dot.gov', port=443): Read timed out. (read timeout=180)"))
+2025-09-02 12:31:52,919 - __main__ - WARNING - No data ingested from API.
+2025-09-02 13:16:15,192 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 13:16:15,193 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 13:16:15,193 - __main__ - INFO - Downloading FARS 2023 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip
+2025-09-02 13:16:16,648 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:16:16,686 - __main__ - INFO - Uploading FARS2023NationalCSV/accident.csv to raw/fars/2023/National/accident.csv (size=23978421)
+2025-09-02 13:16:22,879 - __main__ - ERROR - Ingest failed for 2023 National
+Traceback (most recent call last):
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Allen\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Allen\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Allen\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\Allen\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPConnection object at 0x000001BFEF830050>: Failed to resolve 'host.docker.internal' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\potts-capstone\src\api_ingestion.py", line 95, in ingest_fars_zip_to_minio
+    minio_client.put_object(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        bucket_name=bucket,
+        ^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        content_type=ctype,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\potts-capstone\.venv\Lib\site-packages\minio\api.py", line 2008, in put_object
+    raise exc
+  File "C:\potts-capstone\.venv\Lib\site-packages\minio\api.py", line 1959, in put_object
+    upload_id = self._create_multipart_upload(
+        bucket_name, object_name, headers,
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\minio\api.py", line 1764, in _create_multipart_upload
+    response = self._execute(
+        "POST",
+    ...<3 lines>...
+        query_params={"uploads": ""},
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\minio\api.py", line 440, in _execute
+    region = self._get_region(bucket_name)
+  File "C:\potts-capstone\.venv\Lib\site-packages\minio\api.py", line 497, in _get_region
+    response = self._url_open(
+        "GET",
+    ...<2 lines>...
+        query_params={"location": ""},
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\minio\api.py", line 305, in _url_open
+    response = self._http.urlopen(
+        method,
+    ...<3 lines>...
+        preload_content=preload_content,
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<13 lines>...
+        **response_kw,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<13 lines>...
+        **response_kw,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<13 lines>...
+        **response_kw,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  [Previous line repeated 2 more times]
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\potts-capstone\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal', port=9000): Max retries exceeded with url: /capstone?location= (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000001BFEF830050>: Failed to resolve 'host.docker.internal' ([Errno 11001] getaddrinfo failed)"))
+2025-09-02 13:16:22,899 - __main__ - WARNING - No CSV files uploaded to MinIO.
+2025-09-02 13:17:22,188 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 13:17:22,188 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 13:17:22,188 - __main__ - INFO - Downloading FARS 2023 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip
+2025-09-02 13:17:23,858 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:17:23,896 - __main__ - INFO - Uploading FARS2023NationalCSV/accident.csv to raw/fars/2023/National/accident.csv (size=23978421)
+2025-09-02 13:17:24,196 - __main__ - INFO - Uploading FARS2023NationalCSV/cevent.csv to raw/fars/2023/National/cevent.csv (size=10988036)
+2025-09-02 13:17:24,502 - __main__ - INFO - Uploading FARS2023NationalCSV/crashrf.csv to raw/fars/2023/National/crashrf.csv (size=1382559)
+2025-09-02 13:17:24,559 - __main__ - INFO - Uploading FARS2023NationalCSV/damage.csv to raw/fars/2023/National/damage.csv (size=9311822)
+2025-09-02 13:17:24,789 - __main__ - INFO - Uploading FARS2023NationalCSV/distract.csv to raw/fars/2023/National/distract.csv (size=2450364)
+2025-09-02 13:17:24,884 - __main__ - INFO - Uploading FARS2023NationalCSV/drimpair.csv to raw/fars/2023/National/drimpair.csv (size=2825211)
+2025-09-02 13:17:25,005 - __main__ - INFO - Uploading FARS2023NationalCSV/driverrf.csv to raw/fars/2023/National/driverrf.csv (size=3413664)
+2025-09-02 13:17:25,148 - __main__ - INFO - Uploading FARS2023NationalCSV/drugs.csv to raw/fars/2023/National/drugs.csv (size=20623587)
+2025-09-02 13:17:25,418 - __main__ - INFO - Uploading FARS2023NationalCSV/factor.csv to raw/fars/2023/National/factor.csv (size=2006149)
+2025-09-02 13:17:25,451 - __main__ - INFO - Uploading FARS2023NationalCSV/maneuver.csv to raw/fars/2023/National/maneuver.csv (size=2553981)
+2025-09-02 13:17:25,542 - __main__ - INFO - Uploading FARS2023NationalCSV/MIACC.CSV to raw/fars/2023/National/MIACC.CSV (size=1132035)
+2025-09-02 13:17:25,616 - __main__ - INFO - Uploading FARS2023NationalCSV/MIDRVACC.CSV to raw/fars/2023/National/MIDRVACC.CSV (size=1110860)
+2025-09-02 13:17:25,692 - __main__ - INFO - Uploading FARS2023NationalCSV/MIPER.CSV to raw/fars/2023/National/MIPER.CSV (size=2200632)
+2025-09-02 13:17:25,763 - __main__ - INFO - Uploading FARS2023NationalCSV/nmcrash.csv to raw/fars/2023/National/nmcrash.csv (size=810535)
+2025-09-02 13:17:25,797 - __main__ - INFO - Uploading FARS2023NationalCSV/nmdistract.csv to raw/fars/2023/National/nmdistract.csv (size=390716)
+2025-09-02 13:17:25,855 - __main__ - INFO - Uploading FARS2023NationalCSV/nmimpair.csv to raw/fars/2023/National/nmimpair.csv (size=455463)
+2025-09-02 13:17:25,911 - __main__ - INFO - Uploading FARS2023NationalCSV/nmprior.csv to raw/fars/2023/National/nmprior.csv (size=572050)
+2025-09-02 13:17:25,968 - __main__ - INFO - Uploading FARS2023NationalCSV/parkwork.csv to raw/fars/2023/National/parkwork.csv (size=1728319)
+2025-09-02 13:17:26,013 - __main__ - INFO - Uploading FARS2023NationalCSV/pbtype.csv to raw/fars/2023/National/pbtype.csv (size=3725324)
+2025-09-02 13:17:26,140 - __main__ - INFO - Uploading FARS2023NationalCSV/person.csv to raw/fars/2023/National/person.csv (size=111889636)
+2025-09-02 13:17:26,755 - __main__ - INFO - Uploading FARS2023NationalCSV/personrf.csv to raw/fars/2023/National/personrf.csv (size=3334145)
+2025-09-02 13:17:26,902 - __main__ - INFO - Uploading FARS2023NationalCSV/pvehiclesf.csv to raw/fars/2023/National/pvehiclesf.csv (size=53317)
+2025-09-02 13:17:26,954 - __main__ - INFO - Uploading FARS2023NationalCSV/race.csv to raw/fars/2023/National/race.csv (size=5227531)
+2025-09-02 13:17:27,175 - __main__ - INFO - Uploading FARS2023NationalCSV/safetyeq.csv to raw/fars/2023/National/safetyeq.csv (size=853574)
+2025-09-02 13:17:27,244 - __main__ - INFO - Uploading FARS2023NationalCSV/vehicle.csv to raw/fars/2023/National/vehicle.csv (size=112715066)
+2025-09-02 13:17:27,891 - __main__ - INFO - Uploading FARS2023NationalCSV/vehiclesf.csv to raw/fars/2023/National/vehiclesf.csv (size=1990100)
+2025-09-02 13:17:27,952 - __main__ - INFO - Uploading FARS2023NationalCSV/vevent.csv to raw/fars/2023/National/vevent.csv (size=13581368)
+2025-09-02 13:17:28,101 - __main__ - INFO - Uploading FARS2023NationalCSV/violatn.csv to raw/fars/2023/National/violatn.csv (size=2110229)
+2025-09-02 13:17:28,172 - __main__ - INFO - Uploading FARS2023NationalCSV/vision.csv to raw/fars/2023/National/vision.csv (size=2596686)
+2025-09-02 13:17:28,248 - __main__ - INFO - Uploading FARS2023NationalCSV/vpicdecode.csv to raw/fars/2023/National/vpicdecode.csv (size=46396641)
+2025-09-02 13:17:28,614 - __main__ - INFO - Uploading FARS2023NationalCSV/vpictrailerdecode.csv to raw/fars/2023/National/vpictrailerdecode.csv (size=536480)
+2025-09-02 13:17:28,671 - __main__ - INFO - Uploading FARS2023NationalCSV/vsoe.csv to raw/fars/2023/National/vsoe.csv (size=8361051)
+2025-09-02 13:17:28,882 - __main__ - INFO - Uploading FARS2023NationalCSV/weather.csv to raw/fars/2023/National/weather.csv (size=1052069)
+2025-09-02 13:17:28,925 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2023/National/
+2025-09-02 13:17:29,143 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/accident.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,242 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/cevent.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,267 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/crashrf.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,364 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/damage.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,405 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/distract.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,448 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/drimpair.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,495 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/driverrf.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,762 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/drugs.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,794 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/factor.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,824 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/maneuver.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,842 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/MIACC.CSV: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,859 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/MIDRVACC.CSV: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,893 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/MIPER.CSV: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,905 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/nmcrash.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,912 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/nmdistract.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,918 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/nmimpair.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,928 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/nmprior.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:29,953 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/parkwork.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:30,005 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/pbtype.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:31,017 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/person.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:31,073 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/personrf.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:31,078 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/pvehiclesf.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:31,133 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/race.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:31,146 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/safetyeq.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,081 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vehicle.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,123 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vehiclesf.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,258 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vevent.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,287 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/violatn.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,316 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vision.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,934 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vpicdecode.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:32,955 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vpictrailerdecode.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:33,025 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vsoe.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:17:33,042 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/weather.csv: Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+2025-09-02 13:18:37,856 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 13:18:37,856 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 13:18:37,856 - __main__ - INFO - Downloading FARS 2023 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip
+2025-09-02 13:18:39,294 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:18:39,339 - __main__ - INFO - Uploading FARS2023NationalCSV/accident.csv to raw/fars/2023/National/accident.csv (size=23978421)
+2025-09-02 13:18:39,661 - __main__ - INFO - Uploading FARS2023NationalCSV/cevent.csv to raw/fars/2023/National/cevent.csv (size=10988036)
+2025-09-02 13:18:39,911 - __main__ - INFO - Uploading FARS2023NationalCSV/crashrf.csv to raw/fars/2023/National/crashrf.csv (size=1382559)
+2025-09-02 13:18:39,966 - __main__ - INFO - Uploading FARS2023NationalCSV/damage.csv to raw/fars/2023/National/damage.csv (size=9311822)
+2025-09-02 13:18:40,187 - __main__ - INFO - Uploading FARS2023NationalCSV/distract.csv to raw/fars/2023/National/distract.csv (size=2450364)
+2025-09-02 13:18:40,318 - __main__ - INFO - Uploading FARS2023NationalCSV/drimpair.csv to raw/fars/2023/National/drimpair.csv (size=2825211)
+2025-09-02 13:18:40,403 - __main__ - INFO - Uploading FARS2023NationalCSV/driverrf.csv to raw/fars/2023/National/driverrf.csv (size=3413664)
+2025-09-02 13:18:40,530 - __main__ - INFO - Uploading FARS2023NationalCSV/drugs.csv to raw/fars/2023/National/drugs.csv (size=20623587)
+2025-09-02 13:18:40,815 - __main__ - INFO - Uploading FARS2023NationalCSV/factor.csv to raw/fars/2023/National/factor.csv (size=2006149)
+2025-09-02 13:18:40,934 - __main__ - INFO - Uploading FARS2023NationalCSV/maneuver.csv to raw/fars/2023/National/maneuver.csv (size=2553981)
+2025-09-02 13:18:41,020 - __main__ - INFO - Uploading FARS2023NationalCSV/MIACC.CSV to raw/fars/2023/National/MIACC.CSV (size=1132035)
+2025-09-02 13:18:41,084 - __main__ - INFO - Uploading FARS2023NationalCSV/MIDRVACC.CSV to raw/fars/2023/National/MIDRVACC.CSV (size=1110860)
+2025-09-02 13:18:41,174 - __main__ - INFO - Uploading FARS2023NationalCSV/MIPER.CSV to raw/fars/2023/National/MIPER.CSV (size=2200632)
+2025-09-02 13:18:41,240 - __main__ - INFO - Uploading FARS2023NationalCSV/nmcrash.csv to raw/fars/2023/National/nmcrash.csv (size=810535)
+2025-09-02 13:18:41,284 - __main__ - INFO - Uploading FARS2023NationalCSV/nmdistract.csv to raw/fars/2023/National/nmdistract.csv (size=390716)
+2025-09-02 13:18:41,344 - __main__ - INFO - Uploading FARS2023NationalCSV/nmimpair.csv to raw/fars/2023/National/nmimpair.csv (size=455463)
+2025-09-02 13:18:41,362 - __main__ - INFO - Uploading FARS2023NationalCSV/nmprior.csv to raw/fars/2023/National/nmprior.csv (size=572050)
+2025-09-02 13:18:41,424 - __main__ - INFO - Uploading FARS2023NationalCSV/parkwork.csv to raw/fars/2023/National/parkwork.csv (size=1728319)
+2025-09-02 13:18:41,486 - __main__ - INFO - Uploading FARS2023NationalCSV/pbtype.csv to raw/fars/2023/National/pbtype.csv (size=3725324)
+2025-09-02 13:18:41,612 - __main__ - INFO - Uploading FARS2023NationalCSV/person.csv to raw/fars/2023/National/person.csv (size=111889636)
+2025-09-02 13:18:42,528 - __main__ - INFO - Uploading FARS2023NationalCSV/personrf.csv to raw/fars/2023/National/personrf.csv (size=3334145)
+2025-09-02 13:18:42,634 - __main__ - INFO - Uploading FARS2023NationalCSV/pvehiclesf.csv to raw/fars/2023/National/pvehiclesf.csv (size=53317)
+2025-09-02 13:18:42,691 - __main__ - INFO - Uploading FARS2023NationalCSV/race.csv to raw/fars/2023/National/race.csv (size=5227531)
+2025-09-02 13:18:42,900 - __main__ - INFO - Uploading FARS2023NationalCSV/safetyeq.csv to raw/fars/2023/National/safetyeq.csv (size=853574)
+2025-09-02 13:18:42,931 - __main__ - INFO - Uploading FARS2023NationalCSV/vehicle.csv to raw/fars/2023/National/vehicle.csv (size=112715066)
+2025-09-02 13:18:43,546 - __main__ - INFO - Uploading FARS2023NationalCSV/vehiclesf.csv to raw/fars/2023/National/vehiclesf.csv (size=1990100)
+2025-09-02 13:18:43,623 - __main__ - INFO - Uploading FARS2023NationalCSV/vevent.csv to raw/fars/2023/National/vevent.csv (size=13581368)
+2025-09-02 13:18:43,799 - __main__ - INFO - Uploading FARS2023NationalCSV/violatn.csv to raw/fars/2023/National/violatn.csv (size=2110229)
+2025-09-02 13:18:43,859 - __main__ - INFO - Uploading FARS2023NationalCSV/vision.csv to raw/fars/2023/National/vision.csv (size=2596686)
+2025-09-02 13:18:43,953 - __main__ - INFO - Uploading FARS2023NationalCSV/vpicdecode.csv to raw/fars/2023/National/vpicdecode.csv (size=46396641)
+2025-09-02 13:18:44,344 - __main__ - INFO - Uploading FARS2023NationalCSV/vpictrailerdecode.csv to raw/fars/2023/National/vpictrailerdecode.csv (size=536480)
+2025-09-02 13:18:44,404 - __main__ - INFO - Uploading FARS2023NationalCSV/vsoe.csv to raw/fars/2023/National/vsoe.csv (size=8361051)
+2025-09-02 13:18:44,610 - __main__ - INFO - Uploading FARS2023NationalCSV/weather.csv to raw/fars/2023/National/weather.csv (size=1052069)
+2025-09-02 13:18:44,642 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2023/National/
+2025-09-02 13:18:45,211 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:18:45,386 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:18:45,467 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:18:45,656 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:18:45,751 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:18:45,809 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:18:45,875 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,223 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,278 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,375 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,460 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:18:46,501 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:18:46,562 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:18:46,585 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,647 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,666 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,688 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,783 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:18:46,906 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:18:48,570 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:18:48,655 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:18:48,710 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:18:48,776 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/race.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column ORDERNAME with type object')
+2025-09-02 13:18:48,805 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:18:50,091 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vehicle.csv: ("Could not convert '777777777777' with type str: tried to convert to int64", 'Conversion failed for column TRLR3VIN with type object')
+2025-09-02 13:18:50,146 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:18:50,372 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:18:50,434 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:18:50,535 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:18:51,661 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:18:51,698 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:18:51,868 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:18:51,951 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:21:05,713 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 13:21:05,713 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 13:21:05,714 - __main__ - INFO - Downloading FARS 2019 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2019/National/FARS2019NationalCSV.zip
+2025-09-02 13:21:08,187 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:21:08,222 - __main__ - INFO - Uploading accident.CSV to raw/fars/2019/National/accident.CSV (size=23764896)
+2025-09-02 13:21:08,560 - __main__ - INFO - Uploading CEvent.CSV to raw/fars/2019/National/CEvent.CSV (size=10099932)
+2025-09-02 13:21:08,744 - __main__ - INFO - Uploading Damage.CSV to raw/fars/2019/National/Damage.CSV (size=7871387)
+2025-09-02 13:21:08,887 - __main__ - INFO - Uploading Distract.CSV to raw/fars/2019/National/Distract.CSV (size=2212292)
+2025-09-02 13:21:08,961 - __main__ - INFO - Uploading DrImpair.CSV to raw/fars/2019/National/DrImpair.CSV (size=2604413)
+2025-09-02 13:21:09,038 - __main__ - INFO - Uploading Drugs.CSV to raw/fars/2019/National/Drugs.CSV (size=5979966)
+2025-09-02 13:21:09,176 - __main__ - INFO - Uploading Factor.CSV to raw/fars/2019/National/Factor.CSV (size=1572676)
+2025-09-02 13:21:09,251 - __main__ - INFO - Uploading Maneuver.CSV to raw/fars/2019/National/Maneuver.CSV (size=2232368)
+2025-09-02 13:21:09,290 - __main__ - INFO - Uploading MIACC.CSV to raw/fars/2019/National/MIACC.CSV (size=1035176)
+2025-09-02 13:21:09,351 - __main__ - INFO - Uploading MIDRVACC.CSV to raw/fars/2019/National/MIDRVACC.CSV (size=1015176)
+2025-09-02 13:21:09,381 - __main__ - INFO - Uploading MIPER.CSV to raw/fars/2019/National/MIPER.CSV (size=1990098)
+2025-09-02 13:21:09,428 - __main__ - INFO - Uploading NMCrash.CSV to raw/fars/2019/National/NMCrash.CSV (size=707414)
+2025-09-02 13:21:09,458 - __main__ - INFO - Uploading NMDistract.CSV to raw/fars/2019/National/NMDistract.CSV (size=334518)
+2025-09-02 13:21:09,515 - __main__ - INFO - Uploading NMImpair.CSV to raw/fars/2019/National/NMImpair.CSV (size=400785)
+2025-09-02 13:21:09,573 - __main__ - INFO - Uploading NMPrior.CSV to raw/fars/2019/National/NMPrior.CSV (size=477171)
+2025-09-02 13:21:09,591 - __main__ - INFO - Uploading Parkwork.CSV to raw/fars/2019/National/Parkwork.CSV (size=1307970)
+2025-09-02 13:21:09,676 - __main__ - INFO - Uploading PBType.CSV to raw/fars/2019/National/PBType.CSV (size=3102462)
+2025-09-02 13:21:09,788 - __main__ - INFO - Uploading Person.CSV to raw/fars/2019/National/Person.CSV (size=90995642)
+2025-09-02 13:21:10,426 - __main__ - INFO - Uploading Race.CSV to raw/fars/2019/National/Race.CSV (size=4349924)
+2025-09-02 13:21:10,569 - __main__ - INFO - Uploading SafetyEq.CSV to raw/fars/2019/National/SafetyEq.CSV (size=726499)
+2025-09-02 13:21:10,627 - __main__ - INFO - Uploading vehicle.csv to raw/fars/2019/National/vehicle.csv (size=90255420)
+2025-09-02 13:21:11,259 - __main__ - INFO - Uploading VEvent.CSV to raw/fars/2019/National/VEvent.CSV (size=12402372)
+2025-09-02 13:21:11,489 - __main__ - INFO - Uploading Violatn.CSV to raw/fars/2019/National/Violatn.CSV (size=1950150)
+2025-09-02 13:21:11,552 - __main__ - INFO - Uploading Vision.CSV to raw/fars/2019/National/Vision.CSV (size=2354137)
+2025-09-02 13:21:11,655 - __main__ - INFO - Uploading VPICdecode.CSV to raw/fars/2019/National/VPICdecode.CSV (size=37403936)
+2025-09-02 13:21:11,929 - __main__ - INFO - Uploading VPICTrailerdecode.CSV to raw/fars/2019/National/VPICTrailerdecode.CSV (size=396944)
+2025-09-02 13:21:12,017 - __main__ - INFO - Uploading VSOE.CSV to raw/fars/2019/National/VSOE.CSV (size=7655706)
+2025-09-02 13:21:12,261 - __main__ - INFO - Uploaded 27 file(s) to capstone/raw/fars/2019/National/
+2025-09-02 13:21:12,359 - __main__ - ERROR - Parquet conversion failed for raw/fars/2019/National/accident.CSV: 'utf-8' codec can't decode byte 0x91 in position 25683: invalid start byte
+2025-09-02 13:21:12,553 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/CEvent.CSV to MinIO bucket capstone.
+2025-09-02 13:21:12,685 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Damage.CSV to MinIO bucket capstone.
+2025-09-02 13:21:12,737 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Distract.CSV to MinIO bucket capstone.
+2025-09-02 13:21:12,801 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/DrImpair.CSV to MinIO bucket capstone.
+2025-09-02 13:21:12,927 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Drugs.CSV to MinIO bucket capstone.
+2025-09-02 13:21:12,973 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Factor.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,024 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Maneuver.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,105 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,142 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,196 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,218 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMCrash.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,276 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMDistract.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,336 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMImpair.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,396 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMPrior.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,442 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Parkwork.CSV to MinIO bucket capstone.
+2025-09-02 13:21:13,510 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/PBType.CSV to MinIO bucket capstone.
+2025-09-02 13:21:14,504 - __main__ - ERROR - Parquet conversion failed for raw/fars/2019/National/Person.CSV: ("Expected bytes, got a 'int' object", 'Conversion failed for column MINUTENAME with type object')
+2025-09-02 13:21:14,589 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Race.CSV to MinIO bucket capstone.
+2025-09-02 13:21:14,617 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/SafetyEq.CSV to MinIO bucket capstone.
+2025-09-02 13:21:15,653 - __main__ - ERROR - Parquet conversion failed for raw/fars/2019/National/vehicle.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column MCARR_I2 with type object')
+2025-09-02 13:21:15,895 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/VEvent.CSV to MinIO bucket capstone.
+2025-09-02 13:21:15,948 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Violatn.CSV to MinIO bucket capstone.
+2025-09-02 13:21:16,044 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Vision.CSV to MinIO bucket capstone.
+2025-09-02 13:21:16,087 - __main__ - ERROR - Parquet conversion failed for raw/fars/2019/National/VPICdecode.CSV: 'utf-8' codec can't decode byte 0xc4 in position 171190: invalid continuation byte
+2025-09-02 13:21:16,092 - __main__ - ERROR - Parquet conversion failed for raw/fars/2019/National/VPICTrailerdecode.CSV: 'utf-8' codec can't decode byte 0xa0 in position 239275: invalid start byte
+2025-09-02 13:21:16,223 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/VSOE.CSV to MinIO bucket capstone.
+2025-09-02 13:21:16,225 - __main__ - INFO - Downloading FARS 2020 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2020/National/FARS2020NationalCSV.zip
+2025-09-02 13:21:17,958 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:21:17,959 - __main__ - INFO - Uploading FARS2020NationalCSV/accident.csv to raw/fars/2020/National/accident.csv (size=23081227)
+2025-09-02 13:21:18,229 - __main__ - INFO - Uploading FARS2020NationalCSV/cevent.csv to raw/fars/2020/National/cevent.csv (size=11176477)
+2025-09-02 13:21:18,437 - __main__ - INFO - Uploading FARS2020NationalCSV/crashrf.csv to raw/fars/2020/National/crashrf.csv (size=1148110)
+2025-09-02 13:21:18,466 - __main__ - INFO - Uploading FARS2020NationalCSV/damage.csv to raw/fars/2020/National/damage.csv (size=9028517)
+2025-09-02 13:21:18,625 - __main__ - INFO - Uploading FARS2020NationalCSV/distract.csv to raw/fars/2020/National/distract.csv (size=2335955)
+2025-09-02 13:21:18,700 - __main__ - INFO - Uploading FARS2020NationalCSV/drimpair.csv to raw/fars/2020/National/drimpair.csv (size=2781450)
+2025-09-02 13:21:18,820 - __main__ - INFO - Uploading FARS2020NationalCSV/driverrf.csv to raw/fars/2020/National/driverrf.csv (size=3142601)
+2025-09-02 13:21:18,902 - __main__ - INFO - Uploading FARS2020NationalCSV/drugs.csv to raw/fars/2020/National/drugs.csv (size=6419602)
+2025-09-02 13:21:19,108 - __main__ - INFO - Uploading FARS2020NationalCSV/factor.csv to raw/fars/2020/National/factor.csv (size=1935508)
+2025-09-02 13:21:19,208 - __main__ - INFO - Uploading FARS2020NationalCSV/maneuver.csv to raw/fars/2020/National/maneuver.csv (size=2455039)
+2025-09-02 13:21:19,262 - __main__ - INFO - Uploading FARS2020NationalCSV/MIACC.CSV to raw/fars/2020/National/MIACC.CSV (size=1115048)
+2025-09-02 13:21:19,291 - __main__ - INFO - Uploading FARS2020NationalCSV/MIDRVACC.CSV to raw/fars/2020/National/MIDRVACC.CSV (size=1095501)
+2025-09-02 13:21:19,366 - __main__ - INFO - Uploading FARS2020NationalCSV/MIPER.CSV to raw/fars/2020/National/MIPER.CSV (size=2107451)
+2025-09-02 13:21:19,460 - __main__ - INFO - Uploading FARS2020NationalCSV/nmcrash.csv to raw/fars/2020/National/nmcrash.csv (size=689945)
+2025-09-02 13:21:19,476 - __main__ - INFO - Uploading FARS2020NationalCSV/nmdistract.csv to raw/fars/2020/National/nmdistract.csv (size=342304)
+2025-09-02 13:21:19,490 - __main__ - INFO - Uploading FARS2020NationalCSV/nmimpair.csv to raw/fars/2020/National/nmimpair.csv (size=422802)
+2025-09-02 13:21:19,504 - __main__ - INFO - Uploading FARS2020NationalCSV/nmprior.csv to raw/fars/2020/National/nmprior.csv (size=512988)
+2025-09-02 13:21:19,562 - __main__ - INFO - Uploading FARS2020NationalCSV/parkwork.csv to raw/fars/2020/National/parkwork.csv (size=1804346)
+2025-09-02 13:21:19,622 - __main__ - INFO - Uploading FARS2020NationalCSV/pbtype.csv to raw/fars/2020/National/pbtype.csv (size=3301706)
+2025-09-02 13:21:19,737 - __main__ - INFO - Uploading FARS2020NationalCSV/person.csv to raw/fars/2020/National/person.csv (size=107612299)
+2025-09-02 13:21:20,366 - __main__ - INFO - Uploading FARS2020NationalCSV/personrf.csv to raw/fars/2020/National/personrf.csv (size=2690172)
+2025-09-02 13:21:20,410 - __main__ - INFO - Uploading FARS2020NationalCSV/pvehiclesf.csv to raw/fars/2020/National/pvehiclesf.csv (size=47155)
+2025-09-02 13:21:20,460 - __main__ - INFO - Uploading FARS2020NationalCSV/race.csv to raw/fars/2020/National/race.csv (size=4971179)
+2025-09-02 13:21:20,604 - __main__ - INFO - Uploading FARS2020NationalCSV/safetyeq.csv to raw/fars/2020/National/safetyeq.csv (size=761742)
+2025-09-02 13:21:20,621 - __main__ - INFO - Uploading FARS2020NationalCSV/vehicle.csv to raw/fars/2020/National/vehicle.csv (size=103751724)
+2025-09-02 13:21:21,385 - __main__ - INFO - Uploading FARS2020NationalCSV/vehiclesf.csv to raw/fars/2020/National/vehiclesf.csv (size=1597859)
+2025-09-02 13:21:21,427 - __main__ - INFO - Uploading FARS2020NationalCSV/vevent.csv to raw/fars/2020/National/vevent.csv (size=13583487)
+2025-09-02 13:21:21,584 - __main__ - INFO - Uploading FARS2020NationalCSV/violatn.csv to raw/fars/2020/National/violatn.csv (size=2098680)
+2025-09-02 13:21:21,630 - __main__ - INFO - Uploading FARS2020NationalCSV/vision.csv to raw/fars/2020/National/vision.csv (size=2486860)
+2025-09-02 13:21:21,691 - __main__ - INFO - Uploading FARS2020NationalCSV/vpicdecode.csv to raw/fars/2020/National/vpicdecode.csv (size=39905391)
+2025-09-02 13:21:22,039 - __main__ - INFO - Uploading FARS2020NationalCSV/vpictrailerdecode.csv to raw/fars/2020/National/vpictrailerdecode.csv (size=393796)
+2025-09-02 13:21:22,054 - __main__ - INFO - Uploading FARS2020NationalCSV/vsoe.csv to raw/fars/2020/National/vsoe.csv (size=8336513)
+2025-09-02 13:21:22,280 - __main__ - INFO - Uploading FARS2020NationalCSV/weather.csv to raw/fars/2020/National/weather.csv (size=1049872)
+2025-09-02 13:21:22,317 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2020/National/
+2025-09-02 13:21:22,357 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/accident.csv: 'utf-8' codec can't decode byte 0xd1 in position 29826: invalid continuation byte
+2025-09-02 13:21:22,591 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:22,633 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:22,800 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:21:22,905 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:22,967 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,048 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,209 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,262 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,364 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,406 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:23,447 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:23,511 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:21:23,533 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,592 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,652 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:23,655 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/nmprior.csv: 'utf-8' codec can't decode byte 0x96 in position 5320: invalid start byte
+2025-09-02 13:21:23,660 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/parkwork.csv: 'utf-8' codec can't decode byte 0x96 in position 8520: invalid start byte
+2025-09-02 13:21:23,666 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/pbtype.csv: 'utf-8' codec can't decode byte 0x92 in position 841: invalid start byte
+2025-09-02 13:21:25,336 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:21:25,465 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:25,520 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:25,588 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/race.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column ORDERNAME with type object')
+2025-09-02 13:21:25,615 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:21:26,738 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/vehicle.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column MCARR_I2 with type object')
+2025-09-02 13:21:26,784 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:27,027 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:27,120 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:21:27,190 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:21:27,240 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/vpicdecode.csv: 'utf-8' codec can't decode byte 0xdc in position 25104: invalid continuation byte
+2025-09-02 13:21:27,244 - __main__ - ERROR - Parquet conversion failed for raw/fars/2020/National/vpictrailerdecode.csv: 'utf-8' codec can't decode byte 0xa0 in position 30689: invalid start byte
+2025-09-02 13:21:27,379 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:21:27,460 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:21:27,461 - __main__ - INFO - Downloading FARS 2021 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2021/National/FARS2021NationalCSV.zip
+2025-09-02 13:21:29,234 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:21:29,234 - __main__ - INFO - Uploading FARS2021NationalCSV/accident.csv to raw/fars/2021/National/accident.csv (size=25464921)
+2025-09-02 13:21:29,497 - __main__ - INFO - Uploading FARS2021NationalCSV/cevent.csv to raw/fars/2021/National/cevent.csv (size=12102736)
+2025-09-02 13:21:29,633 - __main__ - INFO - Uploading FARS2021NationalCSV/crashrf.csv to raw/fars/2021/National/crashrf.csv (size=1239444)
+2025-09-02 13:21:29,671 - __main__ - INFO - Uploading FARS2021NationalCSV/damage.csv to raw/fars/2021/National/damage.csv (size=9722663)
+2025-09-02 13:21:29,879 - __main__ - INFO - Uploading FARS2021NationalCSV/distract.csv to raw/fars/2021/National/distract.csv (size=2589619)
+2025-09-02 13:21:29,964 - __main__ - INFO - Uploading FARS2021NationalCSV/drimpair.csv to raw/fars/2021/National/drimpair.csv (size=3064041)
+2025-09-02 13:21:30,098 - __main__ - INFO - Uploading FARS2021NationalCSV/driverrf.csv to raw/fars/2021/National/driverrf.csv (size=3405786)
+2025-09-02 13:21:30,199 - __main__ - INFO - Uploading FARS2021NationalCSV/drugs.csv to raw/fars/2021/National/drugs.csv (size=7106206)
+2025-09-02 13:21:30,449 - __main__ - INFO - Uploading FARS2021NationalCSV/factor.csv to raw/fars/2021/National/factor.csv (size=2132616)
+2025-09-02 13:21:30,516 - __main__ - INFO - Uploading FARS2021NationalCSV/maneuver.csv to raw/fars/2021/National/maneuver.csv (size=2698834)
+2025-09-02 13:21:30,651 - __main__ - INFO - Uploading FARS2021NationalCSV/MIACC.CSV to raw/fars/2021/National/MIACC.CSV (size=1199569)
+2025-09-02 13:21:30,700 - __main__ - INFO - Uploading FARS2021NationalCSV/MIDRVACC.CSV to raw/fars/2021/National/MIDRVACC.CSV (size=1179168)
+2025-09-02 13:21:30,733 - __main__ - INFO - Uploading FARS2021NationalCSV/MIPER.CSV to raw/fars/2021/National/MIPER.CSV (size=2316828)
+2025-09-02 13:21:30,854 - __main__ - INFO - Uploading FARS2021NationalCSV/nmcrash.csv to raw/fars/2021/National/nmcrash.csv (size=777600)
+2025-09-02 13:21:30,914 - __main__ - INFO - Uploading FARS2021NationalCSV/nmdistract.csv to raw/fars/2021/National/nmdistract.csv (size=383538)
+2025-09-02 13:21:30,968 - __main__ - INFO - Uploading FARS2021NationalCSV/nmimpair.csv to raw/fars/2021/National/nmimpair.csv (size=462854)
+2025-09-02 13:21:30,987 - __main__ - INFO - Uploading FARS2021NationalCSV/nmprior.csv to raw/fars/2021/National/nmprior.csv (size=575905)
+2025-09-02 13:21:31,010 - __main__ - INFO - Uploading FARS2021NationalCSV/parkwork.csv to raw/fars/2021/National/parkwork.csv (size=2058155)
+2025-09-02 13:21:31,119 - __main__ - INFO - Uploading FARS2021NationalCSV/pbtype.csv to raw/fars/2021/National/pbtype.csv (size=3698028)
+2025-09-02 13:21:31,235 - __main__ - INFO - Uploading FARS2021NationalCSV/person.csv to raw/fars/2021/National/person.csv (size=122053999)
+2025-09-02 13:21:32,221 - __main__ - INFO - Uploading FARS2021NationalCSV/personrf.csv to raw/fars/2021/National/personrf.csv (size=2937186)
+2025-09-02 13:21:32,329 - __main__ - INFO - Uploading FARS2021NationalCSV/pvehiclesf.csv to raw/fars/2021/National/pvehiclesf.csv (size=51719)
+2025-09-02 13:21:32,379 - __main__ - INFO - Uploading FARS2021NationalCSV/race.csv to raw/fars/2021/National/race.csv (size=5531744)
+2025-09-02 13:21:32,508 - __main__ - INFO - Uploading FARS2021NationalCSV/safetyeq.csv to raw/fars/2021/National/safetyeq.csv (size=848061)
+2025-09-02 13:21:32,548 - __main__ - INFO - Uploading FARS2021NationalCSV/vehicle.csv to raw/fars/2021/National/vehicle.csv (size=117115395)
+2025-09-02 13:21:33,317 - __main__ - INFO - Uploading FARS2021NationalCSV/vehiclesf.csv to raw/fars/2021/National/vehiclesf.csv (size=1749094)
+2025-09-02 13:21:33,379 - __main__ - INFO - Uploading FARS2021NationalCSV/vevent.csv to raw/fars/2021/National/vevent.csv (size=14881262)
+2025-09-02 13:21:33,623 - __main__ - INFO - Uploading FARS2021NationalCSV/violatn.csv to raw/fars/2021/National/violatn.csv (size=2303174)
+2025-09-02 13:21:33,689 - __main__ - INFO - Uploading FARS2021NationalCSV/vision.csv to raw/fars/2021/National/vision.csv (size=2752370)
+2025-09-02 13:21:33,767 - __main__ - INFO - Uploading FARS2021NationalCSV/vpicdecode.csv to raw/fars/2021/National/vpicdecode.csv (size=46432914)
+2025-09-02 13:21:34,159 - __main__ - INFO - Uploading FARS2021NationalCSV/vpictrailerdecode.csv to raw/fars/2021/National/vpictrailerdecode.csv (size=503439)
+2025-09-02 13:21:34,215 - __main__ - INFO - Uploading FARS2021NationalCSV/vsoe.csv to raw/fars/2021/National/vsoe.csv (size=9139577)
+2025-09-02 13:21:34,359 - __main__ - INFO - Uploading FARS2021NationalCSV/weather.csv to raw/fars/2021/National/weather.csv (size=1115662)
+2025-09-02 13:21:34,429 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2021/National/
+2025-09-02 13:21:34,979 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,186 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,268 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,464 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,563 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,663 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,763 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:35,921 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,016 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,116 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,196 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:36,236 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:36,337 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:21:36,358 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,419 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,478 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,497 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,551 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:21:36,556 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/pbtype.csv: 'utf-8' codec can't decode byte 0xa0 in position 16801: invalid start byte
+2025-09-02 13:21:37,767 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/person.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column MINUTENAME with type object')
+2025-09-02 13:21:37,775 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/personrf.csv: 'utf-8' codec can't decode byte 0xa0 in position 14553: invalid start byte
+2025-09-02 13:21:37,831 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:37,903 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/race.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column ORDERNAME with type object')
+2025-09-02 13:21:37,933 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:21:39,302 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/vehicle.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column MINUTENAME with type object')
+2025-09-02 13:21:39,308 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/vehiclesf.csv: 'utf-8' codec can't decode byte 0xa0 in position 22893: invalid start byte
+2025-09-02 13:21:39,558 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:39,618 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:21:39,738 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:21:39,824 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/vpicdecode.csv: 'utf-8' codec can't decode byte 0xed in position 19369: invalid continuation byte
+2025-09-02 13:21:39,829 - __main__ - ERROR - Parquet conversion failed for raw/fars/2021/National/vpictrailerdecode.csv: 'utf-8' codec can't decode byte 0xa0 in position 93360: invalid start byte
+2025-09-02 13:21:40,004 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:21:40,042 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:21:40,043 - __main__ - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 13:21:41,462 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:21:41,462 - __main__ - INFO - Uploading FARS2022NationalCSV/accident.csv to raw/fars/2022/National/accident.csv (size=25219608)
+2025-09-02 13:21:41,684 - __main__ - INFO - Uploading FARS2022NationalCSV/cevent.csv to raw/fars/2022/National/cevent.csv (size=11843381)
+2025-09-02 13:21:41,859 - __main__ - INFO - Uploading FARS2022NationalCSV/crashrf.csv to raw/fars/2022/National/crashrf.csv (size=1449559)
+2025-09-02 13:21:41,917 - __main__ - INFO - Uploading FARS2022NationalCSV/damage.csv to raw/fars/2022/National/damage.csv (size=9711142)
+2025-09-02 13:21:42,154 - __main__ - INFO - Uploading FARS2022NationalCSV/distract.csv to raw/fars/2022/National/distract.csv (size=2550532)
+2025-09-02 13:21:42,231 - __main__ - INFO - Uploading FARS2022NationalCSV/drimpair.csv to raw/fars/2022/National/drimpair.csv (size=2992010)
+2025-09-02 13:21:42,296 - __main__ - INFO - Uploading FARS2022NationalCSV/driverrf.csv to raw/fars/2022/National/driverrf.csv (size=3599738)
+2025-09-02 13:21:42,420 - __main__ - INFO - Uploading FARS2022NationalCSV/drugs.csv to raw/fars/2022/National/drugs.csv (size=7781009)
+2025-09-02 13:21:42,661 - __main__ - INFO - Uploading FARS2022NationalCSV/factor.csv to raw/fars/2022/National/factor.csv (size=2087746)
+2025-09-02 13:21:42,732 - __main__ - INFO - Uploading FARS2022NationalCSV/maneuver.csv to raw/fars/2022/National/maneuver.csv (size=2659981)
+2025-09-02 13:21:42,854 - __main__ - INFO - Uploading FARS2022NationalCSV/MIACC.CSV to raw/fars/2022/National/MIACC.CSV (size=1188017)
+2025-09-02 13:21:42,889 - __main__ - INFO - Uploading FARS2022NationalCSV/MIDRVACC.CSV to raw/fars/2022/National/MIDRVACC.CSV (size=1167243)
+2025-09-02 13:21:42,937 - __main__ - INFO - Uploading FARS2022NationalCSV/MIPER.CSV to raw/fars/2022/National/MIPER.CSV (size=2293343)
+2025-09-02 13:21:43,059 - __main__ - INFO - Uploading FARS2022NationalCSV/nmcrash.csv to raw/fars/2022/National/nmcrash.csv (size=822617)
+2025-09-02 13:21:43,091 - __main__ - INFO - Uploading FARS2022NationalCSV/nmdistract.csv to raw/fars/2022/National/nmdistract.csv (size=403668)
+2025-09-02 13:21:43,106 - __main__ - INFO - Uploading FARS2022NationalCSV/nmimpair.csv to raw/fars/2022/National/nmimpair.csv (size=481811)
+2025-09-02 13:21:43,121 - __main__ - INFO - Uploading FARS2022NationalCSV/nmprior.csv to raw/fars/2022/National/nmprior.csv (size=597479)
+2025-09-02 13:21:43,153 - __main__ - INFO - Uploading FARS2022NationalCSV/parkwork.csv to raw/fars/2022/National/parkwork.csv (size=1841241)
+2025-09-02 13:21:43,216 - __main__ - INFO - Uploading FARS2022NationalCSV/pbtype.csv to raw/fars/2022/National/pbtype.csv (size=3842930)
+2025-09-02 13:21:43,371 - __main__ - INFO - Uploading FARS2022NationalCSV/person.csv to raw/fars/2022/National/person.csv (size=116735456)
+2025-09-02 13:21:43,913 - __main__ - INFO - Uploading FARS2022NationalCSV/personrf.csv to raw/fars/2022/National/personrf.csv (size=3469226)
+2025-09-02 13:21:44,030 - __main__ - INFO - Uploading FARS2022NationalCSV/pvehiclesf.csv to raw/fars/2022/National/pvehiclesf.csv (size=57077)
+2025-09-02 13:21:44,078 - __main__ - INFO - Uploading FARS2022NationalCSV/race.csv to raw/fars/2022/National/race.csv (size=5449171)
+2025-09-02 13:21:44,302 - __main__ - INFO - Uploading FARS2022NationalCSV/safetyeq.csv to raw/fars/2022/National/safetyeq.csv (size=889152)
+2025-09-02 13:21:44,355 - __main__ - INFO - Uploading FARS2022NationalCSV/vehicle.csv to raw/fars/2022/National/vehicle.csv (size=113583661)
+2025-09-02 13:21:45,008 - __main__ - INFO - Uploading FARS2022NationalCSV/vehiclesf.csv to raw/fars/2022/National/vehiclesf.csv (size=2077845)
+2025-09-02 13:21:45,053 - __main__ - INFO - Uploading FARS2022NationalCSV/vevent.csv to raw/fars/2022/National/vevent.csv (size=14548801)
+2025-09-02 13:21:45,287 - __main__ - INFO - Uploading FARS2022NationalCSV/violatn.csv to raw/fars/2022/National/violatn.csv (size=2267197)
+2025-09-02 13:21:45,389 - __main__ - INFO - Uploading FARS2022NationalCSV/vision.csv to raw/fars/2022/National/vision.csv (size=2705133)
+2025-09-02 13:21:45,502 - __main__ - INFO - Uploading FARS2022NationalCSV/vpicdecode.csv to raw/fars/2022/National/vpicdecode.csv (size=47813632)
+2025-09-02 13:21:45,902 - __main__ - INFO - Uploading FARS2022NationalCSV/vpictrailerdecode.csv to raw/fars/2022/National/vpictrailerdecode.csv (size=509384)
+2025-09-02 13:21:45,960 - __main__ - INFO - Uploading FARS2022NationalCSV/vsoe.csv to raw/fars/2022/National/vsoe.csv (size=8926141)
+2025-09-02 13:21:46,191 - __main__ - INFO - Uploading FARS2022NationalCSV/weather.csv to raw/fars/2022/National/weather.csv (size=1101942)
+2025-09-02 13:21:46,233 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2022/National/
+2025-09-02 13:21:46,731 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:21:46,966 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,074 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,235 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,332 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,404 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,511 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,641 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,735 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,790 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:21:47,829 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:47,908 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:21:48,012 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:21:48,035 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:21:48,053 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:48,070 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:48,088 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:21:48,092 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/parkwork.csv: 'utf-8' codec can't decode byte 0xa0 in position 2111: invalid start byte
+2025-09-02 13:21:48,211 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:21:49,405 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/person.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column MINUTENAME with type object')
+2025-09-02 13:21:49,413 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/personrf.csv: 'utf-8' codec can't decode byte 0xa0 in position 73619: invalid start byte
+2025-09-02 13:21:49,416 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/pvehiclesf.csv: 'utf-8' codec can't decode byte 0xa0 in position 27991: invalid start byte
+2025-09-02 13:21:49,499 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/race.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column ORDERNAME with type object')
+2025-09-02 13:21:49,535 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:21:51,053 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/vehicle.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column MINUTENAME with type object')
+2025-09-02 13:21:51,059 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/vehiclesf.csv: 'utf-8' codec can't decode byte 0xa0 in position 104943: invalid start byte
+2025-09-02 13:21:51,313 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:51,365 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:21:51,420 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:21:51,478 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/vpicdecode.csv: 'utf-8' codec can't decode byte 0xe8 in position 255021: invalid continuation byte
+2025-09-02 13:21:51,484 - __main__ - ERROR - Parquet conversion failed for raw/fars/2022/National/vpictrailerdecode.csv: 'utf-8' codec can't decode byte 0xcd in position 35146: invalid continuation byte
+2025-09-02 13:21:51,655 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:21:51,735 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:21:51,736 - __main__ - INFO - Downloading FARS 2023 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip
+2025-09-02 13:21:53,595 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:21:53,595 - __main__ - INFO - Uploading FARS2023NationalCSV/accident.csv to raw/fars/2023/National/accident.csv (size=23978421)
+2025-09-02 13:21:53,830 - __main__ - INFO - Uploading FARS2023NationalCSV/cevent.csv to raw/fars/2023/National/cevent.csv (size=10988036)
+2025-09-02 13:21:53,938 - __main__ - INFO - Uploading FARS2023NationalCSV/crashrf.csv to raw/fars/2023/National/crashrf.csv (size=1382559)
+2025-09-02 13:21:53,996 - __main__ - INFO - Uploading FARS2023NationalCSV/damage.csv to raw/fars/2023/National/damage.csv (size=9311822)
+2025-09-02 13:21:54,231 - __main__ - INFO - Uploading FARS2023NationalCSV/distract.csv to raw/fars/2023/National/distract.csv (size=2450364)
+2025-09-02 13:21:54,310 - __main__ - INFO - Uploading FARS2023NationalCSV/drimpair.csv to raw/fars/2023/National/drimpair.csv (size=2825211)
+2025-09-02 13:21:54,447 - __main__ - INFO - Uploading FARS2023NationalCSV/driverrf.csv to raw/fars/2023/National/driverrf.csv (size=3413664)
+2025-09-02 13:21:54,561 - __main__ - INFO - Uploading FARS2023NationalCSV/drugs.csv to raw/fars/2023/National/drugs.csv (size=20623587)
+2025-09-02 13:21:54,779 - __main__ - INFO - Uploading FARS2023NationalCSV/factor.csv to raw/fars/2023/National/factor.csv (size=2006149)
+2025-09-02 13:21:54,805 - __main__ - INFO - Uploading FARS2023NationalCSV/maneuver.csv to raw/fars/2023/National/maneuver.csv (size=2553981)
+2025-09-02 13:21:54,932 - __main__ - INFO - Uploading FARS2023NationalCSV/MIACC.CSV to raw/fars/2023/National/MIACC.CSV (size=1132035)
+2025-09-02 13:21:54,966 - __main__ - INFO - Uploading FARS2023NationalCSV/MIDRVACC.CSV to raw/fars/2023/National/MIDRVACC.CSV (size=1110860)
+2025-09-02 13:21:55,054 - __main__ - INFO - Uploading FARS2023NationalCSV/MIPER.CSV to raw/fars/2023/National/MIPER.CSV (size=2200632)
+2025-09-02 13:21:55,164 - __main__ - INFO - Uploading FARS2023NationalCSV/nmcrash.csv to raw/fars/2023/National/nmcrash.csv (size=810535)
+2025-09-02 13:21:55,186 - __main__ - INFO - Uploading FARS2023NationalCSV/nmdistract.csv to raw/fars/2023/National/nmdistract.csv (size=390716)
+2025-09-02 13:21:55,205 - __main__ - INFO - Uploading FARS2023NationalCSV/nmimpair.csv to raw/fars/2023/National/nmimpair.csv (size=455463)
+2025-09-02 13:21:55,224 - __main__ - INFO - Uploading FARS2023NationalCSV/nmprior.csv to raw/fars/2023/National/nmprior.csv (size=572050)
+2025-09-02 13:21:55,284 - __main__ - INFO - Uploading FARS2023NationalCSV/parkwork.csv to raw/fars/2023/National/parkwork.csv (size=1728319)
+2025-09-02 13:21:55,339 - __main__ - INFO - Uploading FARS2023NationalCSV/pbtype.csv to raw/fars/2023/National/pbtype.csv (size=3725324)
+2025-09-02 13:21:55,463 - __main__ - INFO - Uploading FARS2023NationalCSV/person.csv to raw/fars/2023/National/person.csv (size=111889636)
+2025-09-02 13:21:56,268 - __main__ - INFO - Uploading FARS2023NationalCSV/personrf.csv to raw/fars/2023/National/personrf.csv (size=3334145)
+2025-09-02 13:21:56,367 - __main__ - INFO - Uploading FARS2023NationalCSV/pvehiclesf.csv to raw/fars/2023/National/pvehiclesf.csv (size=53317)
+2025-09-02 13:21:56,424 - __main__ - INFO - Uploading FARS2023NationalCSV/race.csv to raw/fars/2023/National/race.csv (size=5227531)
+2025-09-02 13:21:56,628 - __main__ - INFO - Uploading FARS2023NationalCSV/safetyeq.csv to raw/fars/2023/National/safetyeq.csv (size=853574)
+2025-09-02 13:21:56,657 - __main__ - INFO - Uploading FARS2023NationalCSV/vehicle.csv to raw/fars/2023/National/vehicle.csv (size=112715066)
+2025-09-02 13:21:57,168 - __main__ - INFO - Uploading FARS2023NationalCSV/vehiclesf.csv to raw/fars/2023/National/vehiclesf.csv (size=1990100)
+2025-09-02 13:21:57,291 - __main__ - INFO - Uploading FARS2023NationalCSV/vevent.csv to raw/fars/2023/National/vevent.csv (size=13581368)
+2025-09-02 13:21:57,434 - __main__ - INFO - Uploading FARS2023NationalCSV/violatn.csv to raw/fars/2023/National/violatn.csv (size=2110229)
+2025-09-02 13:21:57,481 - __main__ - INFO - Uploading FARS2023NationalCSV/vision.csv to raw/fars/2023/National/vision.csv (size=2596686)
+2025-09-02 13:21:57,573 - __main__ - INFO - Uploading FARS2023NationalCSV/vpicdecode.csv to raw/fars/2023/National/vpicdecode.csv (size=46396641)
+2025-09-02 13:21:58,016 - __main__ - INFO - Uploading FARS2023NationalCSV/vpictrailerdecode.csv to raw/fars/2023/National/vpictrailerdecode.csv (size=536480)
+2025-09-02 13:21:58,055 - __main__ - INFO - Uploading FARS2023NationalCSV/vsoe.csv to raw/fars/2023/National/vsoe.csv (size=8361051)
+2025-09-02 13:21:58,274 - __main__ - INFO - Uploading FARS2023NationalCSV/weather.csv to raw/fars/2023/National/weather.csv (size=1052069)
+2025-09-02 13:21:58,349 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2023/National/
+2025-09-02 13:21:58,823 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,009 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,096 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,242 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,305 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,384 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,491 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:21:59,908 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,008 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,112 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,154 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:22:00,239 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:22:00,344 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:22:00,371 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,435 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,457 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,479 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,575 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:22:00,699 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:22:02,346 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:22:02,480 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:22:02,547 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:22:02,616 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/race.csv: ("Expected bytes, got a 'int' object", 'Conversion failed for column ORDERNAME with type object')
+2025-09-02 13:22:02,650 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:22:03,763 - __main__ - ERROR - Parquet conversion failed for raw/fars/2023/National/vehicle.csv: ("Could not convert '777777777777' with type str: tried to convert to int64", 'Conversion failed for column TRLR3VIN with type object')
+2025-09-02 13:22:03,859 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:22:04,074 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:22:04,170 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:22:04,267 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:22:05,278 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:22:05,359 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:22:05,532 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:22:05,577 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:23:55,077 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-02 13:23:55,077 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-02 13:23:55,077 - __main__ - INFO - Downloading FARS 2019 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2019/National/FARS2019NationalCSV.zip
+2025-09-02 13:23:56,625 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:23:56,662 - __main__ - INFO - Uploading accident.CSV to raw/fars/2019/National/accident.CSV (size=23764896)
+2025-09-02 13:23:56,858 - __main__ - INFO - Uploading CEvent.CSV to raw/fars/2019/National/CEvent.CSV (size=10099932)
+2025-09-02 13:23:57,106 - __main__ - INFO - Uploading Damage.CSV to raw/fars/2019/National/Damage.CSV (size=7871387)
+2025-09-02 13:23:57,238 - __main__ - INFO - Uploading Distract.CSV to raw/fars/2019/National/Distract.CSV (size=2212292)
+2025-09-02 13:23:57,312 - __main__ - INFO - Uploading DrImpair.CSV to raw/fars/2019/National/DrImpair.CSV (size=2604413)
+2025-09-02 13:23:57,404 - __main__ - INFO - Uploading Drugs.CSV to raw/fars/2019/National/Drugs.CSV (size=5979966)
+2025-09-02 13:23:57,586 - __main__ - INFO - Uploading Factor.CSV to raw/fars/2019/National/Factor.CSV (size=1572676)
+2025-09-02 13:23:57,680 - __main__ - INFO - Uploading Maneuver.CSV to raw/fars/2019/National/Maneuver.CSV (size=2232368)
+2025-09-02 13:23:57,748 - __main__ - INFO - Uploading MIACC.CSV to raw/fars/2019/National/MIACC.CSV (size=1035176)
+2025-09-02 13:23:57,813 - __main__ - INFO - Uploading MIDRVACC.CSV to raw/fars/2019/National/MIDRVACC.CSV (size=1015176)
+2025-09-02 13:23:57,875 - __main__ - INFO - Uploading MIPER.CSV to raw/fars/2019/National/MIPER.CSV (size=1990098)
+2025-09-02 13:23:57,992 - __main__ - INFO - Uploading NMCrash.CSV to raw/fars/2019/National/NMCrash.CSV (size=707414)
+2025-09-02 13:23:58,011 - __main__ - INFO - Uploading NMDistract.CSV to raw/fars/2019/National/NMDistract.CSV (size=334518)
+2025-09-02 13:23:58,027 - __main__ - INFO - Uploading NMImpair.CSV to raw/fars/2019/National/NMImpair.CSV (size=400785)
+2025-09-02 13:23:58,085 - __main__ - INFO - Uploading NMPrior.CSV to raw/fars/2019/National/NMPrior.CSV (size=477171)
+2025-09-02 13:23:58,103 - __main__ - INFO - Uploading Parkwork.CSV to raw/fars/2019/National/Parkwork.CSV (size=1307970)
+2025-09-02 13:23:58,148 - __main__ - INFO - Uploading PBType.CSV to raw/fars/2019/National/PBType.CSV (size=3102462)
+2025-09-02 13:23:58,253 - __main__ - INFO - Uploading Person.CSV to raw/fars/2019/National/Person.CSV (size=90995642)
+2025-09-02 13:23:58,795 - __main__ - INFO - Uploading Race.CSV to raw/fars/2019/National/Race.CSV (size=4349924)
+2025-09-02 13:23:58,970 - __main__ - INFO - Uploading SafetyEq.CSV to raw/fars/2019/National/SafetyEq.CSV (size=726499)
+2025-09-02 13:23:59,032 - __main__ - INFO - Uploading vehicle.csv to raw/fars/2019/National/vehicle.csv (size=90255420)
+2025-09-02 13:23:59,667 - __main__ - INFO - Uploading VEvent.CSV to raw/fars/2019/National/VEvent.CSV (size=12402372)
+2025-09-02 13:23:59,982 - __main__ - INFO - Uploading Violatn.CSV to raw/fars/2019/National/Violatn.CSV (size=1950150)
+2025-09-02 13:24:00,081 - __main__ - INFO - Uploading Vision.CSV to raw/fars/2019/National/Vision.CSV (size=2354137)
+2025-09-02 13:24:00,199 - __main__ - INFO - Uploading VPICdecode.CSV to raw/fars/2019/National/VPICdecode.CSV (size=37403936)
+2025-09-02 13:24:00,534 - __main__ - INFO - Uploading VPICTrailerdecode.CSV to raw/fars/2019/National/VPICTrailerdecode.CSV (size=396944)
+2025-09-02 13:24:00,594 - __main__ - INFO - Uploading VSOE.CSV to raw/fars/2019/National/VSOE.CSV (size=7655706)
+2025-09-02 13:24:00,801 - __main__ - INFO - Uploaded 27 file(s) to capstone/raw/fars/2019/National/
+2025-09-02 13:24:01,510 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/accident.CSV to MinIO bucket capstone.
+2025-09-02 13:24:01,751 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/CEvent.CSV to MinIO bucket capstone.
+2025-09-02 13:24:01,990 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Damage.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,067 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Distract.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,147 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/DrImpair.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,298 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Drugs.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,368 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Factor.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,441 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Maneuver.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,559 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,674 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,790 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,823 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMCrash.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,890 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMDistract.CSV to MinIO bucket capstone.
+2025-09-02 13:24:02,963 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMImpair.CSV to MinIO bucket capstone.
+2025-09-02 13:24:03,035 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMPrior.CSV to MinIO bucket capstone.
+2025-09-02 13:24:03,127 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Parkwork.CSV to MinIO bucket capstone.
+2025-09-02 13:24:03,212 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/PBType.CSV to MinIO bucket capstone.
+2025-09-02 13:24:05,040 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Person.CSV to MinIO bucket capstone.
+2025-09-02 13:24:05,218 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Race.CSV to MinIO bucket capstone.
+2025-09-02 13:24:05,257 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/SafetyEq.CSV to MinIO bucket capstone.
+2025-09-02 13:24:07,142 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-02 13:24:07,437 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/VEvent.CSV to MinIO bucket capstone.
+2025-09-02 13:24:07,514 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Violatn.CSV to MinIO bucket capstone.
+2025-09-02 13:24:07,586 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/Vision.CSV to MinIO bucket capstone.
+2025-09-02 13:24:09,035 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/VPICdecode.CSV to MinIO bucket capstone.
+2025-09-02 13:24:09,073 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/VPICTrailerdecode.CSV to MinIO bucket capstone.
+2025-09-02 13:24:09,283 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2019/National/VSOE.CSV to MinIO bucket capstone.
+2025-09-02 13:24:09,285 - __main__ - INFO - Downloading FARS 2020 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2020/National/FARS2020NationalCSV.zip
+2025-09-02 13:24:10,785 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:24:10,786 - __main__ - INFO - Uploading FARS2020NationalCSV/accident.csv to raw/fars/2020/National/accident.csv (size=23081227)
+2025-09-02 13:24:11,042 - __main__ - INFO - Uploading FARS2020NationalCSV/cevent.csv to raw/fars/2020/National/cevent.csv (size=11176477)
+2025-09-02 13:24:11,198 - __main__ - INFO - Uploading FARS2020NationalCSV/crashrf.csv to raw/fars/2020/National/crashrf.csv (size=1148110)
+2025-09-02 13:24:11,232 - __main__ - INFO - Uploading FARS2020NationalCSV/damage.csv to raw/fars/2020/National/damage.csv (size=9028517)
+2025-09-02 13:24:11,481 - __main__ - INFO - Uploading FARS2020NationalCSV/distract.csv to raw/fars/2020/National/distract.csv (size=2335955)
+2025-09-02 13:24:11,572 - __main__ - INFO - Uploading FARS2020NationalCSV/drimpair.csv to raw/fars/2020/National/drimpair.csv (size=2781450)
+2025-09-02 13:24:11,668 - __main__ - INFO - Uploading FARS2020NationalCSV/driverrf.csv to raw/fars/2020/National/driverrf.csv (size=3142601)
+2025-09-02 13:24:11,778 - __main__ - INFO - Uploading FARS2020NationalCSV/drugs.csv to raw/fars/2020/National/drugs.csv (size=6419602)
+2025-09-02 13:24:12,018 - __main__ - INFO - Uploading FARS2020NationalCSV/factor.csv to raw/fars/2020/National/factor.csv (size=1935508)
+2025-09-02 13:24:12,076 - __main__ - INFO - Uploading FARS2020NationalCSV/maneuver.csv to raw/fars/2020/National/maneuver.csv (size=2455039)
+2025-09-02 13:24:12,197 - __main__ - INFO - Uploading FARS2020NationalCSV/MIACC.CSV to raw/fars/2020/National/MIACC.CSV (size=1115048)
+2025-09-02 13:24:12,271 - __main__ - INFO - Uploading FARS2020NationalCSV/MIDRVACC.CSV to raw/fars/2020/National/MIDRVACC.CSV (size=1095501)
+2025-09-02 13:24:12,352 - __main__ - INFO - Uploading FARS2020NationalCSV/MIPER.CSV to raw/fars/2020/National/MIPER.CSV (size=2107451)
+2025-09-02 13:24:12,419 - __main__ - INFO - Uploading FARS2020NationalCSV/nmcrash.csv to raw/fars/2020/National/nmcrash.csv (size=689945)
+2025-09-02 13:24:12,479 - __main__ - INFO - Uploading FARS2020NationalCSV/nmdistract.csv to raw/fars/2020/National/nmdistract.csv (size=342304)
+2025-09-02 13:24:12,538 - __main__ - INFO - Uploading FARS2020NationalCSV/nmimpair.csv to raw/fars/2020/National/nmimpair.csv (size=422802)
+2025-09-02 13:24:12,556 - __main__ - INFO - Uploading FARS2020NationalCSV/nmprior.csv to raw/fars/2020/National/nmprior.csv (size=512988)
+2025-09-02 13:24:12,579 - __main__ - INFO - Uploading FARS2020NationalCSV/parkwork.csv to raw/fars/2020/National/parkwork.csv (size=1804346)
+2025-09-02 13:24:12,605 - __main__ - INFO - Uploading FARS2020NationalCSV/pbtype.csv to raw/fars/2020/National/pbtype.csv (size=3301706)
+2025-09-02 13:24:12,739 - __main__ - INFO - Uploading FARS2020NationalCSV/person.csv to raw/fars/2020/National/person.csv (size=107612299)
+2025-09-02 13:24:13,427 - __main__ - INFO - Uploading FARS2020NationalCSV/personrf.csv to raw/fars/2020/National/personrf.csv (size=2690172)
+2025-09-02 13:24:13,521 - __main__ - INFO - Uploading FARS2020NationalCSV/pvehiclesf.csv to raw/fars/2020/National/pvehiclesf.csv (size=47155)
+2025-09-02 13:24:13,573 - __main__ - INFO - Uploading FARS2020NationalCSV/race.csv to raw/fars/2020/National/race.csv (size=4971179)
+2025-09-02 13:24:13,717 - __main__ - INFO - Uploading FARS2020NationalCSV/safetyeq.csv to raw/fars/2020/National/safetyeq.csv (size=761742)
+2025-09-02 13:24:13,779 - __main__ - INFO - Uploading FARS2020NationalCSV/vehicle.csv to raw/fars/2020/National/vehicle.csv (size=103751724)
+2025-09-02 13:24:14,363 - __main__ - INFO - Uploading FARS2020NationalCSV/vehiclesf.csv to raw/fars/2020/National/vehiclesf.csv (size=1597859)
+2025-09-02 13:24:14,412 - __main__ - INFO - Uploading FARS2020NationalCSV/vevent.csv to raw/fars/2020/National/vevent.csv (size=13583487)
+2025-09-02 13:24:14,633 - __main__ - INFO - Uploading FARS2020NationalCSV/violatn.csv to raw/fars/2020/National/violatn.csv (size=2098680)
+2025-09-02 13:24:14,710 - __main__ - INFO - Uploading FARS2020NationalCSV/vision.csv to raw/fars/2020/National/vision.csv (size=2486860)
+2025-09-02 13:24:14,832 - __main__ - INFO - Uploading FARS2020NationalCSV/vpicdecode.csv to raw/fars/2020/National/vpicdecode.csv (size=39905391)
+2025-09-02 13:24:15,286 - __main__ - INFO - Uploading FARS2020NationalCSV/vpictrailerdecode.csv to raw/fars/2020/National/vpictrailerdecode.csv (size=393796)
+2025-09-02 13:24:15,305 - __main__ - INFO - Uploading FARS2020NationalCSV/vsoe.csv to raw/fars/2020/National/vsoe.csv (size=8336513)
+2025-09-02 13:24:15,525 - __main__ - INFO - Uploading FARS2020NationalCSV/weather.csv to raw/fars/2020/National/weather.csv (size=1049872)
+2025-09-02 13:24:15,564 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2020/National/
+2025-09-02 13:24:16,211 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:24:16,482 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:24:16,577 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:16,808 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:24:16,931 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,009 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,133 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,339 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,429 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,545 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,622 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:17,742 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:17,869 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:24:17,900 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:24:17,969 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:24:18,037 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:24:18,100 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:24:18,193 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:24:18,278 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:24:20,408 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:24:20,540 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:20,601 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:20,786 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/race.parquet to MinIO bucket capstone.
+2025-09-02 13:24:20,826 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:24:22,949 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-02 13:24:23,040 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:23,400 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:24:23,548 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:24:23,625 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:24:25,133 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:24:25,174 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:24:25,364 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:24:25,461 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2020/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:24:25,462 - __main__ - INFO - Downloading FARS 2021 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2021/National/FARS2021NationalCSV.zip
+2025-09-02 13:24:27,023 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:24:27,023 - __main__ - INFO - Uploading FARS2021NationalCSV/accident.csv to raw/fars/2021/National/accident.csv (size=25464921)
+2025-09-02 13:24:27,277 - __main__ - INFO - Uploading FARS2021NationalCSV/cevent.csv to raw/fars/2021/National/cevent.csv (size=12102736)
+2025-09-02 13:24:27,473 - __main__ - INFO - Uploading FARS2021NationalCSV/crashrf.csv to raw/fars/2021/National/crashrf.csv (size=1239444)
+2025-09-02 13:24:27,508 - __main__ - INFO - Uploading FARS2021NationalCSV/damage.csv to raw/fars/2021/National/damage.csv (size=9722663)
+2025-09-02 13:24:27,724 - __main__ - INFO - Uploading FARS2021NationalCSV/distract.csv to raw/fars/2021/National/distract.csv (size=2589619)
+2025-09-02 13:24:27,817 - __main__ - INFO - Uploading FARS2021NationalCSV/drimpair.csv to raw/fars/2021/National/drimpair.csv (size=3064041)
+2025-09-02 13:24:27,894 - __main__ - INFO - Uploading FARS2021NationalCSV/driverrf.csv to raw/fars/2021/National/driverrf.csv (size=3405786)
+2025-09-02 13:24:28,017 - __main__ - INFO - Uploading FARS2021NationalCSV/drugs.csv to raw/fars/2021/National/drugs.csv (size=7106206)
+2025-09-02 13:24:28,242 - __main__ - INFO - Uploading FARS2021NationalCSV/factor.csv to raw/fars/2021/National/factor.csv (size=2132616)
+2025-09-02 13:24:28,313 - __main__ - INFO - Uploading FARS2021NationalCSV/maneuver.csv to raw/fars/2021/National/maneuver.csv (size=2698834)
+2025-09-02 13:24:28,448 - __main__ - INFO - Uploading FARS2021NationalCSV/MIACC.CSV to raw/fars/2021/National/MIACC.CSV (size=1199569)
+2025-09-02 13:24:28,497 - __main__ - INFO - Uploading FARS2021NationalCSV/MIDRVACC.CSV to raw/fars/2021/National/MIDRVACC.CSV (size=1179168)
+2025-09-02 13:24:28,570 - __main__ - INFO - Uploading FARS2021NationalCSV/MIPER.CSV to raw/fars/2021/National/MIPER.CSV (size=2316828)
+2025-09-02 13:24:28,639 - __main__ - INFO - Uploading FARS2021NationalCSV/nmcrash.csv to raw/fars/2021/National/nmcrash.csv (size=777600)
+2025-09-02 13:24:28,669 - __main__ - INFO - Uploading FARS2021NationalCSV/nmdistract.csv to raw/fars/2021/National/nmdistract.csv (size=383538)
+2025-09-02 13:24:28,729 - __main__ - INFO - Uploading FARS2021NationalCSV/nmimpair.csv to raw/fars/2021/National/nmimpair.csv (size=462854)
+2025-09-02 13:24:28,748 - __main__ - INFO - Uploading FARS2021NationalCSV/nmprior.csv to raw/fars/2021/National/nmprior.csv (size=575905)
+2025-09-02 13:24:28,810 - __main__ - INFO - Uploading FARS2021NationalCSV/parkwork.csv to raw/fars/2021/National/parkwork.csv (size=2058155)
+2025-09-02 13:24:28,887 - __main__ - INFO - Uploading FARS2021NationalCSV/pbtype.csv to raw/fars/2021/National/pbtype.csv (size=3698028)
+2025-09-02 13:24:28,997 - __main__ - INFO - Uploading FARS2021NationalCSV/person.csv to raw/fars/2021/National/person.csv (size=122053999)
+2025-09-02 13:24:29,894 - __main__ - INFO - Uploading FARS2021NationalCSV/personrf.csv to raw/fars/2021/National/personrf.csv (size=2937186)
+2025-09-02 13:24:30,032 - __main__ - INFO - Uploading FARS2021NationalCSV/pvehiclesf.csv to raw/fars/2021/National/pvehiclesf.csv (size=51719)
+2025-09-02 13:24:30,087 - __main__ - INFO - Uploading FARS2021NationalCSV/race.csv to raw/fars/2021/National/race.csv (size=5531744)
+2025-09-02 13:24:30,316 - __main__ - INFO - Uploading FARS2021NationalCSV/safetyeq.csv to raw/fars/2021/National/safetyeq.csv (size=848061)
+2025-09-02 13:24:30,338 - __main__ - INFO - Uploading FARS2021NationalCSV/vehicle.csv to raw/fars/2021/National/vehicle.csv (size=117115395)
+2025-09-02 13:24:31,039 - __main__ - INFO - Uploading FARS2021NationalCSV/vehiclesf.csv to raw/fars/2021/National/vehiclesf.csv (size=1749094)
+2025-09-02 13:24:31,140 - __main__ - INFO - Uploading FARS2021NationalCSV/vevent.csv to raw/fars/2021/National/vevent.csv (size=14881262)
+2025-09-02 13:24:31,357 - __main__ - INFO - Uploading FARS2021NationalCSV/violatn.csv to raw/fars/2021/National/violatn.csv (size=2303174)
+2025-09-02 13:24:31,447 - __main__ - INFO - Uploading FARS2021NationalCSV/vision.csv to raw/fars/2021/National/vision.csv (size=2752370)
+2025-09-02 13:24:31,516 - __main__ - INFO - Uploading FARS2021NationalCSV/vpicdecode.csv to raw/fars/2021/National/vpicdecode.csv (size=46432914)
+2025-09-02 13:24:31,845 - __main__ - INFO - Uploading FARS2021NationalCSV/vpictrailerdecode.csv to raw/fars/2021/National/vpictrailerdecode.csv (size=503439)
+2025-09-02 13:24:31,864 - __main__ - INFO - Uploading FARS2021NationalCSV/vsoe.csv to raw/fars/2021/National/vsoe.csv (size=9139577)
+2025-09-02 13:24:32,020 - __main__ - INFO - Uploading FARS2021NationalCSV/weather.csv to raw/fars/2021/National/weather.csv (size=1115662)
+2025-09-02 13:24:32,081 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2021/National/
+2025-09-02 13:24:32,790 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,102 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,200 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,474 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,559 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,686 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,776 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:33,994 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,074 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,158 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,241 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:34,365 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:34,497 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:24:34,530 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,558 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,584 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,611 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,673 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:24:34,805 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:24:37,211 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:24:37,380 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:37,439 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:37,592 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/race.parquet to MinIO bucket capstone.
+2025-09-02 13:24:37,633 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:24:39,853 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-02 13:24:39,979 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:40,344 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:24:40,469 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:24:40,574 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:24:42,278 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:24:42,324 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:24:42,565 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:24:42,664 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2021/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:24:42,665 - __main__ - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-02 13:24:44,114 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:24:44,115 - __main__ - INFO - Uploading FARS2022NationalCSV/accident.csv to raw/fars/2022/National/accident.csv (size=25219608)
+2025-09-02 13:24:44,340 - __main__ - INFO - Uploading FARS2022NationalCSV/cevent.csv to raw/fars/2022/National/cevent.csv (size=11843381)
+2025-09-02 13:24:44,552 - __main__ - INFO - Uploading FARS2022NationalCSV/crashrf.csv to raw/fars/2022/National/crashrf.csv (size=1449559)
+2025-09-02 13:24:44,594 - __main__ - INFO - Uploading FARS2022NationalCSV/damage.csv to raw/fars/2022/National/damage.csv (size=9711142)
+2025-09-02 13:24:44,764 - __main__ - INFO - Uploading FARS2022NationalCSV/distract.csv to raw/fars/2022/National/distract.csv (size=2550532)
+2025-09-02 13:24:44,844 - __main__ - INFO - Uploading FARS2022NationalCSV/drimpair.csv to raw/fars/2022/National/drimpair.csv (size=2992010)
+2025-09-02 13:24:44,952 - __main__ - INFO - Uploading FARS2022NationalCSV/driverrf.csv to raw/fars/2022/National/driverrf.csv (size=3599738)
+2025-09-02 13:24:45,090 - __main__ - INFO - Uploading FARS2022NationalCSV/drugs.csv to raw/fars/2022/National/drugs.csv (size=7781009)
+2025-09-02 13:24:45,304 - __main__ - INFO - Uploading FARS2022NationalCSV/factor.csv to raw/fars/2022/National/factor.csv (size=2087746)
+2025-09-02 13:24:45,390 - __main__ - INFO - Uploading FARS2022NationalCSV/maneuver.csv to raw/fars/2022/National/maneuver.csv (size=2659981)
+2025-09-02 13:24:45,483 - __main__ - INFO - Uploading FARS2022NationalCSV/MIACC.CSV to raw/fars/2022/National/MIACC.CSV (size=1188017)
+2025-09-02 13:24:45,557 - __main__ - INFO - Uploading FARS2022NationalCSV/MIDRVACC.CSV to raw/fars/2022/National/MIDRVACC.CSV (size=1167243)
+2025-09-02 13:24:45,593 - __main__ - INFO - Uploading FARS2022NationalCSV/MIPER.CSV to raw/fars/2022/National/MIPER.CSV (size=2293343)
+2025-09-02 13:24:45,729 - __main__ - INFO - Uploading FARS2022NationalCSV/nmcrash.csv to raw/fars/2022/National/nmcrash.csv (size=822617)
+2025-09-02 13:24:45,762 - __main__ - INFO - Uploading FARS2022NationalCSV/nmdistract.csv to raw/fars/2022/National/nmdistract.csv (size=403668)
+2025-09-02 13:24:45,820 - __main__ - INFO - Uploading FARS2022NationalCSV/nmimpair.csv to raw/fars/2022/National/nmimpair.csv (size=481811)
+2025-09-02 13:24:45,838 - __main__ - INFO - Uploading FARS2022NationalCSV/nmprior.csv to raw/fars/2022/National/nmprior.csv (size=597479)
+2025-09-02 13:24:45,896 - __main__ - INFO - Uploading FARS2022NationalCSV/parkwork.csv to raw/fars/2022/National/parkwork.csv (size=1841241)
+2025-09-02 13:24:45,990 - __main__ - INFO - Uploading FARS2022NationalCSV/pbtype.csv to raw/fars/2022/National/pbtype.csv (size=3842930)
+2025-09-02 13:24:46,104 - __main__ - INFO - Uploading FARS2022NationalCSV/person.csv to raw/fars/2022/National/person.csv (size=116735456)
+2025-09-02 13:24:46,798 - __main__ - INFO - Uploading FARS2022NationalCSV/personrf.csv to raw/fars/2022/National/personrf.csv (size=3469226)
+2025-09-02 13:24:46,915 - __main__ - INFO - Uploading FARS2022NationalCSV/pvehiclesf.csv to raw/fars/2022/National/pvehiclesf.csv (size=57077)
+2025-09-02 13:24:46,969 - __main__ - INFO - Uploading FARS2022NationalCSV/race.csv to raw/fars/2022/National/race.csv (size=5449171)
+2025-09-02 13:24:47,188 - __main__ - INFO - Uploading FARS2022NationalCSV/safetyeq.csv to raw/fars/2022/National/safetyeq.csv (size=889152)
+2025-09-02 13:24:47,230 - __main__ - INFO - Uploading FARS2022NationalCSV/vehicle.csv to raw/fars/2022/National/vehicle.csv (size=113583661)
+2025-09-02 13:24:47,917 - __main__ - INFO - Uploading FARS2022NationalCSV/vehiclesf.csv to raw/fars/2022/National/vehiclesf.csv (size=2077845)
+2025-09-02 13:24:47,993 - __main__ - INFO - Uploading FARS2022NationalCSV/vevent.csv to raw/fars/2022/National/vevent.csv (size=14548801)
+2025-09-02 13:24:48,209 - __main__ - INFO - Uploading FARS2022NationalCSV/violatn.csv to raw/fars/2022/National/violatn.csv (size=2267197)
+2025-09-02 13:24:48,264 - __main__ - INFO - Uploading FARS2022NationalCSV/vision.csv to raw/fars/2022/National/vision.csv (size=2705133)
+2025-09-02 13:24:48,351 - __main__ - INFO - Uploading FARS2022NationalCSV/vpicdecode.csv to raw/fars/2022/National/vpicdecode.csv (size=47813632)
+2025-09-02 13:24:48,760 - __main__ - INFO - Uploading FARS2022NationalCSV/vpictrailerdecode.csv to raw/fars/2022/National/vpictrailerdecode.csv (size=509384)
+2025-09-02 13:24:48,780 - __main__ - INFO - Uploading FARS2022NationalCSV/vsoe.csv to raw/fars/2022/National/vsoe.csv (size=8926141)
+2025-09-02 13:24:49,015 - __main__ - INFO - Uploading FARS2022NationalCSV/weather.csv to raw/fars/2022/National/weather.csv (size=1101942)
+2025-09-02 13:24:49,048 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2022/National/
+2025-09-02 13:24:49,703 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:24:50,106 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:24:50,212 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:50,505 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:24:50,632 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:24:50,756 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:24:50,909 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,109 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,234 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,361 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,454 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:51,541 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:24:51,721 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:24:51,759 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,789 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,817 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,848 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:24:51,944 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:24:52,092 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:24:54,464 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:24:54,596 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:54,650 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:54,845 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/race.parquet to MinIO bucket capstone.
+2025-09-02 13:24:54,889 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:24:57,151 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-02 13:24:57,258 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:24:57,640 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:24:57,768 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:24:57,893 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:24:59,724 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:24:59,776 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:25:00,083 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:25:00,146 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2022/National/weather.parquet to MinIO bucket capstone.
+2025-09-02 13:25:00,147 - __main__ - INFO - Downloading FARS 2023 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip
+2025-09-02 13:25:01,631 - __main__ - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-02 13:25:01,632 - __main__ - INFO - Uploading FARS2023NationalCSV/accident.csv to raw/fars/2023/National/accident.csv (size=23978421)
+2025-09-02 13:25:01,908 - __main__ - INFO - Uploading FARS2023NationalCSV/cevent.csv to raw/fars/2023/National/cevent.csv (size=10988036)
+2025-09-02 13:25:02,023 - __main__ - INFO - Uploading FARS2023NationalCSV/crashrf.csv to raw/fars/2023/National/crashrf.csv (size=1382559)
+2025-09-02 13:25:02,081 - __main__ - INFO - Uploading FARS2023NationalCSV/damage.csv to raw/fars/2023/National/damage.csv (size=9311822)
+2025-09-02 13:25:02,284 - __main__ - INFO - Uploading FARS2023NationalCSV/distract.csv to raw/fars/2023/National/distract.csv (size=2450364)
+2025-09-02 13:25:02,346 - __main__ - INFO - Uploading FARS2023NationalCSV/drimpair.csv to raw/fars/2023/National/drimpair.csv (size=2825211)
+2025-09-02 13:25:02,427 - __main__ - INFO - Uploading FARS2023NationalCSV/driverrf.csv to raw/fars/2023/National/driverrf.csv (size=3413664)
+2025-09-02 13:25:02,562 - __main__ - INFO - Uploading FARS2023NationalCSV/drugs.csv to raw/fars/2023/National/drugs.csv (size=20623587)
+2025-09-02 13:25:02,695 - __main__ - INFO - Uploading FARS2023NationalCSV/factor.csv to raw/fars/2023/National/factor.csv (size=2006149)
+2025-09-02 13:25:02,772 - __main__ - INFO - Uploading FARS2023NationalCSV/maneuver.csv to raw/fars/2023/National/maneuver.csv (size=2553981)
+2025-09-02 13:25:02,911 - __main__ - INFO - Uploading FARS2023NationalCSV/MIACC.CSV to raw/fars/2023/National/MIACC.CSV (size=1132035)
+2025-09-02 13:25:02,944 - __main__ - INFO - Uploading FARS2023NationalCSV/MIDRVACC.CSV to raw/fars/2023/National/MIDRVACC.CSV (size=1110860)
+2025-09-02 13:25:03,033 - __main__ - INFO - Uploading FARS2023NationalCSV/MIPER.CSV to raw/fars/2023/National/MIPER.CSV (size=2200632)
+2025-09-02 13:25:03,103 - __main__ - INFO - Uploading FARS2023NationalCSV/nmcrash.csv to raw/fars/2023/National/nmcrash.csv (size=810535)
+2025-09-02 13:25:03,124 - __main__ - INFO - Uploading FARS2023NationalCSV/nmdistract.csv to raw/fars/2023/National/nmdistract.csv (size=390716)
+2025-09-02 13:25:03,142 - __main__ - INFO - Uploading FARS2023NationalCSV/nmimpair.csv to raw/fars/2023/National/nmimpair.csv (size=455463)
+2025-09-02 13:25:03,161 - __main__ - INFO - Uploading FARS2023NationalCSV/nmprior.csv to raw/fars/2023/National/nmprior.csv (size=572050)
+2025-09-02 13:25:03,221 - __main__ - INFO - Uploading FARS2023NationalCSV/parkwork.csv to raw/fars/2023/National/parkwork.csv (size=1728319)
+2025-09-02 13:25:03,298 - __main__ - INFO - Uploading FARS2023NationalCSV/pbtype.csv to raw/fars/2023/National/pbtype.csv (size=3725324)
+2025-09-02 13:25:03,415 - __main__ - INFO - Uploading FARS2023NationalCSV/person.csv to raw/fars/2023/National/person.csv (size=111889636)
+2025-09-02 13:25:04,077 - __main__ - INFO - Uploading FARS2023NationalCSV/personrf.csv to raw/fars/2023/National/personrf.csv (size=3334145)
+2025-09-02 13:25:04,146 - __main__ - INFO - Uploading FARS2023NationalCSV/pvehiclesf.csv to raw/fars/2023/National/pvehiclesf.csv (size=53317)
+2025-09-02 13:25:04,200 - __main__ - INFO - Uploading FARS2023NationalCSV/race.csv to raw/fars/2023/National/race.csv (size=5227531)
+2025-09-02 13:25:04,382 - __main__ - INFO - Uploading FARS2023NationalCSV/safetyeq.csv to raw/fars/2023/National/safetyeq.csv (size=853574)
+2025-09-02 13:25:04,415 - __main__ - INFO - Uploading FARS2023NationalCSV/vehicle.csv to raw/fars/2023/National/vehicle.csv (size=112715066)
+2025-09-02 13:25:05,077 - __main__ - INFO - Uploading FARS2023NationalCSV/vehiclesf.csv to raw/fars/2023/National/vehiclesf.csv (size=1990100)
+2025-09-02 13:25:05,125 - __main__ - INFO - Uploading FARS2023NationalCSV/vevent.csv to raw/fars/2023/National/vevent.csv (size=13581368)
+2025-09-02 13:25:05,244 - __main__ - INFO - Uploading FARS2023NationalCSV/violatn.csv to raw/fars/2023/National/violatn.csv (size=2110229)
+2025-09-02 13:25:05,320 - __main__ - INFO - Uploading FARS2023NationalCSV/vision.csv to raw/fars/2023/National/vision.csv (size=2596686)
+2025-09-02 13:25:05,397 - __main__ - INFO - Uploading FARS2023NationalCSV/vpicdecode.csv to raw/fars/2023/National/vpicdecode.csv (size=46396641)
+2025-09-02 13:25:05,763 - __main__ - INFO - Uploading FARS2023NationalCSV/vpictrailerdecode.csv to raw/fars/2023/National/vpictrailerdecode.csv (size=536480)
+2025-09-02 13:25:05,782 - __main__ - INFO - Uploading FARS2023NationalCSV/vsoe.csv to raw/fars/2023/National/vsoe.csv (size=8361051)
+2025-09-02 13:25:05,988 - __main__ - INFO - Uploading FARS2023NationalCSV/weather.csv to raw/fars/2023/National/weather.csv (size=1052069)
+2025-09-02 13:25:06,023 - __main__ - INFO - Uploaded 33 file(s) to capstone/raw/fars/2023/National/
+2025-09-02 13:25:06,807 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/accident.parquet to MinIO bucket capstone.
+2025-09-02 13:25:07,126 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/cevent.parquet to MinIO bucket capstone.
+2025-09-02 13:25:07,193 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-02 13:25:07,493 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/damage.parquet to MinIO bucket capstone.
+2025-09-02 13:25:07,624 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/distract.parquet to MinIO bucket capstone.
+2025-09-02 13:25:07,716 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:25:07,853 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-02 13:25:08,325 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/drugs.parquet to MinIO bucket capstone.
+2025-09-02 13:25:08,459 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/factor.parquet to MinIO bucket capstone.
+2025-09-02 13:25:08,543 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-02 13:25:08,628 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIACC.CSV to MinIO bucket capstone.
+2025-09-02 13:25:08,752 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIDRVACC.CSV to MinIO bucket capstone.
+2025-09-02 13:25:08,889 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIPER.CSV to MinIO bucket capstone.
+2025-09-02 13:25:08,926 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-02 13:25:08,954 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-02 13:25:08,983 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-02 13:25:09,013 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-02 13:25:09,120 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-02 13:25:09,264 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-02 13:25:11,987 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/person.parquet to MinIO bucket capstone.
+2025-09-02 13:25:12,176 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/personrf.parquet to MinIO bucket capstone.
+2025-09-02 13:25:12,240 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:25:12,402 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/race.parquet to MinIO bucket capstone.
+2025-09-02 13:25:12,449 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-02 13:25:14,659 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-02 13:25:14,755 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-02 13:25:15,097 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vevent.parquet to MinIO bucket capstone.
+2025-09-02 13:25:15,185 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/violatn.parquet to MinIO bucket capstone.
+2025-09-02 13:25:15,272 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vision.parquet to MinIO bucket capstone.
+2025-09-02 13:25:17,095 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:25:17,200 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-02 13:25:17,449 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-02 13:25:17,551 - __main__ - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.

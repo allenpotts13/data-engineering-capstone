@@ -2,3 +2,4 @@ dotenv
 pandas
 minio
 requests
+pyarrow
