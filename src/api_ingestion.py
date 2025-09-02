@@ -20,8 +20,10 @@ minio_client = get_minio_client()
 def _default_fars_zip_url(year: int, scope: str = "National") -> str:
     year = str(year)
     scope_clean = scope.strip().title()
-    return (f"https://static.nhtsa.gov/nhtsa/downloads/FARS/{year}/"
-            f"{scope_clean}/FARS{year}{scope_clean}CSV.zip")
+    return (
+        f"https://static.nhtsa.gov/nhtsa/downloads/FARS/{year}/"
+        f"{scope_clean}/FARS{year}{scope_clean}CSV.zip"
+    )
 
 
 def ingest_fars_zip_to_minio(
@@ -51,10 +53,7 @@ def ingest_fars_zip_to_minio(
                 downloaded = 0
                 chunk_size = 1024 * 1024
 
-                with tempfile.NamedTemporaryFile(
-                    delete=False,
-                    suffix=".zip"
-                ) as tmp:
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".zip") as tmp:
                     tmp_path = tmp.name
                     for chunk in r.iter_content(chunk_size=chunk_size):
                         if not chunk:
@@ -64,8 +63,7 @@ def ingest_fars_zip_to_minio(
                         if total:
                             pct = downloaded / total * 100
                             print(
-                                f"  ... {downloaded/1_048_576:.1f} MB "
-                                f"({pct:.1f}%)",
+                                f"  ... {downloaded/1_048_576:.1f} MB " f"({pct:.1f}%)",
                                 end="\r",
                             )
                     print()
