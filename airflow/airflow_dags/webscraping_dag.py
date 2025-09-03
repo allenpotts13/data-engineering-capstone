@@ -4,13 +4,13 @@ import sys
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "src"))
 )
+import logging
 from datetime import datetime
 
 import pendulum
 from airflow.providers.standard.operators.python import PythonOperator
 
 from airflow import DAG
-import logging
 
 logger = logging.getLogger(__name__)
 
