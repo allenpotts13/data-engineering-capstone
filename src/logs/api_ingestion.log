@@ -6327,3 +6327,8 @@ minio.error.S3Error: S3 operation failed; code: AccessDenied, message: Access de
 2025-09-03 19:51:46,261 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
 2025-09-03 19:51:46,429 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
 2025-09-03 19:51:46,487 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.
+2025-09-03 15:44:40,879 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-03 15:44:40,880 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-03 15:44:40,917 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-03 15:44:40,918 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-03 15:44:40,921 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
