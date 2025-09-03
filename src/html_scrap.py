@@ -186,7 +186,7 @@ def csv_to_parquet_and_upload(
 def main():
     result = scrape_helmet_laws()
     if not result:
-        return
+        return False
     headers, helmet_laws = result
     date_str = datetime.now().strftime("%Y%m%d")
     csv_filename = f"motorcycle_helmet_laws_{date_str}.csv"
@@ -199,6 +199,7 @@ def main():
     csv_to_parquet_and_upload(
         minio_client, bucket_name, minio_csv_path, parquet_filename
     )
+    return True
 
 
 if __name__ == "__main__":
