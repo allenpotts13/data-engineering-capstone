@@ -46,15 +46,19 @@ def ingest_fars_zip_to_minio(
 
     try:
         with requests_session_with_retries() as session:
-            with session.get(zip_url, timeout=timeout, stream=True) as r:
-                r.raise_for_status()
-                total = int(r.headers.get("Content-Length") or 0)
+            with session.get(
+                zip_url, timeout=timeout, stream=True
+            ) as zip_download_response:
+                zip_download_response.raise_for_status()
+                total = int(zip_download_response.headers.get("Content-Length") or 0)
                 downloaded = 0
                 chunk_size = 1024 * 1024
 
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".zip") as tmp:
                     tmp_path = tmp.name
-                    for chunk in r.iter_content(chunk_size=chunk_size):
+                    for chunk in zip_download_response.iter_content(
+                        chunk_size=chunk_size
+                    ):
                         if not chunk:
                             continue
                         tmp.write(chunk)
@@ -71,6 +75,8 @@ def ingest_fars_zip_to_minio(
         logger.info("ZIP downloaded; starting unzip/upload phase")
 
         minio_client = get_minio_client()
+        if not minio_client.bucket_exists(bucket):
+            minio_client.make_bucket(bucket)
         with zipfile.ZipFile(tmp_path) as zip_file:
             zip_file_list = [
                 zip_info for zip_info in zip_file.infolist() if not zip_info.is_dir()
@@ -128,6 +134,8 @@ def ingest_fars_zip_to_minio(
 def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | None:
     try:
         minio_client = get_minio_client()
+        if not minio_client.bucket_exists(bucket_name):
+            minio_client.make_bucket(bucket_name)
         minio_object_response = minio_client.get_object(bucket_name, csv_object_name)
         data = minio_object_response.read()
         if not data:
@@ -140,9 +148,11 @@ def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | Non
         parquet_buf = BytesIO()
         ftp_call.to_parquet(parquet_buf, index=False, engine="pyarrow")
         parquet_buf.seek(0)
-        parquet_key = csv_object_name.replace(".csv", ".parquet").replace(
-            "raw/", "parquet/"
-        )
+        # Ensure both .csv and .CSV extensions are replaced with .parquet
+        base_key = csv_object_name
+        if base_key.lower().endswith(".csv"):
+            base_key = base_key[: -(len(".csv"))] + ".parquet"
+        parquet_key = base_key.replace("raw/", "parquet/")
 
         minio_client.put_object(
             bucket_name,
@@ -190,6 +200,7 @@ def main():
             upload_to_minio_parquet(csv_object_name, bucket_name)
 
     print("API ingestion and Parquet upload complete.")
+    return True
 
 
 if __name__ == "__main__":
