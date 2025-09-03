@@ -1438,3 +1438,13 @@ urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='host.docker.internal'
 2025-09-02 18:48:56,475 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
 2025-09-02 18:48:56,475 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
 2025-09-02 18:48:56,477 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-03 09:41:43,683 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-03 09:41:43,685 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-03 09:41:43,718 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-03 09:41:43,718 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-03 09:41:43,720 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
+2025-09-03 09:43:10,806 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-03 09:43:10,808 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-03 09:43:10,841 - src.api_ingestion - INFO - Uploading test.csv to raw/fars/2022/National/test.csv (size=4)
+2025-09-03 09:43:10,842 - src.api_ingestion - INFO - Uploaded 1 file(s) to capstone/raw/fars/2022/National/
+2025-09-03 09:43:10,844 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/test.parquet to MinIO bucket bucket.
