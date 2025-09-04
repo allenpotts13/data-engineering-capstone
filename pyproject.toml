@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "potts-capstone"
+version = "0.1.0"
+description = "Motorcycle crash statistics and data"
+authors = ["Allen <129114411+allenpotts13@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+pandas = "*"
+minio = "*"
+requests = "*"
+pyarrow = "*"
+beautifulsoup4 = "*"
+cryptography = "*"
+apache-airflow = "*"
+duckdb = "*"
+python-dotenv = "*"
+dotenv = "*"
+
+[tool.poetry.group.dev.dependencies]
+isort = "*"
+black = "*"
+bandit = "*"
+flake8 = "*"
+pytest = "*"
+setuptools = ">=78.1.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
