@@ -6667,3 +6667,338 @@ minio.error.S3Error: S3 operation failed; code: AccessDenied, message: Access de
 2025-09-04 04:29:48,446 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
 2025-09-04 04:29:48,622 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
 2025-09-04 04:29:48,680 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.
+2025-09-05 13:50:25,760 - src.api_ingestion - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-05 13:50:25,761 - src.api_ingestion - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-05 13:50:25,761 - src.api_ingestion - INFO - Downloading FARS 2019 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2019/National/FARS2019NationalCSV.zip
+2025-09-05 13:50:27,475 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-05 13:50:27,482 - src.api_ingestion - INFO - Uploading accident.CSV to raw/fars/2019/National/accident.CSV (size=23764896)
+2025-09-05 13:50:27,625 - src.api_ingestion - INFO - Uploading CEvent.CSV to raw/fars/2019/National/CEvent.CSV (size=10099932)
+2025-09-05 13:50:27,697 - src.api_ingestion - INFO - Uploading Damage.CSV to raw/fars/2019/National/Damage.CSV (size=7871387)
+2025-09-05 13:50:27,774 - src.api_ingestion - INFO - Uploading Distract.CSV to raw/fars/2019/National/Distract.CSV (size=2212292)
+2025-09-05 13:50:27,802 - src.api_ingestion - INFO - Uploading DrImpair.CSV to raw/fars/2019/National/DrImpair.CSV (size=2604413)
+2025-09-05 13:50:27,832 - src.api_ingestion - INFO - Uploading Drugs.CSV to raw/fars/2019/National/Drugs.CSV (size=5979966)
+2025-09-05 13:50:27,892 - src.api_ingestion - INFO - Uploading Factor.CSV to raw/fars/2019/National/Factor.CSV (size=1572676)
+2025-09-05 13:50:27,918 - src.api_ingestion - INFO - Uploading Maneuver.CSV to raw/fars/2019/National/Maneuver.CSV (size=2232368)
+2025-09-05 13:50:27,947 - src.api_ingestion - INFO - Uploading MIACC.CSV to raw/fars/2019/National/MIACC.CSV (size=1035176)
+2025-09-05 13:50:27,974 - src.api_ingestion - INFO - Uploading MIDRVACC.CSV to raw/fars/2019/National/MIDRVACC.CSV (size=1015176)
+2025-09-05 13:50:27,998 - src.api_ingestion - INFO - Uploading MIPER.CSV to raw/fars/2019/National/MIPER.CSV (size=1990098)
+2025-09-05 13:50:28,585 - src.api_ingestion - INFO - Uploading NMCrash.CSV to raw/fars/2019/National/NMCrash.CSV (size=707414)
+2025-09-05 13:50:28,610 - src.api_ingestion - INFO - Uploading NMDistract.CSV to raw/fars/2019/National/NMDistract.CSV (size=334518)
+2025-09-05 13:50:28,631 - src.api_ingestion - INFO - Uploading NMImpair.CSV to raw/fars/2019/National/NMImpair.CSV (size=400785)
+2025-09-05 13:50:28,652 - src.api_ingestion - INFO - Uploading NMPrior.CSV to raw/fars/2019/National/NMPrior.CSV (size=477171)
+2025-09-05 13:50:28,672 - src.api_ingestion - INFO - Uploading Parkwork.CSV to raw/fars/2019/National/Parkwork.CSV (size=1307970)
+2025-09-05 13:50:28,701 - src.api_ingestion - INFO - Uploading PBType.CSV to raw/fars/2019/National/PBType.CSV (size=3102462)
+2025-09-05 13:50:28,743 - src.api_ingestion - INFO - Uploading Person.CSV to raw/fars/2019/National/Person.CSV (size=90995642)
+2025-09-05 13:50:29,009 - src.api_ingestion - INFO - Uploading Race.CSV to raw/fars/2019/National/Race.CSV (size=4349924)
+2025-09-05 13:50:29,050 - src.api_ingestion - INFO - Uploading SafetyEq.CSV to raw/fars/2019/National/SafetyEq.CSV (size=726499)
+2025-09-05 13:50:29,072 - src.api_ingestion - INFO - Uploading vehicle.csv to raw/fars/2019/National/vehicle.csv (size=90255420)
+2025-09-05 13:50:29,369 - src.api_ingestion - INFO - Uploading VEvent.CSV to raw/fars/2019/National/VEvent.CSV (size=12402372)
+2025-09-05 13:50:29,448 - src.api_ingestion - INFO - Uploading Violatn.CSV to raw/fars/2019/National/Violatn.CSV (size=1950150)
+2025-09-05 13:50:29,475 - src.api_ingestion - INFO - Uploading Vision.CSV to raw/fars/2019/National/Vision.CSV (size=2354137)
+2025-09-05 13:50:29,502 - src.api_ingestion - INFO - Uploading VPICdecode.CSV to raw/fars/2019/National/VPICdecode.CSV (size=37403936)
+2025-09-05 13:50:29,659 - src.api_ingestion - INFO - Uploading VPICTrailerdecode.CSV to raw/fars/2019/National/VPICTrailerdecode.CSV (size=396944)
+2025-09-05 13:50:29,679 - src.api_ingestion - INFO - Uploading VSOE.CSV to raw/fars/2019/National/VSOE.CSV (size=7655706)
+2025-09-05 13:50:29,758 - src.api_ingestion - INFO - Uploaded 27 file(s) to capstone/raw/fars/2019/National/
+2025-09-05 13:50:30,399 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/accident.parquet to MinIO bucket capstone.
+2025-09-05 13:50:30,653 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/CEvent.parquet to MinIO bucket capstone.
+2025-09-05 13:50:30,838 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Damage.parquet to MinIO bucket capstone.
+2025-09-05 13:50:30,919 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Distract.parquet to MinIO bucket capstone.
+2025-09-05 13:50:30,987 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/DrImpair.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,128 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Drugs.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,195 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Factor.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,260 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Maneuver.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,327 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIACC.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,390 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIDRVACC.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,493 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/MIPER.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,529 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMCrash.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,554 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMDistract.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,583 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMImpair.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,609 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/NMPrior.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,658 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Parkwork.parquet to MinIO bucket capstone.
+2025-09-05 13:50:31,753 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/PBType.parquet to MinIO bucket capstone.
+2025-09-05 13:50:33,606 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Person.parquet to MinIO bucket capstone.
+2025-09-05 13:50:33,754 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Race.parquet to MinIO bucket capstone.
+2025-09-05 13:50:33,796 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/SafetyEq.parquet to MinIO bucket capstone.
+2025-09-05 13:50:35,585 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-05 13:50:35,903 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/VEvent.parquet to MinIO bucket capstone.
+2025-09-05 13:50:35,981 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Violatn.parquet to MinIO bucket capstone.
+2025-09-05 13:50:36,041 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/Vision.parquet to MinIO bucket capstone.
+2025-09-05 13:50:37,104 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/VPICdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:50:37,158 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/VPICTrailerdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:50:37,321 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2019/National/VSOE.parquet to MinIO bucket capstone.
+2025-09-05 13:50:37,331 - src.api_ingestion - INFO - Downloading FARS 2020 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2020/National/FARS2020NationalCSV.zip
+2025-09-05 13:50:39,264 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-05 13:50:39,268 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/accident.csv to raw/fars/2020/National/accident.csv (size=23081227)
+2025-09-05 13:50:39,364 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/cevent.csv to raw/fars/2020/National/cevent.csv (size=11176477)
+2025-09-05 13:50:39,424 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/crashrf.csv to raw/fars/2020/National/crashrf.csv (size=1148110)
+2025-09-05 13:50:39,445 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/damage.csv to raw/fars/2020/National/damage.csv (size=9028517)
+2025-09-05 13:50:39,497 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/distract.csv to raw/fars/2020/National/distract.csv (size=2335955)
+2025-09-05 13:50:39,526 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/drimpair.csv to raw/fars/2020/National/drimpair.csv (size=2781450)
+2025-09-05 13:50:39,553 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/driverrf.csv to raw/fars/2020/National/driverrf.csv (size=3142601)
+2025-09-05 13:50:39,586 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/drugs.csv to raw/fars/2020/National/drugs.csv (size=6419602)
+2025-09-05 13:50:39,642 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/factor.csv to raw/fars/2020/National/factor.csv (size=1935508)
+2025-09-05 13:50:39,670 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/maneuver.csv to raw/fars/2020/National/maneuver.csv (size=2455039)
+2025-09-05 13:50:39,695 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/MIACC.CSV to raw/fars/2020/National/MIACC.CSV (size=1115048)
+2025-09-05 13:50:39,723 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/MIDRVACC.CSV to raw/fars/2020/National/MIDRVACC.CSV (size=1095501)
+2025-09-05 13:50:39,746 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/MIPER.CSV to raw/fars/2020/National/MIPER.CSV (size=2107451)
+2025-09-05 13:50:39,772 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/nmcrash.csv to raw/fars/2020/National/nmcrash.csv (size=689945)
+2025-09-05 13:50:39,794 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/nmdistract.csv to raw/fars/2020/National/nmdistract.csv (size=342304)
+2025-09-05 13:50:39,811 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/nmimpair.csv to raw/fars/2020/National/nmimpair.csv (size=422802)
+2025-09-05 13:50:39,830 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/nmprior.csv to raw/fars/2020/National/nmprior.csv (size=512988)
+2025-09-05 13:50:39,848 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/parkwork.csv to raw/fars/2020/National/parkwork.csv (size=1804346)
+2025-09-05 13:50:39,874 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/pbtype.csv to raw/fars/2020/National/pbtype.csv (size=3301706)
+2025-09-05 13:50:39,910 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/person.csv to raw/fars/2020/National/person.csv (size=107612299)
+2025-09-05 13:50:40,201 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/personrf.csv to raw/fars/2020/National/personrf.csv (size=2690172)
+2025-09-05 13:50:40,228 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/pvehiclesf.csv to raw/fars/2020/National/pvehiclesf.csv (size=47155)
+2025-09-05 13:50:40,242 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/race.csv to raw/fars/2020/National/race.csv (size=4971179)
+2025-09-05 13:50:40,286 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/safetyeq.csv to raw/fars/2020/National/safetyeq.csv (size=761742)
+2025-09-05 13:50:40,307 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vehicle.csv to raw/fars/2020/National/vehicle.csv (size=103751724)
+2025-09-05 13:50:40,586 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vehiclesf.csv to raw/fars/2020/National/vehiclesf.csv (size=1597859)
+2025-09-05 13:50:40,618 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vevent.csv to raw/fars/2020/National/vevent.csv (size=13583487)
+2025-09-05 13:50:40,706 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/violatn.csv to raw/fars/2020/National/violatn.csv (size=2098680)
+2025-09-05 13:50:40,771 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vision.csv to raw/fars/2020/National/vision.csv (size=2486860)
+2025-09-05 13:50:40,807 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vpicdecode.csv to raw/fars/2020/National/vpicdecode.csv (size=39905391)
+2025-09-05 13:50:40,970 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vpictrailerdecode.csv to raw/fars/2020/National/vpictrailerdecode.csv (size=393796)
+2025-09-05 13:50:40,999 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/vsoe.csv to raw/fars/2020/National/vsoe.csv (size=8336513)
+2025-09-05 13:50:41,059 - src.api_ingestion - INFO - Uploading FARS2020NationalCSV/weather.csv to raw/fars/2020/National/weather.csv (size=1049872)
+2025-09-05 13:50:41,086 - src.api_ingestion - INFO - Uploaded 33 file(s) to capstone/raw/fars/2020/National/
+2025-09-05 13:50:41,785 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/accident.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,021 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/cevent.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,081 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,378 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/damage.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,492 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/distract.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,574 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,652 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,804 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/drugs.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,882 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/factor.parquet to MinIO bucket capstone.
+2025-09-05 13:50:42,951 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,021 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIACC.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,089 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIDRVACC.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,205 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/MIPER.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,244 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,270 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,295 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,323 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,381 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-05 13:50:43,466 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-05 13:50:45,294 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/person.parquet to MinIO bucket capstone.
+2025-09-05 13:50:45,418 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/personrf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:45,441 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:45,568 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/race.parquet to MinIO bucket capstone.
+2025-09-05 13:50:45,611 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-05 13:50:47,304 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-05 13:50:47,405 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:47,691 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vevent.parquet to MinIO bucket capstone.
+2025-09-05 13:50:47,783 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/violatn.parquet to MinIO bucket capstone.
+2025-09-05 13:50:47,848 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vision.parquet to MinIO bucket capstone.
+2025-09-05 13:50:49,085 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:50:49,140 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:50:49,317 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-05 13:50:49,374 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2020/National/weather.parquet to MinIO bucket capstone.
+2025-09-05 13:50:49,375 - src.api_ingestion - INFO - Downloading FARS 2021 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2021/National/FARS2021NationalCSV.zip
+2025-09-05 13:50:51,271 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-05 13:50:51,275 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/accident.csv to raw/fars/2021/National/accident.csv (size=25464921)
+2025-09-05 13:50:51,372 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/cevent.csv to raw/fars/2021/National/cevent.csv (size=12102736)
+2025-09-05 13:50:51,430 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/crashrf.csv to raw/fars/2021/National/crashrf.csv (size=1239444)
+2025-09-05 13:50:51,450 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/damage.csv to raw/fars/2021/National/damage.csv (size=9722663)
+2025-09-05 13:50:51,511 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/distract.csv to raw/fars/2021/National/distract.csv (size=2589619)
+2025-09-05 13:50:51,536 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/drimpair.csv to raw/fars/2021/National/drimpair.csv (size=3064041)
+2025-09-05 13:50:51,563 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/driverrf.csv to raw/fars/2021/National/driverrf.csv (size=3405786)
+2025-09-05 13:50:51,592 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/drugs.csv to raw/fars/2021/National/drugs.csv (size=7106206)
+2025-09-05 13:50:51,646 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/factor.csv to raw/fars/2021/National/factor.csv (size=2132616)
+2025-09-05 13:50:51,670 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/maneuver.csv to raw/fars/2021/National/maneuver.csv (size=2698834)
+2025-09-05 13:50:51,696 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/MIACC.CSV to raw/fars/2021/National/MIACC.CSV (size=1199569)
+2025-09-05 13:50:51,717 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/MIDRVACC.CSV to raw/fars/2021/National/MIDRVACC.CSV (size=1179168)
+2025-09-05 13:50:51,743 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/MIPER.CSV to raw/fars/2021/National/MIPER.CSV (size=2316828)
+2025-09-05 13:50:51,769 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/nmcrash.csv to raw/fars/2021/National/nmcrash.csv (size=777600)
+2025-09-05 13:50:51,788 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/nmdistract.csv to raw/fars/2021/National/nmdistract.csv (size=383538)
+2025-09-05 13:50:51,804 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/nmimpair.csv to raw/fars/2021/National/nmimpair.csv (size=462854)
+2025-09-05 13:50:51,823 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/nmprior.csv to raw/fars/2021/National/nmprior.csv (size=575905)
+2025-09-05 13:50:51,840 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/parkwork.csv to raw/fars/2021/National/parkwork.csv (size=2058155)
+2025-09-05 13:50:51,863 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/pbtype.csv to raw/fars/2021/National/pbtype.csv (size=3698028)
+2025-09-05 13:50:51,891 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/person.csv to raw/fars/2021/National/person.csv (size=122053999)
+2025-09-05 13:50:52,187 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/personrf.csv to raw/fars/2021/National/personrf.csv (size=2937186)
+2025-09-05 13:50:52,221 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/pvehiclesf.csv to raw/fars/2021/National/pvehiclesf.csv (size=51719)
+2025-09-05 13:50:52,236 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/race.csv to raw/fars/2021/National/race.csv (size=5531744)
+2025-09-05 13:50:52,291 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/safetyeq.csv to raw/fars/2021/National/safetyeq.csv (size=848061)
+2025-09-05 13:50:52,314 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vehicle.csv to raw/fars/2021/National/vehicle.csv (size=117115395)
+2025-09-05 13:50:52,617 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vehiclesf.csv to raw/fars/2021/National/vehiclesf.csv (size=1749094)
+2025-09-05 13:50:52,640 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vevent.csv to raw/fars/2021/National/vevent.csv (size=14881262)
+2025-09-05 13:50:52,701 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/violatn.csv to raw/fars/2021/National/violatn.csv (size=2303174)
+2025-09-05 13:50:52,727 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vision.csv to raw/fars/2021/National/vision.csv (size=2752370)
+2025-09-05 13:50:52,755 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vpicdecode.csv to raw/fars/2021/National/vpicdecode.csv (size=46432914)
+2025-09-05 13:50:52,890 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vpictrailerdecode.csv to raw/fars/2021/National/vpictrailerdecode.csv (size=503439)
+2025-09-05 13:50:52,909 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/vsoe.csv to raw/fars/2021/National/vsoe.csv (size=9139577)
+2025-09-05 13:50:52,966 - src.api_ingestion - INFO - Uploading FARS2021NationalCSV/weather.csv to raw/fars/2021/National/weather.csv (size=1115662)
+2025-09-05 13:50:52,988 - src.api_ingestion - INFO - Uploaded 33 file(s) to capstone/raw/fars/2021/National/
+2025-09-05 13:50:53,561 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/accident.parquet to MinIO bucket capstone.
+2025-09-05 13:50:53,819 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/cevent.parquet to MinIO bucket capstone.
+2025-09-05 13:50:53,885 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,108 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/damage.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,191 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/distract.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,256 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,325 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,471 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/drugs.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,548 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/factor.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,615 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,686 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIACC.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,762 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIDRVACC.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,887 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/MIPER.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,926 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,957 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-05 13:50:54,988 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:50:55,016 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-05 13:50:55,080 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-05 13:50:55,170 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-05 13:50:57,214 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/person.parquet to MinIO bucket capstone.
+2025-09-05 13:50:57,346 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/personrf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:57,370 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:57,506 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/race.parquet to MinIO bucket capstone.
+2025-09-05 13:50:57,551 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-05 13:50:59,444 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-05 13:50:59,545 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:50:59,829 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vevent.parquet to MinIO bucket capstone.
+2025-09-05 13:50:59,914 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/violatn.parquet to MinIO bucket capstone.
+2025-09-05 13:50:59,980 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vision.parquet to MinIO bucket capstone.
+2025-09-05 13:51:01,222 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:51:01,302 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:51:01,505 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-05 13:51:01,566 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2021/National/weather.parquet to MinIO bucket capstone.
+2025-09-05 13:51:01,567 - src.api_ingestion - INFO - Downloading FARS 2022 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2022/National/FARS2022NationalCSV.zip
+2025-09-05 13:51:03,511 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-05 13:51:03,514 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/accident.csv to raw/fars/2022/National/accident.csv (size=25219608)
+2025-09-05 13:51:03,617 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/cevent.csv to raw/fars/2022/National/cevent.csv (size=11843381)
+2025-09-05 13:51:03,747 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/crashrf.csv to raw/fars/2022/National/crashrf.csv (size=1449559)
+2025-09-05 13:51:03,773 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/damage.csv to raw/fars/2022/National/damage.csv (size=9711142)
+2025-09-05 13:51:03,833 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/distract.csv to raw/fars/2022/National/distract.csv (size=2550532)
+2025-09-05 13:51:03,858 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/drimpair.csv to raw/fars/2022/National/drimpair.csv (size=2992010)
+2025-09-05 13:51:03,885 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/driverrf.csv to raw/fars/2022/National/driverrf.csv (size=3599738)
+2025-09-05 13:51:03,915 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/drugs.csv to raw/fars/2022/National/drugs.csv (size=7781009)
+2025-09-05 13:51:03,964 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/factor.csv to raw/fars/2022/National/factor.csv (size=2087746)
+2025-09-05 13:51:03,989 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/maneuver.csv to raw/fars/2022/National/maneuver.csv (size=2659981)
+2025-09-05 13:51:04,015 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/MIACC.CSV to raw/fars/2022/National/MIACC.CSV (size=1188017)
+2025-09-05 13:51:04,036 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/MIDRVACC.CSV to raw/fars/2022/National/MIDRVACC.CSV (size=1167243)
+2025-09-05 13:51:04,059 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/MIPER.CSV to raw/fars/2022/National/MIPER.CSV (size=2293343)
+2025-09-05 13:51:04,085 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/nmcrash.csv to raw/fars/2022/National/nmcrash.csv (size=822617)
+2025-09-05 13:51:04,105 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/nmdistract.csv to raw/fars/2022/National/nmdistract.csv (size=403668)
+2025-09-05 13:51:04,123 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/nmimpair.csv to raw/fars/2022/National/nmimpair.csv (size=481811)
+2025-09-05 13:51:04,140 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/nmprior.csv to raw/fars/2022/National/nmprior.csv (size=597479)
+2025-09-05 13:51:04,158 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/parkwork.csv to raw/fars/2022/National/parkwork.csv (size=1841241)
+2025-09-05 13:51:04,183 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/pbtype.csv to raw/fars/2022/National/pbtype.csv (size=3842930)
+2025-09-05 13:51:04,212 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/person.csv to raw/fars/2022/National/person.csv (size=116735456)
+2025-09-05 13:51:04,495 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/personrf.csv to raw/fars/2022/National/personrf.csv (size=3469226)
+2025-09-05 13:51:04,526 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/pvehiclesf.csv to raw/fars/2022/National/pvehiclesf.csv (size=57077)
+2025-09-05 13:51:04,538 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/race.csv to raw/fars/2022/National/race.csv (size=5449171)
+2025-09-05 13:51:04,592 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/safetyeq.csv to raw/fars/2022/National/safetyeq.csv (size=889152)
+2025-09-05 13:51:04,613 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vehicle.csv to raw/fars/2022/National/vehicle.csv (size=113583661)
+2025-09-05 13:51:04,900 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vehiclesf.csv to raw/fars/2022/National/vehiclesf.csv (size=2077845)
+2025-09-05 13:51:04,925 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vevent.csv to raw/fars/2022/National/vevent.csv (size=14548801)
+2025-09-05 13:51:04,988 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/violatn.csv to raw/fars/2022/National/violatn.csv (size=2267197)
+2025-09-05 13:51:05,016 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vision.csv to raw/fars/2022/National/vision.csv (size=2705133)
+2025-09-05 13:51:05,044 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vpicdecode.csv to raw/fars/2022/National/vpicdecode.csv (size=47813632)
+2025-09-05 13:51:05,191 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vpictrailerdecode.csv to raw/fars/2022/National/vpictrailerdecode.csv (size=509384)
+2025-09-05 13:51:05,209 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/vsoe.csv to raw/fars/2022/National/vsoe.csv (size=8926141)
+2025-09-05 13:51:05,265 - src.api_ingestion - INFO - Uploading FARS2022NationalCSV/weather.csv to raw/fars/2022/National/weather.csv (size=1101942)
+2025-09-05 13:51:05,286 - src.api_ingestion - INFO - Uploaded 33 file(s) to capstone/raw/fars/2022/National/
+2025-09-05 13:51:05,813 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/accident.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,046 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/cevent.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,110 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,314 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/damage.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,396 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/distract.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,462 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,533 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,681 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/drugs.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,758 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/factor.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,821 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,888 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIACC.parquet to MinIO bucket capstone.
+2025-09-05 13:51:06,954 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIDRVACC.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,063 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/MIPER.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,100 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,126 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,150 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,176 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,230 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-05 13:51:07,316 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-05 13:51:09,242 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/person.parquet to MinIO bucket capstone.
+2025-09-05 13:51:09,379 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/personrf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:09,405 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:09,545 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/race.parquet to MinIO bucket capstone.
+2025-09-05 13:51:09,593 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-05 13:51:11,419 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-05 13:51:11,521 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:11,794 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vevent.parquet to MinIO bucket capstone.
+2025-09-05 13:51:11,864 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/violatn.parquet to MinIO bucket capstone.
+2025-09-05 13:51:11,929 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vision.parquet to MinIO bucket capstone.
+2025-09-05 13:51:13,403 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:51:13,475 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:51:13,659 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-05 13:51:13,755 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2022/National/weather.parquet to MinIO bucket capstone.
+2025-09-05 13:51:13,757 - src.api_ingestion - INFO - Downloading FARS 2023 National ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip
+2025-09-05 13:51:15,593 - src.api_ingestion - INFO - ZIP downloaded; starting unzip/upload phase
+2025-09-05 13:51:15,597 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/accident.csv to raw/fars/2023/National/accident.csv (size=23978421)
+2025-09-05 13:51:15,691 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/cevent.csv to raw/fars/2023/National/cevent.csv (size=10988036)
+2025-09-05 13:51:15,748 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/crashrf.csv to raw/fars/2023/National/crashrf.csv (size=1382559)
+2025-09-05 13:51:15,770 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/damage.csv to raw/fars/2023/National/damage.csv (size=9311822)
+2025-09-05 13:51:15,824 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/distract.csv to raw/fars/2023/National/distract.csv (size=2450364)
+2025-09-05 13:51:15,853 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/drimpair.csv to raw/fars/2023/National/drimpair.csv (size=2825211)
+2025-09-05 13:51:15,880 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/driverrf.csv to raw/fars/2023/National/driverrf.csv (size=3413664)
+2025-09-05 13:51:15,908 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/drugs.csv to raw/fars/2023/National/drugs.csv (size=20623587)
+2025-09-05 13:51:15,989 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/factor.csv to raw/fars/2023/National/factor.csv (size=2006149)
+2025-09-05 13:51:16,014 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/maneuver.csv to raw/fars/2023/National/maneuver.csv (size=2553981)
+2025-09-05 13:51:16,038 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/MIACC.CSV to raw/fars/2023/National/MIACC.CSV (size=1132035)
+2025-09-05 13:51:16,061 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/MIDRVACC.CSV to raw/fars/2023/National/MIDRVACC.CSV (size=1110860)
+2025-09-05 13:51:16,082 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/MIPER.CSV to raw/fars/2023/National/MIPER.CSV (size=2200632)
+2025-09-05 13:51:16,109 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/nmcrash.csv to raw/fars/2023/National/nmcrash.csv (size=810535)
+2025-09-05 13:51:16,129 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/nmdistract.csv to raw/fars/2023/National/nmdistract.csv (size=390716)
+2025-09-05 13:51:16,146 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/nmimpair.csv to raw/fars/2023/National/nmimpair.csv (size=455463)
+2025-09-05 13:51:16,163 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/nmprior.csv to raw/fars/2023/National/nmprior.csv (size=572050)
+2025-09-05 13:51:16,182 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/parkwork.csv to raw/fars/2023/National/parkwork.csv (size=1728319)
+2025-09-05 13:51:16,205 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/pbtype.csv to raw/fars/2023/National/pbtype.csv (size=3725324)
+2025-09-05 13:51:16,233 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/person.csv to raw/fars/2023/National/person.csv (size=111889636)
+2025-09-05 13:51:16,511 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/personrf.csv to raw/fars/2023/National/personrf.csv (size=3334145)
+2025-09-05 13:51:16,539 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/pvehiclesf.csv to raw/fars/2023/National/pvehiclesf.csv (size=53317)
+2025-09-05 13:51:16,551 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/race.csv to raw/fars/2023/National/race.csv (size=5227531)
+2025-09-05 13:51:16,587 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/safetyeq.csv to raw/fars/2023/National/safetyeq.csv (size=853574)
+2025-09-05 13:51:16,609 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vehicle.csv to raw/fars/2023/National/vehicle.csv (size=112715066)
+2025-09-05 13:51:16,893 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vehiclesf.csv to raw/fars/2023/National/vehiclesf.csv (size=1990100)
+2025-09-05 13:51:16,922 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vevent.csv to raw/fars/2023/National/vevent.csv (size=13581368)
+2025-09-05 13:51:16,989 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/violatn.csv to raw/fars/2023/National/violatn.csv (size=2110229)
+2025-09-05 13:51:17,016 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vision.csv to raw/fars/2023/National/vision.csv (size=2596686)
+2025-09-05 13:51:17,042 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vpicdecode.csv to raw/fars/2023/National/vpicdecode.csv (size=46396641)
+2025-09-05 13:51:17,170 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vpictrailerdecode.csv to raw/fars/2023/National/vpictrailerdecode.csv (size=536480)
+2025-09-05 13:51:17,189 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/vsoe.csv to raw/fars/2023/National/vsoe.csv (size=8361051)
+2025-09-05 13:51:17,243 - src.api_ingestion - INFO - Uploading FARS2023NationalCSV/weather.csv to raw/fars/2023/National/weather.csv (size=1052069)
+2025-09-05 13:51:17,264 - src.api_ingestion - INFO - Uploaded 33 file(s) to capstone/raw/fars/2023/National/
+2025-09-05 13:51:17,770 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/accident.parquet to MinIO bucket capstone.
+2025-09-05 13:51:17,976 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/cevent.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,039 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/crashrf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,243 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/damage.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,325 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/distract.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,392 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/drimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,462 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/driverrf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,823 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/drugs.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,910 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/factor.parquet to MinIO bucket capstone.
+2025-09-05 13:51:18,975 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/maneuver.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,047 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIACC.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,121 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIDRVACC.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,276 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/MIPER.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,320 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmcrash.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,349 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmdistract.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,379 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmimpair.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,415 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/nmprior.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,485 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/parkwork.parquet to MinIO bucket capstone.
+2025-09-05 13:51:19,597 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/pbtype.parquet to MinIO bucket capstone.
+2025-09-05 13:51:22,748 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/person.parquet to MinIO bucket capstone.
+2025-09-05 13:51:22,904 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/personrf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:22,931 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/pvehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:23,087 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/race.parquet to MinIO bucket capstone.
+2025-09-05 13:51:23,137 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/safetyeq.parquet to MinIO bucket capstone.
+2025-09-05 13:51:25,401 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vehicle.parquet to MinIO bucket capstone.
+2025-09-05 13:51:25,517 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vehiclesf.parquet to MinIO bucket capstone.
+2025-09-05 13:51:25,805 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vevent.parquet to MinIO bucket capstone.
+2025-09-05 13:51:25,901 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/violatn.parquet to MinIO bucket capstone.
+2025-09-05 13:51:25,975 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vision.parquet to MinIO bucket capstone.
+2025-09-05 13:51:27,246 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpicdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:51:27,311 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vpictrailerdecode.parquet to MinIO bucket capstone.
+2025-09-05 13:51:27,503 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/vsoe.parquet to MinIO bucket capstone.
+2025-09-05 13:51:27,568 - src.api_ingestion - INFO - Uploaded Parquet file as parquet/fars/2023/National/weather.parquet to MinIO bucket capstone.
