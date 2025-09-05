@@ -1,4 +1,6 @@
-CREATE OR REPLACE TABLE silver_pvehiclesf AS
+CREATE SCHEMA IF NOT EXISTS silver;
+
+CREATE OR REPLACE TABLE silver.silver_pvehiclesf AS
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME,
