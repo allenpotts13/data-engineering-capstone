@@ -23,7 +23,7 @@ if SRC_PATH_IN_AIRFLOW not in sys.path:
 
 
 try:
-    from src.api_ingestion import main
+    from src.ftp_ingestion import main
 except ImportError as e:
     print(f"Error importing modules: {e}")
     raise
@@ -43,17 +43,17 @@ def _run_api_ingestion(**kwargs):
 
 
 with DAG(
-    dag_id="api_ingestion_dag",
-    schedule="@daily",
+    dag_id="ftp_ingestion_dag",
+    schedule="@yearly",
     start_date=pendulum.now("UTC").subtract(days=1),
     catchup=False,
-    description="DAG for API ingestion tasks",
+    description="DAG for FTP ingestion tasks",
     tags=["data", "ingestion"],
 ) as dag:
 
-    run_api_ingestion = PythonOperator(
-        task_id="run_api_ingestion",
+    run_ftp_ingestion = PythonOperator(
+        task_id="run_ftp_ingestion",
         python_callable=_run_api_ingestion,
     )
 
-    run_api_ingestion
+    run_ftp_ingestion

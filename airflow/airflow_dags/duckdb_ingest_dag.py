@@ -44,10 +44,10 @@ def _run_duckdb_ingest(**kwargs):
 
 with DAG(
     dag_id="duckdb_ingest_dag",
-    schedule="@daily",
+    schedule="@yearly",
     start_date=pendulum.now("UTC").subtract(days=1),
     catchup=False,
-    description="DAG for API ingestion tasks",
+    description="DAG for DuckDB ingestion tasks",
     tags=["data", "ingestion"],
 ) as dag:
 

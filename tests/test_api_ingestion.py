@@ -3,7 +3,7 @@ import sys
 from io import BytesIO
 from unittest.mock import MagicMock
 
-from src.api_ingestion import (
+from src.ftp_ingestion import (
     _default_fars_zip_url,
     ingest_fars_zip_to_minio,
     upload_to_minio_parquet,

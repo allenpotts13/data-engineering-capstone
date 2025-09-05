@@ -44,7 +44,7 @@ def _run_webscraping(**kwargs):
 
 with DAG(
     dag_id="webscraping_dag",
-    schedule="@daily",
+    schedule="@yearly",
     start_date=pendulum.now("UTC").subtract(days=1),
     catchup=False,
     description="DAG for Webscraping tasks",

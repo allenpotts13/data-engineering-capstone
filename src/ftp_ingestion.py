@@ -1,3 +1,4 @@
+import datetime
 import os
 import tempfile
 import zipfile
@@ -188,8 +189,28 @@ def main():
     logger.info(f"MINIO_BUCKET_NAME: {os.getenv('MINIO_BUCKET_NAME')}")
 
     bucket_name = os.getenv("MINIO_BUCKET_NAME", "capstone")
-    for year in range(2019, 2024):
-        print(f"\nProcessing year: {year}")
+    minio_client = get_minio_client()
+
+    current_year = datetime.datetime.now().year
+    available_years = list(range(2024, current_year + 1))
+
+    existing_years = set()
+    objects = minio_client.list_objects(
+        bucket_name, prefix="parquet/fars/", recursive=True
+    )
+    for obj in objects:
+        parts = obj.object_name.split("/")
+        if len(parts) > 2 and parts[2].isdigit():
+            existing_years.add(int(parts[2]))
+
+    new_years = [year for year in available_years if year not in existing_years]
+    if not new_years:
+        print("No new year data to ingest. Exiting.")
+        logger.info("No new year data to ingest. Exiting.")
+        return True
+
+    for year in new_years:
+        print(f"\nProcessing new year: {year}")
         uploaded_csvs = ingest_fars_zip_to_minio(year=year, scope="National")
         if not uploaded_csvs:
             logger.warning(f"No CSV files uploaded to MinIO for year {year}.")

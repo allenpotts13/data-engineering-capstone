@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS silver;
 
-CREATE OR REPLACE TABLE silver.silver_parkwork AS
+INSERT INTO silver.silver_parkwork
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME,
@@ -118,4 +118,9 @@ SELECT
     PVIN_12,
     TRY_CAST(PDEATHS AS INTEGER) AS pdeaths
 FROM bronze.bronze_parkwork
-WHERE st_case IS NOT NULL AND veh_no IS NOT NULL;
+WHERE st_case IS NOT NULL AND veh_no IS NOT NULL
+    AND NOT EXISTS (
+        SELECT 1 FROM silver.silver_parkwork s
+        WHERE s.st_case = TRY_CAST(bronze.bronze_parkwork.ST_CASE AS INTEGER)
+            AND s.veh_no = TRY_CAST(bronze.bronze_parkwork.VEH_NO AS INTEGER)
+    );

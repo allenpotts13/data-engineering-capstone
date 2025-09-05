@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS silver;
-
-CREATE OR REPLACE TABLE silver.silver_accident AS
+INSERT INTO silver.silver_accident
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -84,3 +82,8 @@ SELECT
     TRY_CAST(FATALS AS INTEGER) AS fatals
 FROM bronze.bronze_accident
 WHERE ST_CASE IS NOT NULL AND YEAR IS NOT NULL
+  AND NOT EXISTS (
+      SELECT 1 FROM silver.silver_accident s
+      WHERE s.st_case = TRY_CAST(bronze.bronze_accident.ST_CASE AS INTEGER)
+        AND s.year = TRY_CAST(bronze.bronze_accident.YEAR AS INTEGER)
+  );

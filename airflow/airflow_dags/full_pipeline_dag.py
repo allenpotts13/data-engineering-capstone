@@ -1,10 +1,11 @@
-from airflow import DAG
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 import pendulum
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+
+from airflow import DAG
 
 with DAG(
     dag_id="full_pipeline_dag",
-    schedule="@daily",
+    schedule="@yearly",
     start_date=pendulum.now("UTC").subtract(days=1),
     catchup=False,
 ) as dag:
@@ -33,4 +34,9 @@ with DAG(
         wait_for_completion=True,
     )
 
-    trigger_api_ingestion >> trigger_webscraping >> trigger_duckdb_ingest >> trigger_duckdb_transformation
+    (
+        trigger_api_ingestion
+        >> trigger_webscraping
+        >> trigger_duckdb_ingest
+        >> trigger_duckdb_transformation
+    )

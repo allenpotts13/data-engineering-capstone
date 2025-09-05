@@ -23,56 +23,30 @@ def fars_data_to_duckdb():
     bucket_name = os.getenv("MINIO_BUCKET_NAME")
     minio_client = get_minio_client()
 
-    file_types = [
-        "accident",
-        "CEvent",
-        "crashrf",
-        "damage",
-        "distract",
-        "drimpair",
-        "driverrf",
-        "drugs",
-        "factor",
-        "maneuver",
-        "miacc",
-        "midrvacc",
-        "miper",
-        "nmcrash",
-        "nmdistract",
-        "nmimpair",
-        "nmprior",
-        "parkwork",
-        "pbtype",
-        "person",
-        "personrf",
-        "pvehiclesf",
-        "race",
-        "safetyEq",
-        "vehicle",
-        "vehiclesf",
-        "VEvent",
-        "Violatn",
-        "Vision",
-        "VPICdecode",
-        "VPICTrailerdecode",
-        "VSOE",
-        "weather"
-    ]
-
     con = duckdb.connect(duckdb_path)
     con.execute(f"CREATE SCHEMA IF NOT EXISTS {schema_name}")
 
-    for file_type in file_types:
-        pattern = re.compile(
-            rf"parquet/fars/.+/national/{file_type}\.parquet$", re.IGNORECASE
+    # Create ingest_config table if it doesn't exist
+    con.execute(
+        """
+        CREATE TABLE IF NOT EXISTS ingest_config (
+            file_path TEXT PRIMARY KEY,
+            ingested_at TIMESTAMP
         )
-        objects = minio_client.list_objects(
-            bucket_name, prefix="parquet/fars/", recursive=True
-        )
-        matched_files = [
-            obj.object_name for obj in objects if pattern.search(obj.object_name)
-        ]
+    """
+    )
 
+    objects = minio_client.list_objects(
+        bucket_name, prefix="parquet/fars/", recursive=True
+    )
+    file_type_to_files = {}
+    for obj in objects:
+        parts = obj.object_name.split("/")
+        if len(parts) >= 5 and parts[-1].endswith(".parquet"):
+            file_type = parts[-1].replace(".parquet", "").lower()
+            file_type_to_files.setdefault(file_type, []).append(obj.object_name)
+
+    for file_type, matched_files in file_type_to_files.items():
         logger.info(
             f"File type '{file_type}': found {len(matched_files)} matching files."
         )
@@ -81,27 +55,25 @@ def fars_data_to_duckdb():
             continue
 
         matched_files_sorted = sorted(
-            matched_files,
-            key=lambda x: re.search(r"/([0-9]{4})/", x).group(1),
-            reverse=True,
+            matched_files, key=lambda x: re.search(r"/([0-9]{4})/", x).group(1)
         )
-        latest_file = matched_files_sorted[0]
         table_name = f"{schema_name}.bronze_{file_type.lower()}"
 
-        logger.info(f"Using {latest_file} as schema standard for {file_type}")
-        data = minio_client.get_object(bucket_name, latest_file).read()
-        schema_df = pd.read_parquet(io.BytesIO(data))
-        schema_columns = schema_df.columns.tolist()
-
-        con.register("df", schema_df)
-        con.execute(f"CREATE OR REPLACE TABLE {table_name} AS SELECT * FROM df")
-        logger.info(f"Loaded {latest_file} into DuckDB table {table_name}")
-
-        for file_path in matched_files_sorted[1:]:
+        schema_columns = None
+        first_file = True
+        for file_path in matched_files_sorted:
+            result = con.execute(
+                "SELECT 1 FROM ingest_config WHERE file_path = ?", [file_path]
+            ).fetchone()
+            if result:
+                logger.info(f"Skipping already ingested file: {file_path}")
+                continue
             try:
                 logger.info(f"Downloading {file_path} from MinIO for DuckDB import")
                 data = minio_client.get_object(bucket_name, file_path).read()
                 imported_data = pd.read_parquet(io.BytesIO(data))
+                if schema_columns is None:
+                    schema_columns = imported_data.columns.tolist()
                 missing_columns = [
                     col for col in schema_columns if col not in imported_data.columns
                 ]
@@ -127,8 +99,19 @@ def fars_data_to_duckdb():
                             imported_data[col], errors="coerce"
                         ).astype("Int64")
                 con.register("df", imported_data)
-                con.execute(f"INSERT INTO {table_name} SELECT * FROM df")
-                logger.info(f"Loaded {file_path} into DuckDB table {table_name}")
+                if first_file:
+                    con.execute(f"DROP TABLE IF EXISTS {table_name}")
+                    con.execute(f"CREATE TABLE {table_name} AS SELECT * FROM df")
+                    logger.info(f"Created DuckDB table {table_name} from {file_path}")
+                    first_file = False
+                else:
+                    con.execute(f"INSERT INTO {table_name} SELECT * FROM df")
+                    logger.info(f"Appended {file_path} to DuckDB table {table_name}")
+                # Record ingestion in ingest_config
+                con.execute(
+                    "INSERT INTO ingest_config (file_path, ingested_at) VALUES (?, CURRENT_TIMESTAMP)",
+                    [file_path],
+                )
             except Exception as e:
                 logger.error(f"Error loading {file_path} into DuckDB: {e}")
     con.close()
@@ -169,8 +152,10 @@ def helmet_laws_to_duckdb():
         )
         with open(local_parquet, "wb") as lp:
             lp.write(response.read())
+        # Truncate table before loading new data
+        con.execute(f"DROP TABLE IF EXISTS {full_table_name}")
         con.execute(
-            f"CREATE OR REPLACE TABLE {full_table_name} AS SELECT * FROM '{local_parquet}'"
+            f"CREATE TABLE {full_table_name} AS SELECT * FROM '{local_parquet}'"
         )
         os.remove(local_parquet)
         logger.info(

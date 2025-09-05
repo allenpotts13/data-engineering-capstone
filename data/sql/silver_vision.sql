@@ -1,12 +1,17 @@
 CREATE SCHEMA IF NOT EXISTS silver;
 
-CREATE OR REPLACE TABLE silver.silver_vision AS
+INSERT INTO silver.silver_vision
 SELECT
-    TRY_CAST(STATE AS INTEGER) AS STATE,
-    STATENAME AS STATENAME,
-    TRY_CAST(ST_CASE AS INTEGER) AS ST_CASE,
-    TRY_CAST(VEH_NO AS INTEGER) AS VEH_NO,
-    TRY_CAST(VISION AS INTEGER) AS VISION,
-    VISIONNAME AS VISIONNAME
+        TRY_CAST(STATE AS INTEGER) AS state,
+        STATENAME AS state_name,
+        TRY_CAST(ST_CASE AS INTEGER) AS st_case,
+        TRY_CAST(VEH_NO AS INTEGER) AS veh_no,
+        TRY_CAST(VISION AS INTEGER) AS vision,
+        VISIONNAME AS vision_name
 FROM bronze.bronze_vision
-WHERE st_case IS NOT NULL AND veh_no IS NOT NULL;
+WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL
+    AND NOT EXISTS (
+            SELECT 1 FROM silver.silver_vision s
+            WHERE s.st_case = TRY_CAST(bronze.bronze_vision.ST_CASE AS INTEGER)
+                AND s.veh_no = TRY_CAST(bronze.bronze_vision.VEH_NO AS INTEGER)
+    );
