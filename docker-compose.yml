@@ -31,6 +31,16 @@ services:
     volumes:
       - minio_data:/data
 
+  metabase:
+    build: ./metabase
+    container_name: metabase_capstone
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data/duckdb/motorcycle_capstone.duckdb:/duckdb/motorcycle_capstone.duckdb
+    depends_on:
+      - airflow
+
   airflow:
     image: apache/airflow:3.0.0-python3.12
     entrypoint: /bin/bash
@@ -78,7 +88,7 @@ services:
     volumes:
       - ./airflow/airflow_dags:/opt/airflow/dags
       - ./src:/opt/airflow/src
-      - ./airflow/data:/opt/airflow/import/data
+      - ./data:/opt/airflow/data
       - ./requirements.txt:/opt/airflow/requirements.txt
 
 volumes:

@@ -8,7 +8,7 @@ from airflow.providers.standard.operators.python import PythonOperator
 from airflow import DAG
 
 sys.path.append(
-    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "src"))
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "data"))
 )
 
 logger = logging.getLogger(__name__)
@@ -17,33 +17,33 @@ PROJECT_ROOT_IN_AIRFLOW = "/opt/airflow"
 if PROJECT_ROOT_IN_AIRFLOW not in sys.path:
     sys.path.append(PROJECT_ROOT_IN_AIRFLOW)
 
-SRC_PATH_IN_AIRFLOW = "/opt/airflow/src"
+SRC_PATH_IN_AIRFLOW = "/opt/airflow/data"
 if SRC_PATH_IN_AIRFLOW not in sys.path:
     sys.path.append(SRC_PATH_IN_AIRFLOW)
 
 
 try:
-    from src.api_ingestion import main
+    from data.duckdb_ingest import main
 except ImportError as e:
     print(f"Error importing modules: {e}")
     raise
 
 
-def _run_api_ingestion(**kwargs):
+def _run_duckdb_ingest(**kwargs):
     run_id = kwargs.get("dag_run").run_id if kwargs.get("dag_run") else "unknown"
-    logger.info(f"Running API ingestion tasks for {run_id}")
+    logger.info(f"Running DuckDB ingestion tasks for {run_id}")
 
-    api_results = main()
-    if not api_results:
-        logger.error("API call failed, skipping subsequent tasks.")
-        raise Exception("API call failed")
+    duckdb_bronze_ingestion = main()
+    if not duckdb_bronze_ingestion:
+        logger.error("DuckDB ingestion failed, skipping subsequent tasks.")
+        raise Exception("DuckDB ingestion failed")
 
-    logger.info(f"Data acquisition tasks completed successfully for {run_id}")
+    logger.info(f"DuckDB ingestion tasks completed successfully for {run_id}")
     return True
 
 
 with DAG(
-    dag_id="api_ingestion_dag",
+    dag_id="duckdb_ingestion_dag",
     schedule="@daily",
     start_date=pendulum.now("UTC").subtract(days=1),
     catchup=False,
@@ -51,9 +51,9 @@ with DAG(
     tags=["data", "ingestion"],
 ) as dag:
 
-    run_api_ingestion = PythonOperator(
-        task_id="run_api_ingestion",
-        python_callable=_run_api_ingestion,
+    run_duckdb_ingestion = PythonOperator(
+        task_id="run_duckdb_ingestion",
+        python_callable=_run_duckdb_ingest,
     )
 
-    run_api_ingestion
+    run_duckdb_ingestion

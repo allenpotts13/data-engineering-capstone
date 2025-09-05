@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Motorcycle crash statistics and data"
 authors = ["Allen <129114411+allenpotts13@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{ include = "src" }]
+packages = [
+    { include = "src" },
+    { include = "data" }
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
