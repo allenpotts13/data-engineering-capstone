@@ -3865,3 +3865,1370 @@ LINE 1: ...REATE OR REPLACE TABLE bronze.bronze_vsoe AS SELECT * FROM df
 2025-09-04 13:13:54,841 - __main__ - INFO - Downloading parquet/motorcycle_helmet_laws_20250904.parquet from MinIO for DuckDB import
 2025-09-04 13:13:54,850 - __main__ - INFO - Loaded parquet/motorcycle_helmet_laws_20250904.parquet into DuckDB table bronze.bronze_motorcycle_helmet_laws
 2025-09-04 13:13:54,924 - __main__ - INFO - Data ingestion to DuckDB completed successfully.
+2025-09-05 15:55:12,496 - data.duckdb_ingest - ERROR - Error during DuckDB ingestion: IO Error: Could not set lock on file "/opt/airflow/data/duckdb/motorcycle_capstone.duckdb": Conflicting lock is held in PID 0. See also https://duckdb.org/docs/stable/connect/concurrency
+2025-09-05 15:55:12,613 - data.duckdb_ingest - ERROR - Error during DuckDB ingestion: IO Error: Could not set lock on file "/opt/airflow/data/duckdb/motorcycle_capstone.duckdb": Conflicting lock is held in PID 0. See also https://duckdb.org/docs/stable/connect/concurrency
+2025-09-05 15:55:13,017 - data.duckdb_ingest - ERROR - Error during DuckDB ingestion: IO Error: Could not set lock on file "/opt/airflow/data/duckdb/motorcycle_capstone.duckdb": Conflicting lock is held in PID 0. See also https://duckdb.org/docs/stable/connect/concurrency
+2025-09-05 15:55:13,133 - data.duckdb_ingest - ERROR - Error during DuckDB ingestion: IO Error: Could not set lock on file "/opt/airflow/data/duckdb/motorcycle_capstone.duckdb": Conflicting lock is held in PID 0. See also https://duckdb.org/docs/stable/connect/concurrency
+2025-09-05 15:56:01,612 - data.duckdb_ingest - ERROR - Error during DuckDB ingestion: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: /capstone?location= (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d4e98e35520>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-09-05 16:01:10,197 - data.duckdb_ingest - INFO - File type 'accident': found 5 matching files.
+2025-09-05 16:01:10,197 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/accident.parquet as schema standard for accident
+2025-09-05 16:01:11,054 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:01:11,055 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:01:12,513 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:01:12,514 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:01:14,219 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:01:14,220 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:01:15,910 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:01:15,911 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:01:17,082 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:01:17,092 - data.duckdb_ingest - INFO - File type 'CEvent': found 5 matching files.
+2025-09-05 16:01:17,092 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/cevent.parquet as schema standard for CEvent
+2025-09-05 16:01:17,421 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:01:17,421 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:01:18,006 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:01:18,007 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:01:18,516 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:01:18,517 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:01:18,978 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:01:18,978 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/CEvent.parquet from MinIO for DuckDB import
+2025-09-05 16:01:19,413 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/CEvent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:01:19,424 - data.duckdb_ingest - INFO - File type 'damage': found 5 matching files.
+2025-09-05 16:01:19,424 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/damage.parquet as schema standard for damage
+2025-09-05 16:01:19,721 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:01:19,721 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:01:20,282 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:01:20,283 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:01:20,857 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:01:20,858 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:01:21,189 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:01:21,190 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Damage.parquet from MinIO for DuckDB import
+2025-09-05 16:01:22,040 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:01:22,049 - data.duckdb_ingest - INFO - File type 'distract': found 5 matching files.
+2025-09-05 16:01:22,050 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/distract.parquet as schema standard for distract
+2025-09-05 16:01:22,133 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:01:22,134 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:22,244 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:01:22,244 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:22,360 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:01:22,360 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:22,461 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:01:22,461 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Distract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:22,692 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:01:22,701 - data.duckdb_ingest - INFO - File type 'drimpair': found 5 matching files.
+2025-09-05 16:01:22,702 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drimpair.parquet as schema standard for drimpair
+2025-09-05 16:01:22,949 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:01:22,949 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:23,053 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:01:23,054 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:23,159 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:01:23,159 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:23,255 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:01:23,255 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/DrImpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:23,348 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/DrImpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:01:23,357 - data.duckdb_ingest - INFO - File type 'drugs': found 5 matching files.
+2025-09-05 16:01:23,358 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drugs.parquet as schema standard for drugs
+2025-09-05 16:01:23,823 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:01:23,823 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:01:26,037 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:01:26,038 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:01:27,722 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:01:27,722 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:01:29,597 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:01:29,597 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:01:31,195 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:01:31,210 - data.duckdb_ingest - INFO - File type 'factor': found 5 matching files.
+2025-09-05 16:01:31,210 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/factor.parquet as schema standard for factor
+2025-09-05 16:01:31,298 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:01:31,299 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:01:31,409 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:01:31,410 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:01:31,514 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:01:31,514 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:01:31,611 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:01:31,612 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Factor.parquet from MinIO for DuckDB import
+2025-09-05 16:01:31,860 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:01:31,870 - data.duckdb_ingest - INFO - File type 'maneuver': found 5 matching files.
+2025-09-05 16:01:31,870 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/maneuver.parquet as schema standard for maneuver
+2025-09-05 16:01:31,949 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:01:31,949 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:01:32,260 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:01:32,260 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:01:32,375 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:01:32,375 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:01:32,472 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:01:32,472 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:01:32,680 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:01:32,690 - data.duckdb_ingest - INFO - File type 'miacc': found 5 matching files.
+2025-09-05 16:01:32,690 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIACC.parquet as schema standard for miacc
+2025-09-05 16:01:32,769 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:01:32,769 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:32,879 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:01:32,879 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:32,993 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:01:32,994 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:33,103 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:01:33,103 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:33,480 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:01:33,490 - data.duckdb_ingest - INFO - File type 'midrvacc': found 5 matching files.
+2025-09-05 16:01:33,490 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIDRVACC.parquet as schema standard for midrvacc
+2025-09-05 16:01:33,578 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:01:33,578 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:33,685 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:01:33,685 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:33,796 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:01:33,797 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:33,895 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:01:33,896 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:01:33,991 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:01:34,000 - data.duckdb_ingest - INFO - File type 'miper': found 5 matching files.
+2025-09-05 16:01:34,001 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIPER.parquet as schema standard for miper
+2025-09-05 16:01:34,385 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:01:34,386 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:01:34,583 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:01:34,584 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:01:34,986 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:01:34,986 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,154 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:01:35,154 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,314 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:01:35,325 - data.duckdb_ingest - INFO - File type 'nmcrash': found 5 matching files.
+2025-09-05 16:01:35,325 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmcrash.parquet as schema standard for nmcrash
+2025-09-05 16:01:35,358 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:01:35,358 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,397 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:01:35,397 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,434 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:01:35,435 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,468 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:01:35,468 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMCrash.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,528 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMCrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:01:35,537 - data.duckdb_ingest - INFO - File type 'nmdistract': found 5 matching files.
+2025-09-05 16:01:35,538 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmdistract.parquet as schema standard for nmdistract
+2025-09-05 16:01:35,564 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:01:35,564 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,596 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:01:35,596 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,625 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:01:35,625 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,655 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:01:35,655 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMDistract.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,703 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMDistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:01:35,712 - data.duckdb_ingest - INFO - File type 'nmimpair': found 5 matching files.
+2025-09-05 16:01:35,712 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmimpair.parquet as schema standard for nmimpair
+2025-09-05 16:01:35,737 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:01:35,738 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,769 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:01:35,769 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,801 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:01:35,801 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,831 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:01:35,832 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMImpair.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,861 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMImpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:01:35,871 - data.duckdb_ingest - INFO - File type 'nmprior': found 5 matching files.
+2025-09-05 16:01:35,871 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmprior.parquet as schema standard for nmprior
+2025-09-05 16:01:35,897 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:01:35,898 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,931 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:01:35,931 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,963 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:01:35,963 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:01:35,993 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:01:35,993 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMPrior.parquet from MinIO for DuckDB import
+2025-09-05 16:01:36,040 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMPrior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:01:36,049 - data.duckdb_ingest - INFO - File type 'parkwork': found 5 matching files.
+2025-09-05 16:01:36,049 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/parkwork.parquet as schema standard for parkwork
+2025-09-05 16:01:36,238 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:01:36,239 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:01:36,945 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:01:36,945 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:01:37,245 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:01:37,245 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:01:37,492 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:01:37,492 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:01:37,741 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:01:37,756 - data.duckdb_ingest - INFO - File type 'pbtype': found 5 matching files.
+2025-09-05 16:01:37,756 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pbtype.parquet as schema standard for pbtype
+2025-09-05 16:01:37,953 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:01:37,953 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:01:38,143 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:01:38,143 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:01:38,602 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:01:38,603 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:01:38,755 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:01:38,756 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/PBType.parquet from MinIO for DuckDB import
+2025-09-05 16:01:38,912 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/PBType.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:01:38,922 - data.duckdb_ingest - INFO - File type 'person': found 5 matching files.
+2025-09-05 16:01:38,923 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/person.parquet as schema standard for person
+2025-09-05 16:01:41,307 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:01:41,308 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:01:44,794 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:01:44,795 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:01:49,274 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:01:49,274 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:01:53,361 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:01:53,362 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Person.parquet from MinIO for DuckDB import
+2025-09-05 16:01:58,153 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:01:58,163 - data.duckdb_ingest - INFO - File type 'race': found 5 matching files.
+2025-09-05 16:01:58,163 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/race.parquet as schema standard for race
+2025-09-05 16:01:58,349 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:01:58,349 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:01:58,777 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:01:58,778 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:01:59,175 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:01:59,176 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:01:59,382 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:01:59,383 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Race.parquet from MinIO for DuckDB import
+2025-09-05 16:01:59,993 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:02:00,002 - data.duckdb_ingest - INFO - File type 'safetyEq': found 5 matching files.
+2025-09-05 16:02:00,003 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/safetyeq.parquet as schema standard for safetyEq
+2025-09-05 16:02:00,062 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:02:00,062 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:02:00,132 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:02:00,132 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:02:00,192 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:02:00,192 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:02:00,247 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:02:00,247 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/SafetyEq.parquet from MinIO for DuckDB import
+2025-09-05 16:02:00,300 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/SafetyEq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:02:00,310 - data.duckdb_ingest - INFO - File type 'vehicle': found 5 matching files.
+2025-09-05 16:02:00,310 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehicle.parquet as schema standard for vehicle
+2025-09-05 16:02:02,575 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:02:02,576 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:02:06,891 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:02:06,892 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:02:11,822 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:02:11,823 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:02:16,021 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:02:16,022 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:02:21,739 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:02:21,749 - data.duckdb_ingest - INFO - File type 'VEvent': found 5 matching files.
+2025-09-05 16:02:21,749 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vevent.parquet as schema standard for VEvent
+2025-09-05 16:02:22,121 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:02:22,121 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:02:22,982 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:02:22,982 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:02:23,861 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:02:23,862 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:02:24,712 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:02:24,713 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VEvent.parquet from MinIO for DuckDB import
+2025-09-05 16:02:25,182 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VEvent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:02:25,191 - data.duckdb_ingest - INFO - File type 'Violatn': found 5 matching files.
+2025-09-05 16:02:25,191 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/violatn.parquet as schema standard for Violatn
+2025-09-05 16:02:25,268 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:02:25,268 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:02:25,371 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:02:25,371 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:02:25,470 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:02:25,471 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:02:25,563 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:02:25,564 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:02:25,777 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:02:25,787 - data.duckdb_ingest - INFO - File type 'Vision': found 5 matching files.
+2025-09-05 16:02:25,787 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vision.parquet as schema standard for Vision
+2025-09-05 16:02:25,864 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:02:25,864 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:02:26,150 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:02:26,150 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:02:26,253 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:02:26,254 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:02:26,341 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:02:26,342 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Vision.parquet from MinIO for DuckDB import
+2025-09-05 16:02:26,547 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:02:26,560 - data.duckdb_ingest - INFO - File type 'VPICdecode': found 5 matching files.
+2025-09-05 16:02:26,560 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpicdecode.parquet as schema standard for VPICdecode
+2025-09-05 16:02:28,202 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:02:28,202 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:02:31,116 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:02:31,117 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:02:34,318 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:02:34,319 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:02:50,602 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:02:50,602 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:03:05,949 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:03:05,960 - data.duckdb_ingest - INFO - File type 'VPICTrailerdecode': found 5 matching files.
+2025-09-05 16:03:05,961 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpictrailerdecode.parquet as schema standard for VPICTrailerdecode
+2025-09-05 16:03:06,072 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:03:06,072 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:03:06,197 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:03:06,197 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:03:06,281 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:03:06,281 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:03:06,405 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:03:06,405 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICTrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:03:06,517 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICTrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:03:06,527 - data.duckdb_ingest - INFO - File type 'VSOE': found 5 matching files.
+2025-09-05 16:03:06,528 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vsoe.parquet as schema standard for VSOE
+2025-09-05 16:03:06,860 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:03:06,861 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:03:07,450 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:03:07,450 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:03:08,176 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:03:08,177 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:03:08,779 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:03:08,779 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VSOE.parquet from MinIO for DuckDB import
+2025-09-05 16:03:09,047 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VSOE.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:03:09,376 - data.duckdb_ingest - INFO - Downloading parquet/motorcycle_helmet_laws_20250905.parquet from MinIO for DuckDB import
+2025-09-05 16:03:09,386 - data.duckdb_ingest - INFO - Loaded parquet/motorcycle_helmet_laws_20250905.parquet into DuckDB table bronze.bronze_motorcycle_helmet_laws
+2025-09-05 16:03:09,513 - data.duckdb_ingest - INFO - Data ingestion to DuckDB completed successfully.
+2025-09-05 16:33:15,752 - data.duckdb_ingest - INFO - File type 'accident': found 5 matching files.
+2025-09-05 16:33:15,753 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/accident.parquet as schema standard for accident
+2025-09-05 16:33:16,582 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:33:16,583 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:33:18,014 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:33:18,014 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:33:19,781 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:33:19,781 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:33:21,424 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:33:21,425 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:33:22,626 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:33:22,637 - data.duckdb_ingest - INFO - File type 'CEvent': found 5 matching files.
+2025-09-05 16:33:22,637 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/cevent.parquet as schema standard for CEvent
+2025-09-05 16:33:22,978 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:33:22,979 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:33:23,462 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:33:23,462 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:33:23,934 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:33:23,935 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:33:24,364 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:33:24,365 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/CEvent.parquet from MinIO for DuckDB import
+2025-09-05 16:33:24,886 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/CEvent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:33:24,897 - data.duckdb_ingest - INFO - File type 'crashrf': found 4 matching files.
+2025-09-05 16:33:24,898 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/crashrf.parquet as schema standard for crashrf
+2025-09-05 16:33:24,957 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:33:24,957 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 16:33:25,030 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:33:25,030 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 16:33:25,099 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:33:25,100 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 16:33:25,158 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:33:25,168 - data.duckdb_ingest - INFO - File type 'damage': found 5 matching files.
+2025-09-05 16:33:25,168 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/damage.parquet as schema standard for damage
+2025-09-05 16:33:25,529 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:33:25,530 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:33:26,048 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:33:26,049 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:33:26,585 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:33:26,585 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:33:26,914 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:33:26,914 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Damage.parquet from MinIO for DuckDB import
+2025-09-05 16:33:27,723 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:33:27,734 - data.duckdb_ingest - INFO - File type 'distract': found 5 matching files.
+2025-09-05 16:33:27,734 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/distract.parquet as schema standard for distract
+2025-09-05 16:33:27,819 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:33:27,819 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:27,930 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:33:27,930 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:28,041 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:33:28,042 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:28,139 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:33:28,140 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Distract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:28,356 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:33:28,365 - data.duckdb_ingest - INFO - File type 'drimpair': found 5 matching files.
+2025-09-05 16:33:28,366 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drimpair.parquet as schema standard for drimpair
+2025-09-05 16:33:28,618 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:33:28,619 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:28,725 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:33:28,726 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:28,834 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:33:28,834 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:28,926 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:33:28,927 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/DrImpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:29,018 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/DrImpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:33:29,028 - data.duckdb_ingest - INFO - File type 'driverrf': found 4 matching files.
+2025-09-05 16:33:29,028 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/driverrf.parquet as schema standard for driverrf
+2025-09-05 16:33:29,321 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:33:29,322 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 16:33:29,497 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:33:29,497 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 16:33:29,625 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:33:29,625 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 16:33:29,730 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:33:29,741 - data.duckdb_ingest - INFO - File type 'drugs': found 5 matching files.
+2025-09-05 16:33:29,741 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drugs.parquet as schema standard for drugs
+2025-09-05 16:33:30,246 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:33:30,246 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:33:32,385 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:33:32,385 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:33:34,026 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:33:34,026 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:33:35,568 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:33:35,569 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:33:36,983 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:33:36,992 - data.duckdb_ingest - INFO - File type 'factor': found 5 matching files.
+2025-09-05 16:33:36,992 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/factor.parquet as schema standard for factor
+2025-09-05 16:33:37,077 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:33:37,077 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:33:37,181 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:33:37,182 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:33:37,279 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:33:37,280 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:33:37,373 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:33:37,373 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Factor.parquet from MinIO for DuckDB import
+2025-09-05 16:33:37,580 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:33:37,590 - data.duckdb_ingest - INFO - File type 'maneuver': found 5 matching files.
+2025-09-05 16:33:37,590 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/maneuver.parquet as schema standard for maneuver
+2025-09-05 16:33:37,671 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:33:37,672 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:33:37,983 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:33:37,984 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:33:38,090 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:33:38,091 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:33:38,189 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:33:38,189 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:33:38,398 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:33:38,407 - data.duckdb_ingest - INFO - File type 'miacc': found 5 matching files.
+2025-09-05 16:33:38,407 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIACC.parquet as schema standard for miacc
+2025-09-05 16:33:38,483 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:33:38,484 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:38,591 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:33:38,591 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:38,707 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:33:38,707 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:38,826 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:33:38,827 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:39,211 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:33:39,226 - data.duckdb_ingest - INFO - File type 'midrvacc': found 5 matching files.
+2025-09-05 16:33:39,226 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIDRVACC.parquet as schema standard for midrvacc
+2025-09-05 16:33:39,339 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:33:39,340 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:39,493 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:33:39,493 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:39,602 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:33:39,602 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:39,712 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:33:39,713 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:33:39,820 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:33:39,830 - data.duckdb_ingest - INFO - File type 'miper': found 5 matching files.
+2025-09-05 16:33:39,830 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIPER.parquet as schema standard for miper
+2025-09-05 16:33:40,244 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:33:40,244 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:33:40,451 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:33:40,452 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:33:40,858 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:33:40,858 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,045 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:33:41,045 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,226 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:33:41,239 - data.duckdb_ingest - INFO - File type 'nmcrash': found 5 matching files.
+2025-09-05 16:33:41,239 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmcrash.parquet as schema standard for nmcrash
+2025-09-05 16:33:41,272 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:33:41,272 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,312 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:33:41,313 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,353 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:33:41,353 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,389 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:33:41,389 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMCrash.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,448 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMCrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:33:41,457 - data.duckdb_ingest - INFO - File type 'nmdistract': found 5 matching files.
+2025-09-05 16:33:41,457 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmdistract.parquet as schema standard for nmdistract
+2025-09-05 16:33:41,482 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:33:41,483 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,512 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:33:41,512 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,540 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:33:41,540 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,568 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:33:41,568 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMDistract.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,615 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMDistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:33:41,626 - data.duckdb_ingest - INFO - File type 'nmimpair': found 5 matching files.
+2025-09-05 16:33:41,626 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmimpair.parquet as schema standard for nmimpair
+2025-09-05 16:33:41,655 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:33:41,656 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,691 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:33:41,691 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,722 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:33:41,723 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,754 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:33:41,754 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMImpair.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,787 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMImpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:33:41,799 - data.duckdb_ingest - INFO - File type 'nmprior': found 5 matching files.
+2025-09-05 16:33:41,799 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmprior.parquet as schema standard for nmprior
+2025-09-05 16:33:41,828 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:33:41,828 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,863 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:33:41,864 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,898 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:33:41,898 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,933 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:33:41,933 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMPrior.parquet from MinIO for DuckDB import
+2025-09-05 16:33:41,981 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMPrior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:33:41,991 - data.duckdb_ingest - INFO - File type 'parkwork': found 5 matching files.
+2025-09-05 16:33:41,991 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/parkwork.parquet as schema standard for parkwork
+2025-09-05 16:33:42,186 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:33:42,187 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:33:42,826 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:33:42,827 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:33:43,080 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:33:43,081 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:33:43,299 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:33:43,300 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:33:43,518 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:33:43,528 - data.duckdb_ingest - INFO - File type 'pbtype': found 5 matching files.
+2025-09-05 16:33:43,528 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pbtype.parquet as schema standard for pbtype
+2025-09-05 16:33:43,633 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:33:43,634 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:33:43,791 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:33:43,791 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:33:44,227 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:33:44,228 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:33:44,361 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:33:44,361 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/PBType.parquet from MinIO for DuckDB import
+2025-09-05 16:33:44,489 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/PBType.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:33:44,499 - data.duckdb_ingest - INFO - File type 'person': found 5 matching files.
+2025-09-05 16:33:44,499 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/person.parquet as schema standard for person
+2025-09-05 16:33:46,808 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:33:46,808 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:33:50,383 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:33:50,383 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:33:54,549 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:33:54,549 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:33:58,318 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:33:58,319 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Person.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,047 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:34:03,057 - data.duckdb_ingest - INFO - File type 'personrf': found 4 matching files.
+2025-09-05 16:34:03,058 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/personrf.parquet as schema standard for personrf
+2025-09-05 16:34:03,193 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:34:03,194 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,374 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:34:03,374 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,672 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:34:03,672 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,803 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:34:03,813 - data.duckdb_ingest - INFO - File type 'pvehiclesf': found 4 matching files.
+2025-09-05 16:34:03,813 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pvehiclesf.parquet as schema standard for pvehiclesf
+2025-09-05 16:34:03,832 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:34:03,832 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,852 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:34:03,852 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,873 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:34:03,873 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:03,892 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:34:03,901 - data.duckdb_ingest - INFO - File type 'race': found 5 matching files.
+2025-09-05 16:34:03,901 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/race.parquet as schema standard for race
+2025-09-05 16:34:04,240 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:34:04,241 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:34:04,612 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:34:04,612 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:34:04,980 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:34:04,981 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:34:05,180 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:34:05,180 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Race.parquet from MinIO for DuckDB import
+2025-09-05 16:34:05,757 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:34:05,767 - data.duckdb_ingest - INFO - File type 'safetyEq': found 5 matching files.
+2025-09-05 16:34:05,767 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/safetyeq.parquet as schema standard for safetyEq
+2025-09-05 16:34:05,818 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:34:05,818 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:34:05,881 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:34:05,882 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:34:05,938 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:34:05,938 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:34:05,991 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:34:05,991 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/SafetyEq.parquet from MinIO for DuckDB import
+2025-09-05 16:34:06,041 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/SafetyEq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:34:06,051 - data.duckdb_ingest - INFO - File type 'vehicle': found 5 matching files.
+2025-09-05 16:34:06,051 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehicle.parquet as schema standard for vehicle
+2025-09-05 16:34:08,304 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:34:08,304 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:34:12,899 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:34:12,899 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:34:17,583 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:34:17,584 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:34:22,086 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:34:22,086 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:34:27,678 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:34:27,688 - data.duckdb_ingest - INFO - File type 'vehiclesf': found 4 matching files.
+2025-09-05 16:34:27,689 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehiclesf.parquet as schema standard for vehiclesf
+2025-09-05 16:34:27,792 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:34:27,792 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:27,922 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:34:27,922 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:28,016 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:34:28,016 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:34:28,102 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:34:28,111 - data.duckdb_ingest - INFO - File type 'VEvent': found 5 matching files.
+2025-09-05 16:34:28,112 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vevent.parquet as schema standard for VEvent
+2025-09-05 16:34:28,571 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:34:28,572 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:34:29,607 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:34:29,608 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:34:30,526 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:34:30,526 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:34:31,417 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:34:31,418 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VEvent.parquet from MinIO for DuckDB import
+2025-09-05 16:34:31,915 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VEvent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:34:31,925 - data.duckdb_ingest - INFO - File type 'Violatn': found 5 matching files.
+2025-09-05 16:34:31,926 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/violatn.parquet as schema standard for Violatn
+2025-09-05 16:34:32,004 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:34:32,005 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:34:32,111 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:34:32,111 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:34:32,219 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:34:32,220 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:34:32,311 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:34:32,312 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:34:32,537 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:34:32,547 - data.duckdb_ingest - INFO - File type 'Vision': found 5 matching files.
+2025-09-05 16:34:32,548 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vision.parquet as schema standard for Vision
+2025-09-05 16:34:32,628 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:34:32,629 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:34:32,927 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:34:32,928 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:34:33,033 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:34:33,033 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:34:33,128 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:34:33,128 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Vision.parquet from MinIO for DuckDB import
+2025-09-05 16:34:33,341 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:34:33,353 - data.duckdb_ingest - INFO - File type 'VPICdecode': found 5 matching files.
+2025-09-05 16:34:33,353 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpicdecode.parquet as schema standard for VPICdecode
+2025-09-05 16:34:34,938 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:34:34,938 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:34:37,758 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:34:37,759 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:34:40,981 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:34:40,982 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:34:56,853 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:34:56,854 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:35:12,481 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:35:12,491 - data.duckdb_ingest - INFO - File type 'VPICTrailerdecode': found 5 matching files.
+2025-09-05 16:35:12,492 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpictrailerdecode.parquet as schema standard for VPICTrailerdecode
+2025-09-05 16:35:12,611 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:35:12,611 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:35:12,715 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:35:12,716 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:35:12,797 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:35:12,798 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:35:12,920 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:35:12,920 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICTrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:35:13,029 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICTrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:35:13,038 - data.duckdb_ingest - INFO - File type 'VSOE': found 5 matching files.
+2025-09-05 16:35:13,038 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vsoe.parquet as schema standard for VSOE
+2025-09-05 16:35:13,349 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:35:13,350 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:35:13,921 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:35:13,922 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:35:14,515 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:35:14,515 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:35:15,103 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:35:15,103 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VSOE.parquet from MinIO for DuckDB import
+2025-09-05 16:35:15,353 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VSOE.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:35:15,363 - data.duckdb_ingest - INFO - File type 'weather': found 4 matching files.
+2025-09-05 16:35:15,363 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/weather.parquet as schema standard for weather
+2025-09-05 16:35:15,412 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:35:15,413 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 16:35:15,485 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:35:15,485 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 16:35:15,549 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:35:15,550 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 16:35:15,608 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:35:16,011 - data.duckdb_ingest - INFO - Downloading parquet/motorcycle_helmet_laws_20250905.parquet from MinIO for DuckDB import
+2025-09-05 16:35:16,021 - data.duckdb_ingest - INFO - Loaded parquet/motorcycle_helmet_laws_20250905.parquet into DuckDB table bronze.bronze_motorcycle_helmet_laws
+2025-09-05 16:35:16,151 - data.duckdb_ingest - INFO - Data ingestion to DuckDB completed successfully.
+2025-09-05 16:43:27,074 - data.duckdb_ingest - INFO - File type 'accident': found 5 matching files.
+2025-09-05 16:43:27,074 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/accident.parquet as schema standard for accident
+2025-09-05 16:43:27,920 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:43:27,920 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:43:29,361 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:43:29,361 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:43:31,199 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:43:31,200 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:43:32,921 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:43:32,921 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 16:43:34,122 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 16:43:34,132 - data.duckdb_ingest - INFO - File type 'CEvent': found 5 matching files.
+2025-09-05 16:43:34,132 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/cevent.parquet as schema standard for CEvent
+2025-09-05 16:43:34,474 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:43:34,475 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:43:34,973 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:43:34,973 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:43:35,456 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:43:35,457 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 16:43:35,945 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:43:35,946 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/CEvent.parquet from MinIO for DuckDB import
+2025-09-05 16:43:36,384 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/CEvent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 16:43:36,394 - data.duckdb_ingest - INFO - File type 'crashrf': found 4 matching files.
+2025-09-05 16:43:36,394 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/crashrf.parquet as schema standard for crashrf
+2025-09-05 16:43:36,448 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:43:36,448 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 16:43:36,520 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:43:36,521 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 16:43:36,583 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:43:36,584 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 16:43:36,644 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 16:43:36,653 - data.duckdb_ingest - INFO - File type 'damage': found 5 matching files.
+2025-09-05 16:43:36,654 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/damage.parquet as schema standard for damage
+2025-09-05 16:43:37,021 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:43:37,022 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:43:37,544 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:43:37,545 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:43:38,110 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:43:38,111 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 16:43:38,465 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:43:38,465 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Damage.parquet from MinIO for DuckDB import
+2025-09-05 16:43:39,298 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 16:43:39,309 - data.duckdb_ingest - INFO - File type 'distract': found 5 matching files.
+2025-09-05 16:43:39,310 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/distract.parquet as schema standard for distract
+2025-09-05 16:43:39,390 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:43:39,391 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:39,497 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:43:39,498 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:39,605 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:43:39,606 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:39,729 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:43:39,730 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Distract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:40,029 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 16:43:40,039 - data.duckdb_ingest - INFO - File type 'drimpair': found 5 matching files.
+2025-09-05 16:43:40,040 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drimpair.parquet as schema standard for drimpair
+2025-09-05 16:43:40,319 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:43:40,319 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:40,444 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:43:40,444 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:40,558 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:43:40,558 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:40,676 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:43:40,677 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/DrImpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:40,801 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/DrImpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 16:43:40,814 - data.duckdb_ingest - INFO - File type 'driverrf': found 4 matching files.
+2025-09-05 16:43:40,814 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/driverrf.parquet as schema standard for driverrf
+2025-09-05 16:43:41,122 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:43:41,122 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 16:43:41,239 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:43:41,239 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 16:43:41,358 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:43:41,358 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 16:43:41,472 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 16:43:41,482 - data.duckdb_ingest - INFO - File type 'drugs': found 5 matching files.
+2025-09-05 16:43:41,482 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drugs.parquet as schema standard for drugs
+2025-09-05 16:43:42,002 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:43:42,002 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:43:44,049 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:43:44,050 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:43:45,688 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:43:45,688 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:43:47,256 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:43:47,256 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Drugs.parquet from MinIO for DuckDB import
+2025-09-05 16:43:48,665 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 16:43:48,675 - data.duckdb_ingest - INFO - File type 'factor': found 5 matching files.
+2025-09-05 16:43:48,676 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/factor.parquet as schema standard for factor
+2025-09-05 16:43:48,752 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:43:48,753 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:43:48,860 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:43:48,860 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:43:48,963 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:43:48,963 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 16:43:49,056 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:43:49,057 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Factor.parquet from MinIO for DuckDB import
+2025-09-05 16:43:49,268 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 16:43:49,278 - data.duckdb_ingest - INFO - File type 'maneuver': found 5 matching files.
+2025-09-05 16:43:49,278 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/maneuver.parquet as schema standard for maneuver
+2025-09-05 16:43:49,352 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:43:49,353 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:43:49,695 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:43:49,695 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:43:49,870 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:43:49,871 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:43:49,976 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:43:49,977 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Maneuver.parquet from MinIO for DuckDB import
+2025-09-05 16:43:50,200 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 16:43:50,209 - data.duckdb_ingest - INFO - File type 'miacc': found 5 matching files.
+2025-09-05 16:43:50,210 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIACC.parquet as schema standard for miacc
+2025-09-05 16:43:50,287 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:43:50,287 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:50,399 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:43:50,400 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:50,511 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:43:50,512 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:50,620 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:43:50,620 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:51,020 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 16:43:51,029 - data.duckdb_ingest - INFO - File type 'midrvacc': found 5 matching files.
+2025-09-05 16:43:51,030 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIDRVACC.parquet as schema standard for midrvacc
+2025-09-05 16:43:51,107 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:43:51,107 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:51,223 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:43:51,224 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:51,340 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:43:51,340 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:51,449 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:43:51,450 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 16:43:51,551 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 16:43:51,560 - data.duckdb_ingest - INFO - File type 'miper': found 5 matching files.
+2025-09-05 16:43:51,561 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIPER.parquet as schema standard for miper
+2025-09-05 16:43:51,965 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:43:51,965 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:43:52,170 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:43:52,170 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:43:52,593 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:43:52,593 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:43:52,776 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:43:52,776 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 16:43:52,947 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 16:43:52,957 - data.duckdb_ingest - INFO - File type 'nmcrash': found 5 matching files.
+2025-09-05 16:43:52,958 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmcrash.parquet as schema standard for nmcrash
+2025-09-05 16:43:52,992 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:43:52,992 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,034 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:43:53,034 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,071 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:43:53,071 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,105 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:43:53,106 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMCrash.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,165 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMCrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 16:43:53,174 - data.duckdb_ingest - INFO - File type 'nmdistract': found 5 matching files.
+2025-09-05 16:43:53,175 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmdistract.parquet as schema standard for nmdistract
+2025-09-05 16:43:53,201 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:43:53,202 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,234 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:43:53,234 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,267 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:43:53,267 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,297 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:43:53,297 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMDistract.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,346 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMDistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 16:43:53,355 - data.duckdb_ingest - INFO - File type 'nmimpair': found 5 matching files.
+2025-09-05 16:43:53,355 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmimpair.parquet as schema standard for nmimpair
+2025-09-05 16:43:53,382 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:43:53,383 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,420 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:43:53,420 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,453 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:43:53,453 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,484 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:43:53,484 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMImpair.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,513 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMImpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 16:43:53,523 - data.duckdb_ingest - INFO - File type 'nmprior': found 5 matching files.
+2025-09-05 16:43:53,523 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmprior.parquet as schema standard for nmprior
+2025-09-05 16:43:53,550 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:43:53,550 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,585 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:43:53,585 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,617 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:43:53,618 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,649 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:43:53,650 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMPrior.parquet from MinIO for DuckDB import
+2025-09-05 16:43:53,697 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMPrior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 16:43:53,707 - data.duckdb_ingest - INFO - File type 'parkwork': found 5 matching files.
+2025-09-05 16:43:53,708 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/parkwork.parquet as schema standard for parkwork
+2025-09-05 16:43:53,919 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:43:53,920 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:43:54,596 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:43:54,597 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:43:54,866 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:43:54,866 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:43:55,112 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:43:55,113 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Parkwork.parquet from MinIO for DuckDB import
+2025-09-05 16:43:55,353 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 16:43:55,362 - data.duckdb_ingest - INFO - File type 'pbtype': found 5 matching files.
+2025-09-05 16:43:55,363 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pbtype.parquet as schema standard for pbtype
+2025-09-05 16:43:55,478 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:43:55,479 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:43:55,640 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:43:55,640 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:43:56,109 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:43:56,110 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 16:43:56,254 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:43:56,254 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/PBType.parquet from MinIO for DuckDB import
+2025-09-05 16:43:56,384 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/PBType.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 16:43:56,394 - data.duckdb_ingest - INFO - File type 'person': found 5 matching files.
+2025-09-05 16:43:56,394 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/person.parquet as schema standard for person
+2025-09-05 16:43:58,726 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:43:58,726 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:44:02,270 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:44:02,271 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:44:06,429 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:44:06,430 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/person.parquet from MinIO for DuckDB import
+2025-09-05 16:44:10,287 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:44:10,288 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Person.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,016 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 16:44:15,026 - data.duckdb_ingest - INFO - File type 'personrf': found 4 matching files.
+2025-09-05 16:44:15,026 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/personrf.parquet as schema standard for personrf
+2025-09-05 16:44:15,167 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:44:15,168 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,338 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:44:15,339 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,637 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:44:15,637 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,776 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 16:44:15,786 - data.duckdb_ingest - INFO - File type 'pvehiclesf': found 4 matching files.
+2025-09-05 16:44:15,786 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pvehiclesf.parquet as schema standard for pvehiclesf
+2025-09-05 16:44:15,805 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:44:15,806 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,826 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:44:15,827 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,846 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:44:15,847 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:15,864 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 16:44:15,873 - data.duckdb_ingest - INFO - File type 'race': found 5 matching files.
+2025-09-05 16:44:15,874 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/race.parquet as schema standard for race
+2025-09-05 16:44:16,221 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:44:16,222 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:44:16,598 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:44:16,598 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:44:16,982 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:44:16,982 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/race.parquet from MinIO for DuckDB import
+2025-09-05 16:44:17,181 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:44:17,181 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Race.parquet from MinIO for DuckDB import
+2025-09-05 16:44:17,740 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 16:44:17,750 - data.duckdb_ingest - INFO - File type 'safetyEq': found 5 matching files.
+2025-09-05 16:44:17,751 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/safetyeq.parquet as schema standard for safetyEq
+2025-09-05 16:44:17,806 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:44:17,806 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:44:17,869 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:44:17,869 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:44:17,930 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:44:17,930 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 16:44:17,985 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:44:17,985 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/SafetyEq.parquet from MinIO for DuckDB import
+2025-09-05 16:44:18,037 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/SafetyEq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 16:44:18,046 - data.duckdb_ingest - INFO - File type 'vehicle': found 5 matching files.
+2025-09-05 16:44:18,047 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehicle.parquet as schema standard for vehicle
+2025-09-05 16:44:20,403 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:44:20,404 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:44:24,944 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:44:24,944 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:44:29,764 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:44:29,765 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:44:34,370 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:44:34,371 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 16:44:39,962 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 16:44:39,974 - data.duckdb_ingest - INFO - File type 'vehiclesf': found 4 matching files.
+2025-09-05 16:44:39,974 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehiclesf.parquet as schema standard for vehiclesf
+2025-09-05 16:44:40,082 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:44:40,082 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:40,215 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:44:40,215 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:40,311 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:44:40,311 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 16:44:40,399 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 16:44:40,409 - data.duckdb_ingest - INFO - File type 'VEvent': found 5 matching files.
+2025-09-05 16:44:40,410 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vevent.parquet as schema standard for VEvent
+2025-09-05 16:44:40,869 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:44:40,869 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:44:41,776 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:44:41,776 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:44:42,700 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:44:42,700 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 16:44:43,558 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:44:43,558 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VEvent.parquet from MinIO for DuckDB import
+2025-09-05 16:44:44,071 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VEvent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 16:44:44,081 - data.duckdb_ingest - INFO - File type 'Violatn': found 5 matching files.
+2025-09-05 16:44:44,081 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/violatn.parquet as schema standard for Violatn
+2025-09-05 16:44:44,156 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:44:44,157 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:44:44,259 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:44:44,259 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:44:44,357 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:44:44,358 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:44:44,450 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:44:44,450 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Violatn.parquet from MinIO for DuckDB import
+2025-09-05 16:44:44,672 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 16:44:44,682 - data.duckdb_ingest - INFO - File type 'Vision': found 5 matching files.
+2025-09-05 16:44:44,682 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vision.parquet as schema standard for Vision
+2025-09-05 16:44:44,758 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:44:44,758 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:44:45,073 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:44:45,073 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:44:45,174 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:44:45,175 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 16:44:45,272 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:44:45,272 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Vision.parquet from MinIO for DuckDB import
+2025-09-05 16:44:45,479 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 16:44:45,489 - data.duckdb_ingest - INFO - File type 'VPICdecode': found 5 matching files.
+2025-09-05 16:44:45,490 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpicdecode.parquet as schema standard for VPICdecode
+2025-09-05 16:44:47,137 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:44:47,138 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:44:50,077 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:44:50,078 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:44:53,189 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:44:53,190 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:45:09,333 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:45:09,334 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:45:24,996 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 16:45:25,007 - data.duckdb_ingest - INFO - File type 'VPICTrailerdecode': found 5 matching files.
+2025-09-05 16:45:25,007 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpictrailerdecode.parquet as schema standard for VPICTrailerdecode
+2025-09-05 16:45:25,120 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:45:25,120 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:45:25,227 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:45:25,228 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:45:25,313 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:45:25,314 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:45:25,437 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:45:25,438 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICTrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 16:45:25,548 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICTrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 16:45:25,557 - data.duckdb_ingest - INFO - File type 'VSOE': found 5 matching files.
+2025-09-05 16:45:25,558 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vsoe.parquet as schema standard for VSOE
+2025-09-05 16:45:25,869 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:45:25,869 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:45:26,463 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:45:26,464 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:45:27,039 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:45:27,040 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 16:45:27,608 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:45:27,608 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VSOE.parquet from MinIO for DuckDB import
+2025-09-05 16:45:27,849 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VSOE.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 16:45:27,858 - data.duckdb_ingest - INFO - File type 'weather': found 4 matching files.
+2025-09-05 16:45:27,859 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/weather.parquet as schema standard for weather
+2025-09-05 16:45:27,903 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:45:27,903 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 16:45:27,966 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:45:27,966 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 16:45:28,026 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:45:28,027 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 16:45:28,082 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 16:45:28,491 - data.duckdb_ingest - INFO - Downloading parquet/motorcycle_helmet_laws_20250905.parquet from MinIO for DuckDB import
+2025-09-05 16:45:28,501 - data.duckdb_ingest - INFO - Loaded parquet/motorcycle_helmet_laws_20250905.parquet into DuckDB table bronze.bronze_motorcycle_helmet_laws
+2025-09-05 16:45:28,647 - data.duckdb_ingest - INFO - Data ingestion to DuckDB completed successfully.
+2025-09-05 17:34:18,289 - data.duckdb_ingest - INFO - File type 'accident': found 5 matching files.
+2025-09-05 17:34:18,289 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/accident.parquet as schema standard for accident
+2025-09-05 17:34:19,192 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 17:34:19,192 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 17:34:20,732 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 17:34:20,732 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 17:34:22,549 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 17:34:22,550 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 17:34:24,367 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 17:34:24,367 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/accident.parquet from MinIO for DuckDB import
+2025-09-05 17:34:25,599 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/accident.parquet into DuckDB table bronze.bronze_accident
+2025-09-05 17:34:25,609 - data.duckdb_ingest - INFO - File type 'CEvent': found 5 matching files.
+2025-09-05 17:34:25,609 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/cevent.parquet as schema standard for CEvent
+2025-09-05 17:34:26,027 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 17:34:26,027 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 17:34:26,601 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 17:34:26,601 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 17:34:27,154 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 17:34:27,154 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/cevent.parquet from MinIO for DuckDB import
+2025-09-05 17:34:27,678 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/cevent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 17:34:27,678 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/CEvent.parquet from MinIO for DuckDB import
+2025-09-05 17:34:28,178 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/CEvent.parquet into DuckDB table bronze.bronze_cevent
+2025-09-05 17:34:28,189 - data.duckdb_ingest - INFO - File type 'crashrf': found 4 matching files.
+2025-09-05 17:34:28,189 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/crashrf.parquet as schema standard for crashrf
+2025-09-05 17:34:28,247 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 17:34:28,247 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 17:34:28,317 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 17:34:28,318 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 17:34:28,378 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 17:34:28,378 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/crashrf.parquet from MinIO for DuckDB import
+2025-09-05 17:34:28,436 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/crashrf.parquet into DuckDB table bronze.bronze_crashrf
+2025-09-05 17:34:28,446 - data.duckdb_ingest - INFO - File type 'damage': found 5 matching files.
+2025-09-05 17:34:28,447 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/damage.parquet as schema standard for damage
+2025-09-05 17:34:28,915 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 17:34:28,916 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 17:34:29,555 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 17:34:29,556 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 17:34:30,183 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 17:34:30,184 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/damage.parquet from MinIO for DuckDB import
+2025-09-05 17:34:30,634 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 17:34:30,635 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Damage.parquet from MinIO for DuckDB import
+2025-09-05 17:34:31,566 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Damage.parquet into DuckDB table bronze.bronze_damage
+2025-09-05 17:34:31,577 - data.duckdb_ingest - INFO - File type 'distract': found 5 matching files.
+2025-09-05 17:34:31,577 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/distract.parquet as schema standard for distract
+2025-09-05 17:34:31,661 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 17:34:31,661 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:31,771 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 17:34:31,772 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:31,872 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 17:34:31,872 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/distract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:31,967 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 17:34:31,968 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Distract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:32,355 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Distract.parquet into DuckDB table bronze.bronze_distract
+2025-09-05 17:34:32,367 - data.duckdb_ingest - INFO - File type 'drimpair': found 5 matching files.
+2025-09-05 17:34:32,368 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drimpair.parquet as schema standard for drimpair
+2025-09-05 17:34:32,725 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 17:34:32,725 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:32,841 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 17:34:32,842 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:32,955 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 17:34:32,955 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drimpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:33,056 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drimpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 17:34:33,057 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/DrImpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:33,167 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/DrImpair.parquet into DuckDB table bronze.bronze_drimpair
+2025-09-05 17:34:33,178 - data.duckdb_ingest - INFO - File type 'driverrf': found 4 matching files.
+2025-09-05 17:34:33,178 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/driverrf.parquet as schema standard for driverrf
+2025-09-05 17:34:33,533 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 17:34:33,534 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 17:34:33,665 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 17:34:33,665 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 17:34:33,781 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 17:34:33,782 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/driverrf.parquet from MinIO for DuckDB import
+2025-09-05 17:34:33,904 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/driverrf.parquet into DuckDB table bronze.bronze_driverrf
+2025-09-05 17:34:33,914 - data.duckdb_ingest - INFO - File type 'drugs': found 5 matching files.
+2025-09-05 17:34:33,914 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/drugs.parquet as schema standard for drugs
+2025-09-05 17:34:34,493 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 17:34:34,493 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 17:34:36,618 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 17:34:36,619 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 17:34:38,360 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 17:34:38,360 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/drugs.parquet from MinIO for DuckDB import
+2025-09-05 17:34:39,937 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 17:34:39,938 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Drugs.parquet from MinIO for DuckDB import
+2025-09-05 17:34:41,460 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Drugs.parquet into DuckDB table bronze.bronze_drugs
+2025-09-05 17:34:41,470 - data.duckdb_ingest - INFO - File type 'factor': found 5 matching files.
+2025-09-05 17:34:41,471 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/factor.parquet as schema standard for factor
+2025-09-05 17:34:41,548 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 17:34:41,548 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 17:34:41,652 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 17:34:41,652 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 17:34:41,755 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 17:34:41,755 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/factor.parquet from MinIO for DuckDB import
+2025-09-05 17:34:41,854 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 17:34:41,854 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Factor.parquet from MinIO for DuckDB import
+2025-09-05 17:34:42,085 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Factor.parquet into DuckDB table bronze.bronze_factor
+2025-09-05 17:34:42,104 - data.duckdb_ingest - INFO - File type 'maneuver': found 5 matching files.
+2025-09-05 17:34:42,105 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/maneuver.parquet as schema standard for maneuver
+2025-09-05 17:34:42,231 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 17:34:42,232 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 17:34:42,657 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 17:34:42,657 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 17:34:42,773 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 17:34:42,773 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/maneuver.parquet from MinIO for DuckDB import
+2025-09-05 17:34:42,866 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 17:34:42,867 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Maneuver.parquet from MinIO for DuckDB import
+2025-09-05 17:34:43,086 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Maneuver.parquet into DuckDB table bronze.bronze_maneuver
+2025-09-05 17:34:43,095 - data.duckdb_ingest - INFO - File type 'miacc': found 5 matching files.
+2025-09-05 17:34:43,096 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIACC.parquet as schema standard for miacc
+2025-09-05 17:34:43,175 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 17:34:43,175 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:43,296 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 17:34:43,297 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:43,413 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 17:34:43,414 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:43,523 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 17:34:43,523 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:43,982 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIACC.parquet into DuckDB table bronze.bronze_miacc
+2025-09-05 17:34:43,992 - data.duckdb_ingest - INFO - File type 'midrvacc': found 5 matching files.
+2025-09-05 17:34:43,992 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIDRVACC.parquet as schema standard for midrvacc
+2025-09-05 17:34:44,068 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 17:34:44,068 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:44,171 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 17:34:44,171 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:44,283 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 17:34:44,283 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:44,387 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 17:34:44,388 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIDRVACC.parquet from MinIO for DuckDB import
+2025-09-05 17:34:44,486 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIDRVACC.parquet into DuckDB table bronze.bronze_midrvacc
+2025-09-05 17:34:44,496 - data.duckdb_ingest - INFO - File type 'miper': found 5 matching files.
+2025-09-05 17:34:44,497 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/MIPER.parquet as schema standard for miper
+2025-09-05 17:34:44,975 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 17:34:44,976 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 17:34:45,176 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 17:34:45,177 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 17:34:45,681 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 17:34:45,682 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 17:34:45,853 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 17:34:45,853 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/MIPER.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,012 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/MIPER.parquet into DuckDB table bronze.bronze_miper
+2025-09-05 17:34:46,022 - data.duckdb_ingest - INFO - File type 'nmcrash': found 5 matching files.
+2025-09-05 17:34:46,023 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmcrash.parquet as schema standard for nmcrash
+2025-09-05 17:34:46,057 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 17:34:46,057 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,097 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 17:34:46,098 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,134 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 17:34:46,134 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmcrash.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,170 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmcrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 17:34:46,170 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMCrash.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,234 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMCrash.parquet into DuckDB table bronze.bronze_nmcrash
+2025-09-05 17:34:46,243 - data.duckdb_ingest - INFO - File type 'nmdistract': found 5 matching files.
+2025-09-05 17:34:46,243 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmdistract.parquet as schema standard for nmdistract
+2025-09-05 17:34:46,270 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 17:34:46,271 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,308 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 17:34:46,308 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,337 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 17:34:46,337 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmdistract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,371 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmdistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 17:34:46,372 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMDistract.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,430 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMDistract.parquet into DuckDB table bronze.bronze_nmdistract
+2025-09-05 17:34:46,439 - data.duckdb_ingest - INFO - File type 'nmimpair': found 5 matching files.
+2025-09-05 17:34:46,440 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmimpair.parquet as schema standard for nmimpair
+2025-09-05 17:34:46,468 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 17:34:46,468 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,503 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 17:34:46,503 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,535 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 17:34:46,535 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmimpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,570 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmimpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 17:34:46,571 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMImpair.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,602 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMImpair.parquet into DuckDB table bronze.bronze_nmimpair
+2025-09-05 17:34:46,613 - data.duckdb_ingest - INFO - File type 'nmprior': found 5 matching files.
+2025-09-05 17:34:46,613 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/nmprior.parquet as schema standard for nmprior
+2025-09-05 17:34:46,644 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 17:34:46,645 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,679 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 17:34:46,680 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,714 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 17:34:46,714 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/nmprior.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,743 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/nmprior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 17:34:46,743 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/NMPrior.parquet from MinIO for DuckDB import
+2025-09-05 17:34:46,793 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/NMPrior.parquet into DuckDB table bronze.bronze_nmprior
+2025-09-05 17:34:46,802 - data.duckdb_ingest - INFO - File type 'parkwork': found 5 matching files.
+2025-09-05 17:34:46,803 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/parkwork.parquet as schema standard for parkwork
+2025-09-05 17:34:47,001 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 17:34:47,001 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 17:34:47,810 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 17:34:47,811 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 17:34:48,068 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 17:34:48,069 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/parkwork.parquet from MinIO for DuckDB import
+2025-09-05 17:34:48,302 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 17:34:48,302 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Parkwork.parquet from MinIO for DuckDB import
+2025-09-05 17:34:48,532 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Parkwork.parquet into DuckDB table bronze.bronze_parkwork
+2025-09-05 17:34:48,542 - data.duckdb_ingest - INFO - File type 'pbtype': found 5 matching files.
+2025-09-05 17:34:48,542 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pbtype.parquet as schema standard for pbtype
+2025-09-05 17:34:48,654 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 17:34:48,654 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 17:34:48,812 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 17:34:48,812 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 17:34:49,313 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 17:34:49,313 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pbtype.parquet from MinIO for DuckDB import
+2025-09-05 17:34:49,446 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pbtype.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 17:34:49,447 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/PBType.parquet from MinIO for DuckDB import
+2025-09-05 17:34:49,587 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/PBType.parquet into DuckDB table bronze.bronze_pbtype
+2025-09-05 17:34:49,598 - data.duckdb_ingest - INFO - File type 'person': found 5 matching files.
+2025-09-05 17:34:49,599 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/person.parquet as schema standard for person
+2025-09-05 17:34:51,950 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 17:34:51,951 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/person.parquet from MinIO for DuckDB import
+2025-09-05 17:34:55,639 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 17:34:55,639 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/person.parquet from MinIO for DuckDB import
+2025-09-05 17:34:59,810 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 17:34:59,811 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/person.parquet from MinIO for DuckDB import
+2025-09-05 17:35:03,798 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 17:35:03,799 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Person.parquet from MinIO for DuckDB import
+2025-09-05 17:35:08,314 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Person.parquet into DuckDB table bronze.bronze_person
+2025-09-05 17:35:08,324 - data.duckdb_ingest - INFO - File type 'personrf': found 4 matching files.
+2025-09-05 17:35:08,324 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/personrf.parquet as schema standard for personrf
+2025-09-05 17:35:08,468 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 17:35:08,469 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:08,655 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 17:35:08,656 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:09,023 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 17:35:09,023 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/personrf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:09,164 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/personrf.parquet into DuckDB table bronze.bronze_personrf
+2025-09-05 17:35:09,176 - data.duckdb_ingest - INFO - File type 'pvehiclesf': found 4 matching files.
+2025-09-05 17:35:09,177 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/pvehiclesf.parquet as schema standard for pvehiclesf
+2025-09-05 17:35:09,197 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 17:35:09,197 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:09,219 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 17:35:09,219 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:09,239 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 17:35:09,239 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/pvehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:09,258 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/pvehiclesf.parquet into DuckDB table bronze.bronze_pvehiclesf
+2025-09-05 17:35:09,269 - data.duckdb_ingest - INFO - File type 'race': found 5 matching files.
+2025-09-05 17:35:09,269 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/race.parquet as schema standard for race
+2025-09-05 17:35:09,699 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 17:35:09,700 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/race.parquet from MinIO for DuckDB import
+2025-09-05 17:35:10,147 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 17:35:10,148 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/race.parquet from MinIO for DuckDB import
+2025-09-05 17:35:10,578 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 17:35:10,578 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/race.parquet from MinIO for DuckDB import
+2025-09-05 17:35:10,779 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 17:35:10,779 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Race.parquet from MinIO for DuckDB import
+2025-09-05 17:35:11,423 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Race.parquet into DuckDB table bronze.bronze_race
+2025-09-05 17:35:11,433 - data.duckdb_ingest - INFO - File type 'safetyEq': found 5 matching files.
+2025-09-05 17:35:11,433 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/safetyeq.parquet as schema standard for safetyEq
+2025-09-05 17:35:11,493 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 17:35:11,494 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 17:35:11,557 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 17:35:11,557 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 17:35:11,615 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 17:35:11,615 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/safetyeq.parquet from MinIO for DuckDB import
+2025-09-05 17:35:11,667 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/safetyeq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 17:35:11,668 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/SafetyEq.parquet from MinIO for DuckDB import
+2025-09-05 17:35:11,719 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/SafetyEq.parquet into DuckDB table bronze.bronze_safetyeq
+2025-09-05 17:35:11,728 - data.duckdb_ingest - INFO - File type 'vehicle': found 5 matching files.
+2025-09-05 17:35:11,728 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehicle.parquet as schema standard for vehicle
+2025-09-05 17:35:14,125 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 17:35:14,126 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 17:35:18,520 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 17:35:18,521 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 17:35:23,134 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 17:35:23,134 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 17:35:27,568 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 17:35:27,569 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/vehicle.parquet from MinIO for DuckDB import
+2025-09-05 17:35:33,216 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/vehicle.parquet into DuckDB table bronze.bronze_vehicle
+2025-09-05 17:35:33,225 - data.duckdb_ingest - INFO - File type 'vehiclesf': found 4 matching files.
+2025-09-05 17:35:33,225 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vehiclesf.parquet as schema standard for vehiclesf
+2025-09-05 17:35:33,331 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 17:35:33,331 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:33,453 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 17:35:33,453 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:33,545 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 17:35:33,545 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vehiclesf.parquet from MinIO for DuckDB import
+2025-09-05 17:35:33,627 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vehiclesf.parquet into DuckDB table bronze.bronze_vehiclesf
+2025-09-05 17:35:33,636 - data.duckdb_ingest - INFO - File type 'VEvent': found 5 matching files.
+2025-09-05 17:35:33,636 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vevent.parquet as schema standard for VEvent
+2025-09-05 17:35:34,167 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 17:35:34,167 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 17:35:35,134 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 17:35:35,134 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 17:35:36,114 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 17:35:36,115 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vevent.parquet from MinIO for DuckDB import
+2025-09-05 17:35:37,045 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vevent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 17:35:37,045 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VEvent.parquet from MinIO for DuckDB import
+2025-09-05 17:35:37,598 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VEvent.parquet into DuckDB table bronze.bronze_vevent
+2025-09-05 17:35:37,608 - data.duckdb_ingest - INFO - File type 'Violatn': found 5 matching files.
+2025-09-05 17:35:37,609 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/violatn.parquet as schema standard for Violatn
+2025-09-05 17:35:37,683 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 17:35:37,683 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 17:35:37,783 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 17:35:37,783 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 17:35:37,892 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 17:35:37,892 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/violatn.parquet from MinIO for DuckDB import
+2025-09-05 17:35:37,986 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 17:35:37,986 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Violatn.parquet from MinIO for DuckDB import
+2025-09-05 17:35:38,211 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Violatn.parquet into DuckDB table bronze.bronze_violatn
+2025-09-05 17:35:38,222 - data.duckdb_ingest - INFO - File type 'Vision': found 5 matching files.
+2025-09-05 17:35:38,222 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vision.parquet as schema standard for Vision
+2025-09-05 17:35:38,301 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 17:35:38,302 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 17:35:38,677 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 17:35:38,678 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 17:35:38,787 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 17:35:38,787 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vision.parquet from MinIO for DuckDB import
+2025-09-05 17:35:38,889 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 17:35:38,890 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/Vision.parquet from MinIO for DuckDB import
+2025-09-05 17:35:39,106 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/Vision.parquet into DuckDB table bronze.bronze_vision
+2025-09-05 17:35:39,117 - data.duckdb_ingest - INFO - File type 'VPICdecode': found 5 matching files.
+2025-09-05 17:35:39,118 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpicdecode.parquet as schema standard for VPICdecode
+2025-09-05 17:35:40,781 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 17:35:40,781 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:35:43,697 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 17:35:43,698 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:35:46,765 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 17:35:46,766 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpicdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:36:02,766 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpicdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 17:36:02,767 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:36:18,094 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICdecode.parquet into DuckDB table bronze.bronze_vpicdecode
+2025-09-05 17:36:18,104 - data.duckdb_ingest - INFO - File type 'VPICTrailerdecode': found 5 matching files.
+2025-09-05 17:36:18,104 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vpictrailerdecode.parquet as schema standard for VPICTrailerdecode
+2025-09-05 17:36:18,227 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 17:36:18,228 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:36:18,330 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 17:36:18,330 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:36:18,412 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 17:36:18,413 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vpictrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:36:18,532 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vpictrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 17:36:18,532 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VPICTrailerdecode.parquet from MinIO for DuckDB import
+2025-09-05 17:36:18,640 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VPICTrailerdecode.parquet into DuckDB table bronze.bronze_vpictrailerdecode
+2025-09-05 17:36:18,649 - data.duckdb_ingest - INFO - File type 'VSOE': found 5 matching files.
+2025-09-05 17:36:18,650 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/vsoe.parquet as schema standard for VSOE
+2025-09-05 17:36:19,044 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 17:36:19,045 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 17:36:19,685 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 17:36:19,685 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 17:36:20,365 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 17:36:20,366 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/vsoe.parquet from MinIO for DuckDB import
+2025-09-05 17:36:21,004 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/vsoe.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 17:36:21,004 - data.duckdb_ingest - INFO - Downloading parquet/fars/2019/National/VSOE.parquet from MinIO for DuckDB import
+2025-09-05 17:36:21,244 - data.duckdb_ingest - INFO - Loaded parquet/fars/2019/National/VSOE.parquet into DuckDB table bronze.bronze_vsoe
+2025-09-05 17:36:21,255 - data.duckdb_ingest - INFO - File type 'weather': found 4 matching files.
+2025-09-05 17:36:21,255 - data.duckdb_ingest - INFO - Using parquet/fars/2023/National/weather.parquet as schema standard for weather
+2025-09-05 17:36:21,308 - data.duckdb_ingest - INFO - Loaded parquet/fars/2023/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 17:36:21,308 - data.duckdb_ingest - INFO - Downloading parquet/fars/2022/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 17:36:21,370 - data.duckdb_ingest - INFO - Loaded parquet/fars/2022/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 17:36:21,370 - data.duckdb_ingest - INFO - Downloading parquet/fars/2021/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 17:36:21,466 - data.duckdb_ingest - INFO - Loaded parquet/fars/2021/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 17:36:21,467 - data.duckdb_ingest - INFO - Downloading parquet/fars/2020/National/weather.parquet from MinIO for DuckDB import
+2025-09-05 17:36:21,529 - data.duckdb_ingest - INFO - Loaded parquet/fars/2020/National/weather.parquet into DuckDB table bronze.bronze_weather
+2025-09-05 17:36:22,048 - data.duckdb_ingest - INFO - Downloading parquet/motorcycle_helmet_laws_20250905.parquet from MinIO for DuckDB import
+2025-09-05 17:36:22,058 - data.duckdb_ingest - INFO - Loaded parquet/motorcycle_helmet_laws_20250905.parquet into DuckDB table bronze.bronze_motorcycle_helmet_laws
+2025-09-05 17:36:22,345 - data.duckdb_ingest - INFO - Data ingestion to DuckDB completed successfully.

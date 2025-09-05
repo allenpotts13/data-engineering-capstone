@@ -1,10 +1,10 @@
 CREATE OR REPLACE TABLE silver_vision AS
 SELECT
-    TRY_CAST(state AS INTEGER) AS state,
-    LOWER(statename) AS statename,
-    TRY_CAST(st_case AS INTEGER) AS st_case,
-    TRY_CAST(veh_no AS INTEGER) AS veh_no,
-    TRY_CAST(vision AS INTEGER) AS vision,
-    LOWER(visionname) AS vision_name
-FROM bronze_vision
+    TRY_CAST(STATE AS INTEGER) AS STATE,
+    STATENAME AS STATENAME,
+    TRY_CAST(ST_CASE AS INTEGER) AS ST_CASE,
+    TRY_CAST(VEH_NO AS INTEGER) AS VEH_NO,
+    TRY_CAST(VISION AS INTEGER) AS VISION,
+    VISIONNAME AS VISIONNAME
+FROM bronze.bronze_vision
 WHERE st_case IS NOT NULL AND veh_no IS NOT NULL;

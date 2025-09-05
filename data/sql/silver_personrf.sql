@@ -1,11 +1,11 @@
 CREATE OR REPLACE TABLE silver_personrf AS
 SELECT
-    TRY_CAST(state AS INTEGER) AS state,
-    statename,
-    TRY_CAST(st_case AS INTEGER) AS st_case,
-    TRY_CAST(veh_no AS INTEGER) AS veh_no,
-    TRY_CAST(per_no AS INTEGER) AS per_no,
-    TRY_CAST(personrf AS INTEGER) AS personrf,
-    personrfname
-FROM bronze_personrf
-WHERE st_case IS NOT NULL AND veh_no IS NOT NULL AND per_no IS NOT NULL;
+    TRY_CAST(STATE AS INTEGER) AS state,
+    STATENAME,
+    TRY_CAST(ST_CASE AS INTEGER) AS st_case,
+    TRY_CAST(VEH_NO AS INTEGER) AS veh_no,
+    TRY_CAST(PER_NO AS INTEGER) AS per_no,
+    TRY_CAST(PERSONRF AS INTEGER) AS personrf,
+    PERSONRFNAME
+FROM bronze.bronze_personrf
+WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL;

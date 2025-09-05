@@ -1,15 +1,15 @@
 CREATE OR REPLACE TABLE silver_race AS
 SELECT
-    TRY_CAST(state AS INTEGER) AS state,
-    statename,
-    TRY_CAST(st_case AS INTEGER) AS st_case,
-    TRY_CAST(veh_no AS INTEGER) AS veh_no,
-    TRY_CAST(per_no AS INTEGER) AS per_no,
-    TRY_CAST(race AS INTEGER) AS race,
-    racename,
-    TRY_CAST(order AS INTEGER) AS order,
-    ordername,
-    TRY_CAST(multrace AS INTEGER) AS multrace,
-    multracename
-FROM bronze_race
-WHERE st_case IS NOT NULL AND veh_no IS NOT NULL AND per_no IS NOT NULL;
+    TRY_CAST(STATE AS INTEGER) AS state,
+    STATENAME,
+    TRY_CAST(ST_CASE AS INTEGER) AS st_case,
+    TRY_CAST(VEH_NO AS INTEGER) AS veh_no,
+    TRY_CAST(PER_NO AS INTEGER) AS per_no,
+    TRY_CAST(RACE AS INTEGER) AS race,
+    RACENAME,
+    TRY_CAST("ORDER" AS INTEGER) AS order,
+    ORDERNAME,
+    TRY_CAST(MULTRACE AS INTEGER) AS multrace,
+    MULTRACENAME
+FROM bronze.bronze_race
+WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL;

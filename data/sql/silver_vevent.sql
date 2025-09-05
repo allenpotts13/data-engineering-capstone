@@ -1,19 +1,19 @@
 CREATE OR REPLACE TABLE silver_vevent AS
 SELECT
-    TRY_CAST(state AS INTEGER) AS state,
-    LOWER(statename) AS statename,
-    TRY_CAST(st_case AS INTEGER) AS st_case,
-    TRY_CAST(eventnum AS INTEGER) AS eventnum,
-    TRY_CAST(veh_no AS INTEGER) AS veh_no,
-    TRY_CAST(veventnum AS INTEGER) AS veventnum,
-    TRY_CAST(vnumber1 AS INTEGER) AS vnumber1,
-    TRY_CAST(aoi1 AS INTEGER) AS aoi1,
-    LOWER(aoi1name) AS aoi1_name,
-    TRY_CAST(soe AS INTEGER) AS soe,
-    LOWER(soename) AS soename,
-    TRY_CAST(vnumber2 AS INTEGER) AS vnumber2,
-    LOWER(vnumber2name) AS vnumber2_name,
-    TRY_CAST(aoi2 AS INTEGER) AS aoi2,
-    LOWER(aoi2name) AS aoi2_name
-FROM bronze_vevent
-WHERE st_case IS NOT NULL AND veh_no IS NOT NULL AND eventnum IS NOT NULL;
+    TRY_CAST(STATE AS INTEGER) AS state,
+    STATENAME,
+    TRY_CAST(ST_CASE AS INTEGER) AS st_case,
+    TRY_CAST(EVENTNUM AS INTEGER) AS eventnum,
+    TRY_CAST(VEH_NO AS INTEGER) AS veh_no,
+    TRY_CAST(VEVENTNUM AS INTEGER) AS veventnum,
+    TRY_CAST(VNUMBER1 AS INTEGER) AS vnumber1,
+    TRY_CAST(AOI1 AS INTEGER) AS aoi1,
+    AOI1NAME,
+    TRY_CAST(SOE AS INTEGER) AS soe,
+    SOENAME,
+    TRY_CAST(VNUMBER2 AS INTEGER) AS vnumber2,
+    VNUMBER2NAME,
+    TRY_CAST(AOI2 AS INTEGER) AS aoi2,
+    AOI2NAME
+FROM bronze.bronze_vevent
+WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND EVENTNUM IS NOT NULL;

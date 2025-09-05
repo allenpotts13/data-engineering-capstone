@@ -43,7 +43,7 @@ def _run_duckdb_ingest(**kwargs):
 
 
 with DAG(
-    dag_id="duckdb_ingestion_dag",
+    dag_id="duckdb_ingest_dag",
     schedule="@daily",
     start_date=pendulum.now("UTC").subtract(days=1),
     catchup=False,
@@ -51,9 +51,9 @@ with DAG(
     tags=["data", "ingestion"],
 ) as dag:
 
-    run_duckdb_ingestion = PythonOperator(
-        task_id="run_duckdb_ingestion",
+    run_duckdb_ingest = PythonOperator(
+        task_id="run_duckdb_ingest",
         python_callable=_run_duckdb_ingest,
     )
 
-    run_duckdb_ingestion
+    run_duckdb_ingest

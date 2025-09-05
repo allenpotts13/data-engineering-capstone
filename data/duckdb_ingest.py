@@ -26,9 +26,11 @@ def fars_data_to_duckdb():
     file_types = [
         "accident",
         "CEvent",
+        "crashrf",
         "damage",
         "distract",
         "drimpair",
+        "driverrf",
         "drugs",
         "factor",
         "maneuver",
@@ -42,15 +44,19 @@ def fars_data_to_duckdb():
         "parkwork",
         "pbtype",
         "person",
+        "personrf",
+        "pvehiclesf",
         "race",
         "safetyEq",
         "vehicle",
+        "vehiclesf",
         "VEvent",
         "Violatn",
         "Vision",
         "VPICdecode",
         "VPICTrailerdecode",
         "VSOE",
+        "weather"
     ]
 
     con = duckdb.connect(duckdb_path)
