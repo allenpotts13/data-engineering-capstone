@@ -11,7 +11,7 @@ SELECT
 FROM bronze.bronze_maneuver
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_maneuver s
-        WHERE s.st_case = TRY_CAST(bronze.bronze_maneuver.ST_CASE AS INTEGER)
-            AND s.veh_no = TRY_CAST(bronze.bronze_maneuver.VEH_NO AS INTEGER)
+        SELECT 1 FROM analysis.silver_maneuver a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_maneuver.ST_CASE AS INTEGER)
+            AND a.veh_no = TRY_CAST(bronze.bronze_maneuver.VEH_NO AS INTEGER)
     );

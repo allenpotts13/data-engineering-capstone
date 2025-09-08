@@ -16,6 +16,6 @@ SELECT
 FROM bronze.bronze_miacc
 WHERE ST_CASE IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_miacc s
-        WHERE s.st_case = TRY_CAST(bronze.bronze_miacc.ST_CASE AS INTEGER)
+        SELECT 1 FROM analysis.silver_miacc a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_miacc.ST_CASE AS INTEGER)
     );

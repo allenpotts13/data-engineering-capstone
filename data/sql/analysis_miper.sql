@@ -18,8 +18,8 @@ SELECT
 FROM bronze.bronze_miper
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_miper s
-        WHERE s.st_case = TRY_CAST(bronze.bronze_miper.ST_CASE AS INTEGER)
-            AND s.veh_no = TRY_CAST(bronze.bronze_miper.VEH_NO AS INTEGER)
-            AND s.per_no = TRY_CAST(bronze.bronze_miper.PER_NO AS INTEGER)
+        SELECT 1 FROM analysis.silver_miper a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_miper.ST_CASE AS INTEGER)
+            AND a.veh_no = TRY_CAST(bronze.bronze_miper.VEH_NO AS INTEGER)
+            AND a.per_no = TRY_CAST(bronze.bronze_miper.PER_NO AS INTEGER)
     );

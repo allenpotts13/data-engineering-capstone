@@ -10,7 +10,7 @@ SELECT
 FROM bronze.bronze_crashrf
 WHERE ST_CASE IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM silver.silver_crashrf s
-        WHERE s.st_case = TRY_CAST(bronze.bronze_crashrf.ST_CASE AS INTEGER)
-            AND s.crashrf = TRY_CAST(bronze.bronze_crashrf.CRASHRF AS INTEGER)
+        SELECT 1 FROM analysis.silver_crashrf a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_crashrf.ST_CASE AS INTEGER)
+            AND a.crashrf = TRY_CAST(bronze.bronze_crashrf.CRASHRF AS INTEGER)
     );

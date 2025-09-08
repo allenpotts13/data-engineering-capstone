@@ -120,7 +120,7 @@ SELECT
 FROM bronze.bronze_parkwork
 WHERE st_case IS NOT NULL AND veh_no IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_parkwork s
-        WHERE s.st_case = TRY_CAST(bronze.bronze_parkwork.ST_CASE AS INTEGER)
-            AND s.veh_no = TRY_CAST(bronze.bronze_parkwork.VEH_NO AS INTEGER)
+        SELECT 1 FROM analysis.silver_parkwork a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_parkwork.ST_CASE AS INTEGER)
+            AND a.veh_no = TRY_CAST(bronze.bronze_parkwork.VEH_NO AS INTEGER)
     );

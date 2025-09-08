@@ -12,8 +12,8 @@ SELECT
 FROM bronze.bronze_nmcrash
 WHERE ST_CASE IS NOT NULL AND PER_NO IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_nmcrash s
-        WHERE s.st_case = TRY_CAST(bronze.bronze_nmcrash.ST_CASE AS INTEGER)
-            AND s.veh_no = TRY_CAST(bronze.bronze_nmcrash.VEH_NO AS INTEGER)
-            AND s.per_no = TRY_CAST(bronze.bronze_nmcrash.PER_NO AS INTEGER)
+        SELECT 1 FROM analysis.silver_nmcrash a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_nmcrash.ST_CASE AS INTEGER)
+            AND a.veh_no = TRY_CAST(bronze.bronze_nmcrash.VEH_NO AS INTEGER)
+            AND a.per_no = TRY_CAST(bronze.bronze_nmcrash.PER_NO AS INTEGER)
     );

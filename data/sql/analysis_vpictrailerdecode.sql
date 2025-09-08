@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS analysis;
 
-INSERT INTO silver.silver_vpictrailerdecode
+INSERT INTO analysis.silver_vpictrailerdecode
 SELECT
         TRY_CAST(STATE AS INTEGER) AS state,
         STATENAME AS state_name,
@@ -47,7 +47,7 @@ SELECT
 FROM bronze.bronze_vpictrailerdecode
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND TRAILER_NO IS NOT NULL
     AND NOT EXISTS (
-            SELECT 1 FROM silver.silver_vpictrailerdecode s
+            SELECT 1 FROM analysis.silver_vpictrailerdecode s
             WHERE s.st_case = TRY_CAST(bronze.bronze_vpictrailerdecode.ST_CASE AS INTEGER)
                 AND s.veh_no = TRY_CAST(bronze.bronze_vpictrailerdecode.VEH_NO AS INTEGER)
                 AND s.trailer_no = TRY_CAST(bronze.bronze_vpictrailerdecode.TRAILER_NO AS INTEGER)

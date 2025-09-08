@@ -83,7 +83,7 @@ SELECT
 FROM bronze.bronze_accident
 WHERE ST_CASE IS NOT NULL AND YEAR IS NOT NULL
   AND NOT EXISTS (
-      SELECT 1 FROM silver.silver_accident s
-      WHERE s.st_case = TRY_CAST(bronze.bronze_accident.ST_CASE AS INTEGER)
-        AND s.year = TRY_CAST(bronze.bronze_accident.YEAR AS INTEGER)
+      SELECT 1 FROM analysis.silver_accident a
+      WHERE a.st_case = TRY_CAST(bronze.bronze_accident.ST_CASE AS INTEGER)
+        AND a.year = TRY_CAST(bronze.bronze_accident.YEAR AS INTEGER)
   );

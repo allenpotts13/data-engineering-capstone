@@ -9,6 +9,6 @@ SELECT
 FROM bronze.bronze_motorcycle_helmet_laws
 WHERE State IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_motorcycle_helmet_laws s
-        WHERE s.state = LOWER(bronze.bronze_motorcycle_helmet_laws.State)
+        SELECT 1 FROM analysis.silver_motorcycle_helmet_laws a
+        WHERE a.state = LOWER(bronze.bronze_motorcycle_helmet_laws.State)
     );
