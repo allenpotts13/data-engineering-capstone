@@ -1,0 +1,15 @@
+2025-09-08 11:59:30,470 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-08 11:59:30,470 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-08 17:02:37,201 - src.ftp_ingestion - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-08 17:02:37,201 - src.ftp_ingestion - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-08 17:02:37,218 - src.ftp_ingestion - INFO - Downloading ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2024/National/FARS2024NationalCSV.zip
+2025-09-08 12:04:20,485 - __main__ - INFO - API_BASE_URL: https://crashviewer.nhtsa.dot.gov/CrashAPI
+2025-09-08 12:04:20,485 - __main__ - INFO - MINIO_BUCKET_NAME: capstone
+2025-09-08 12:04:20,503 - __main__ - INFO - Downloading ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2024/National/FARS2024NationalCSV.zip
+2025-09-08 12:04:21,338 - __main__ - WARNING - ZIP file not found for URL: https://static.nhtsa.gov/nhtsa/downloads/FARS/2024/National/FARS2024NationalCSV.zip (HTTP 404)
+2025-09-08 12:04:21,338 - __main__ - WARNING - No ZIP file found for year 2024; skipping ingestion.
+2025-09-08 12:04:21,338 - __main__ - WARNING - No CSV files uploaded to MinIO for year 2024.
+2025-09-08 12:04:21,339 - __main__ - INFO - Downloading ZIP from https://static.nhtsa.gov/nhtsa/downloads/FARS/2025/National/FARS2025NationalCSV.zip
+2025-09-08 12:04:22,452 - __main__ - WARNING - ZIP file not found for URL: https://static.nhtsa.gov/nhtsa/downloads/FARS/2025/National/FARS2025NationalCSV.zip (HTTP 404)
+2025-09-08 12:04:22,452 - __main__ - WARNING - No ZIP file found for year 2025; skipping ingestion.
+2025-09-08 12:04:22,452 - __main__ - WARNING - No CSV files uploaded to MinIO for year 2025.

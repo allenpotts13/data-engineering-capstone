@@ -28,27 +28,39 @@ def _default_fars_zip_url(year: int, scope: str = "National") -> str:
 def _download_zip(zip_url, timeout):
     print(f"[FARS] Downloading ZIP: {zip_url}")
     logger.info(f"Downloading ZIP from {zip_url}")
-    with requests_session_with_retries() as session:
-        with session.get(zip_url, timeout=timeout, stream=True) as resp:
-            resp.raise_for_status()
-            total = int(resp.headers.get("Content-Length") or 0)
-            downloaded = 0
-            chunk_size = 1024 * 1024
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".zip") as tmp:
-                tmp_path = tmp.name
-                for chunk in resp.iter_content(chunk_size=chunk_size):
-                    if not chunk:
-                        continue
-                    tmp.write(chunk)
-                    downloaded += len(chunk)
-                    if total:
-                        pct = downloaded / total * 100
-                        print(
-                            f"  ... {downloaded/1_048_576:.1f} MB ({pct:.1f}%)",
-                            end="\r",
-                        )
-                print()
-            return tmp_path
+    try:
+        with requests_session_with_retries() as session:
+            with session.get(zip_url, timeout=timeout, stream=True) as resp:
+                resp.raise_for_status()
+                total = int(resp.headers.get("Content-Length") or 0)
+                downloaded = 0
+                chunk_size = 1024 * 1024
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".zip") as tmp:
+                    tmp_path = tmp.name
+                    for chunk in resp.iter_content(chunk_size=chunk_size):
+                        if not chunk:
+                            continue
+                        tmp.write(chunk)
+                        downloaded += len(chunk)
+                        if total:
+                            pct = downloaded / total * 100
+                            print(
+                                f"  ... {downloaded/1_048_576:.1f} MB ({pct:.1f}%)",
+                                end="\r",
+                            )
+                    print()
+                return tmp_path
+    except Exception as e:
+        import requests
+        if isinstance(e, requests.exceptions.HTTPError) and hasattr(e, 'response') and e.response is not None and e.response.status_code == 404:
+            msg = f"ZIP file not found for URL: {zip_url} (HTTP 404)"
+            print(msg)
+            logger.warning(msg)
+        else:
+            msg = f"Error downloading ZIP from {zip_url}: {e}"
+            print(msg)
+            logger.error(msg)
+        return None
 
 
 def _extract_zip_files(tmp_path, only_csv=True):
@@ -119,7 +131,6 @@ def upload_to_minio_parquet(csv_object_name: str, bucket_name: str) -> str | Non
         parquet_buf = BytesIO()
         ftp_call.to_parquet(parquet_buf, index=False, engine="pyarrow")
         parquet_buf.seek(0)
-        # Ensure both .csv and .CSV extensions are replaced with .parquet
         base_key = csv_object_name
         if base_key.lower().endswith(".csv"):
             base_key = base_key[: -(len(".csv"))] + ".parquet"
@@ -184,6 +195,9 @@ def ingest_fars_zip_to_minio(
     timeout = 60
     zip_url = _default_fars_zip_url(year, scope)
     tmp_zip_path = _download_zip(zip_url, timeout)
+    if tmp_zip_path is None:
+        logger.warning(f"No ZIP file found for year {year}; skipping ingestion.")
+        return []
     extracted_files = _extract_zip_files(tmp_zip_path, only_csv=True)
     if not extracted_files:
         logger.warning(f"No CSV files found in ZIP for year {year}.")

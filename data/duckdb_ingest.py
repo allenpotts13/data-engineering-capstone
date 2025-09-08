@@ -1,3 +1,5 @@
+# NOTE: Run data/duckdb_setup.py before running this script to ensure schemas and config tables exist.
+
 import io
 import os
 import re

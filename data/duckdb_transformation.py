@@ -32,26 +32,18 @@ def run_sql_scripts(db_path, sql_dir):
 
 def main():
     con = duckdb.connect(DUCKDB_PATH)
-    con.execute(
-        """
-        CREATE TABLE IF NOT EXISTS transformation_config (
-            id INTEGER PRIMARY KEY,
-            last_run TIMESTAMP
-        );
-    """
-    )
     result = con.execute(
-        "SELECT last_run FROM transformation_config WHERE id = 1;"
+        "SELECT last_run FROM config.transformation_config WHERE id = 1;"
     ).fetchone()
     last_run = result[0] if result and result[0] else None
     logger.info(f"Last transformation run: {last_run}")
 
     if last_run:
         new_files = con.execute(
-            "SELECT COUNT(*) FROM ingest_config WHERE ingested_at > ?", [last_run]
+            "SELECT COUNT(*) FROM config.ingest_config WHERE ingested_at > ?", [last_run]
         ).fetchone()[0]
     else:
-        new_files = con.execute("SELECT COUNT(*) FROM ingest_config;").fetchone()[0]
+        new_files = con.execute("SELECT COUNT(*) FROM config.ingest_config;").fetchone()[0]
 
     if new_files > 0:
         logger.info(
@@ -62,7 +54,7 @@ def main():
             now = datetime.now()
             con.execute(
                 """
-                INSERT INTO transformation_config (id, last_run)
+                INSERT INTO config.transformation_config (id, last_run)
                 VALUES (1, ?)
                 ON CONFLICT (id) DO UPDATE SET last_run=excluded.last_run;
             """,
