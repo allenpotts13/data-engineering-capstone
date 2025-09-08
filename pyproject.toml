@@ -27,7 +27,8 @@ isort = "*"
 black = "*"
 bandit = "*"
 flake8 = "*"
-pytest = "*"
+pytest = "^8.4"
+pytest-cov = "^6.0"
 setuptools = ">=78.1.1"
 
 [build-system]
