@@ -219,7 +219,11 @@ def ingest_fars_zip_to_minio(
             object_key = prefix + f"{year}/{scope}/" + os.path.basename(file.filename)
             try:
                 _upload_file_to_minio(
-                    minio_client, bucket_name, prefix + f"{year}/{scope}/", file, zip_file
+                    minio_client,
+                    bucket_name,
+                    prefix + f"{year}/{scope}/",
+                    file,
+                    zip_file,
                 )
                 uploaded_object_names.append(object_key)
             except Exception as e:
