@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS silver;
 
-CREATE OR REPLACE TABLE silver.silver_vpicdecode AS
+INSERT INTO silver.silver_vpicdecode
 SELECT
     TRY_CAST(STATE AS INTEGER) AS STATE,
     STATENAME AS STATENAME,
@@ -207,4 +207,9 @@ SELECT
     AUTOREVERSESYSTEM AS AUTOREVERSESYSTEM,
     ACTIVESAFETYSYSNOTE AS ACTIVESAFETYSYSNOTE
 FROM bronze.bronze_vpicdecode
-WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL;
+WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL
+    AND NOT EXISTS (
+        SELECT 1 FROM silver.silver_vpicdecode s
+        WHERE s.st_case = TRY_CAST(bronze.bronze_vpicdecode.ST_CASE AS INTEGER)
+            AND s.veh_no = TRY_CAST(bronze.bronze_vpicdecode.VEH_NO AS INTEGER)
+    );

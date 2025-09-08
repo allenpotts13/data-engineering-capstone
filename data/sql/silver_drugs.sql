@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS silver;
 
-CREATE OR REPLACE TABLE silver.silver_drugs AS
+INSERT INTO silver.silver_drugs
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -20,4 +20,10 @@ SELECT
     TRY_CAST(DRUGUOM AS INTEGER) AS druguom,
     DRUGUOMNAME AS druguom_name
 FROM bronze.bronze_drugs
-WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL;
+WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL
+    AND NOT EXISTS (
+        SELECT 1 FROM silver.silver_drugs s
+        WHERE s.st_case = TRY_CAST(bronze.bronze_drugs.ST_CASE AS INTEGER)
+            AND s.veh_no = TRY_CAST(bronze.bronze_drugs.VEH_NO AS INTEGER)
+            AND s.per_no = TRY_CAST(bronze.bronze_drugs.PER_NO AS INTEGER)
+    );

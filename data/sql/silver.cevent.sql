@@ -1,6 +1,6 @@
 CREATE SCHEMA IF NOT EXISTS silver;
 
-CREATE OR REPLACE TABLE silver.silver_cevent AS
+INSERT INTO silver.silver_cevent
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -16,4 +16,9 @@ SELECT
     TRY_CAST(AOI2 AS INTEGER) AS aoi2,
     AOI2NAME AS aoi2_name
 FROM bronze.bronze_cevent
-WHERE ST_CASE IS NOT NULL AND EVENTNUM IS NOT NULL;
+WHERE ST_CASE IS NOT NULL AND EVENTNUM IS NOT NULL
+    AND NOT EXISTS (
+        SELECT 1 FROM silver.silver_cevent s
+        WHERE s.st_case = TRY_CAST(bronze.bronze_cevent.ST_CASE AS INTEGER)
+            AND s.event_num = TRY_CAST(bronze.bronze_cevent.EVENTNUM AS INTEGER)
+    );
