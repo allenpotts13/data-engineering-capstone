@@ -39,7 +39,7 @@ def test_ingest_fars_zip_to_minio_success(monkeypatch):
     mock_response.raise_for_status.return_value = None
     mock_session.get.return_value.__enter__.return_value = mock_response
     monkeypatch.setattr(
-        "src.api_ingestion.requests_session_with_retries", lambda: mock_session
+        "src.ftp_ingestion.requests_session_with_retries", lambda: mock_session
     )
 
     class MockZipInfo:
@@ -66,10 +66,10 @@ def test_ingest_fars_zip_to_minio_success(monkeypatch):
         def open(self, file, mode):
             return BytesIO(b"data")
 
-    monkeypatch.setattr("src.api_ingestion.zipfile.ZipFile", MockZipFile)
+    monkeypatch.setattr("src.ftp_ingestion.zipfile.ZipFile", MockZipFile)
 
     mock_minio_client = MagicMock()
-    monkeypatch.setattr("src.api_ingestion.get_minio_client", lambda: mock_minio_client)
+    monkeypatch.setattr("src.ftp_ingestion.get_minio_client", lambda: mock_minio_client)
 
     uploaded = ingest_fars_zip_to_minio(2022, "National")
     assert uploaded == ["raw/fars/2022/National/test.csv"]
@@ -80,13 +80,13 @@ def test_upload_to_minio_parquet_success(monkeypatch):
     mock_minio_object_response = MagicMock()
     mock_minio_object_response.read.return_value = b"col1,col2\n1,2\n3,4"
     mock_minio_client.get_object.return_value = mock_minio_object_response
-    monkeypatch.setattr("src.api_ingestion.get_minio_client", lambda: mock_minio_client)
+    monkeypatch.setattr("src.ftp_ingestion.get_minio_client", lambda: mock_minio_client)
 
     mock_df = MagicMock()
     monkeypatch.setattr("pandas.read_csv", lambda *a, **kw: mock_df)
     mock_buf = BytesIO()
     mock_df.to_parquet.side_effect = lambda buf, index, engine: buf.write(b"PARQUET")
-    monkeypatch.setattr("src.api_ingestion.BytesIO", lambda *a, **kw: mock_buf)
+    monkeypatch.setattr("src.ftp_ingestion.BytesIO", lambda *a, **kw: mock_buf)
 
     result = upload_to_minio_parquet("raw/fars/2022/National/test.csv", "bucket")
     assert result == "parquet/fars/2022/National/test.parquet"
