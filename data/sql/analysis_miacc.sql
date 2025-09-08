@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS analysis;
 
-INSERT INTO silver.silver_miacc
+INSERT INTO analysis.silver_miacc
 SELECT
     TRY_CAST(ST_CASE AS INTEGER) AS st_case,
     TRY_CAST(A1 AS INTEGER) AS a1,
@@ -16,6 +16,6 @@ SELECT
 FROM bronze.bronze_miacc
 WHERE ST_CASE IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM silver.silver_miacc s
+        SELECT 1 FROM analysis.silver_miacc s
         WHERE s.st_case = TRY_CAST(bronze.bronze_miacc.ST_CASE AS INTEGER)
     );

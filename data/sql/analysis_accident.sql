@@ -1,4 +1,4 @@
-INSERT INTO silver.silver_accident
+INSERT INTO analysis.silver_accident
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,

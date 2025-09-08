@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS analysis;
 
-INSERT INTO silver.silver_crashrf
+INSERT INTO analysis.silver_crashrf
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,

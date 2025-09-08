@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS analysis;
 
-INSERT INTO silver.silver_factor
+INSERT INTO analysis.silver_factor
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -11,7 +11,7 @@ SELECT
 FROM bronze.bronze_factor
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM silver.silver_factor s
+        SELECT 1 FROM analysis.silver_factor s
         WHERE s.st_case = TRY_CAST(bronze.bronze_factor.ST_CASE AS INTEGER)
             AND s.veh_no = TRY_CAST(bronze.bronze_factor.VEH_NO AS INTEGER)
     );

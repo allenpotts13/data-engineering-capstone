@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS analysis;
 
-INSERT INTO silver.silver_nmimpair
+INSERT INTO analysis.silver_nmimpair
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -12,7 +12,7 @@ SELECT
 FROM bronze.bronze_nmimpair
 WHERE ST_CASE IS NOT NULL AND PER_NO IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM silver.silver_nmimpair s
+        SELECT 1 FROM analysis.silver_nmimpair s
         WHERE s.st_case = TRY_CAST(bronze.bronze_nmimpair.ST_CASE AS INTEGER)
             AND s.veh_no = TRY_CAST(bronze.bronze_nmimpair.VEH_NO AS INTEGER)
             AND s.per_no = TRY_CAST(bronze.bronze_nmimpair.PER_NO AS INTEGER)
