@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_race
+INSERT INTO analysis.analysis_race
 SELECT
         TRY_CAST(STATE AS INTEGER) AS state,
         STATENAME AS state_name,
@@ -16,9 +14,9 @@ SELECT
 FROM bronze.bronze_race
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL
     AND NOT EXISTS (
-            SELECT 1 FROM analysis.silver_race s
-            WHERE s.st_case = TRY_CAST(bronze.bronze_race.ST_CASE AS INTEGER)
-                AND s.veh_no = TRY_CAST(bronze.bronze_race.VEH_NO AS INTEGER)
-                AND s.per_no = TRY_CAST(bronze.bronze_race.PER_NO AS INTEGER)
-                AND s.race = TRY_CAST(bronze.bronze_race.RACE AS INTEGER)
+            SELECT 1 FROM analysis.analysis_race a
+            WHERE a.st_case = TRY_CAST(bronze.bronze_race.ST_CASE AS INTEGER)
+                AND a.veh_no = TRY_CAST(bronze.bronze_race.VEH_NO AS INTEGER)
+                AND a.per_no = TRY_CAST(bronze.bronze_race.PER_NO AS INTEGER)
+                AND a.race = TRY_CAST(bronze.bronze_race.RACE AS INTEGER)
     );

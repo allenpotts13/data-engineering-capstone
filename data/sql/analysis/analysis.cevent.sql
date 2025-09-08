@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_cevent
+INSERT INTO analysis.analysis_cevent
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -18,7 +16,7 @@ SELECT
 FROM bronze.bronze_cevent
 WHERE ST_CASE IS NOT NULL AND EVENTNUM IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_cevent a
+        SELECT 1 FROM analysis.analysis_cevent a
         WHERE a.st_case = TRY_CAST(bronze.bronze_cevent.ST_CASE AS INTEGER)
             AND a.event_num = TRY_CAST(bronze.bronze_cevent.EVENTNUM AS INTEGER)
     );

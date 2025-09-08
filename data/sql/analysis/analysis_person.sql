@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_person
+INSERT INTO analysis.analysis_person
 SELECT
         TRY_CAST(STATE AS INTEGER) AS state,
         STATENAME AS state_name,
@@ -131,7 +129,7 @@ SELECT
 FROM bronze.bronze_person
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL
     AND NOT EXISTS (
-            SELECT 1 FROM analysis.silver_person a
+            SELECT 1 FROM analysis.analysis_person a
             WHERE a.st_case = TRY_CAST(bronze.bronze_person.ST_CASE AS INTEGER)
                 AND a.veh_no = TRY_CAST(bronze.bronze_person.VEH_NO AS INTEGER)
                 AND a.per_no = TRY_CAST(bronze.bronze_person.PER_NO AS INTEGER)

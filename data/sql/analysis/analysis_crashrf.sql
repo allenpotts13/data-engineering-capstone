@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_crashrf
+INSERT INTO analysis.analysis_crashrf
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -10,7 +8,7 @@ SELECT
 FROM bronze.bronze_crashrf
 WHERE ST_CASE IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_crashrf a
+        SELECT 1 FROM analysis.analysis_crashrf a
         WHERE a.st_case = TRY_CAST(bronze.bronze_crashrf.ST_CASE AS INTEGER)
             AND a.crashrf = TRY_CAST(bronze.bronze_crashrf.CRASHRF AS INTEGER)
     );

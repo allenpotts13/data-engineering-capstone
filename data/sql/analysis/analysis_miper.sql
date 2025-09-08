@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_miper
+INSERT INTO analysis.analysis_miper
 SELECT
     TRY_CAST(ST_CASE AS INTEGER) AS st_case,
     TRY_CAST(VEH_NO AS INTEGER) AS veh_no,
@@ -18,7 +16,7 @@ SELECT
 FROM bronze.bronze_miper
 WHERE ST_CASE IS NOT NULL AND VEH_NO IS NOT NULL AND PER_NO IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_miper a
+        SELECT 1 FROM analysis.analysis_miper a
         WHERE a.st_case = TRY_CAST(bronze.bronze_miper.ST_CASE AS INTEGER)
             AND a.veh_no = TRY_CAST(bronze.bronze_miper.VEH_NO AS INTEGER)
             AND a.per_no = TRY_CAST(bronze.bronze_miper.PER_NO AS INTEGER)

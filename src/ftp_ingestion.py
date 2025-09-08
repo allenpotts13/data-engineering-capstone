@@ -52,7 +52,13 @@ def _download_zip(zip_url, timeout):
                 return tmp_path
     except Exception as e:
         import requests
-        if isinstance(e, requests.exceptions.HTTPError) and hasattr(e, 'response') and e.response is not None and e.response.status_code == 404:
+
+        if (
+            isinstance(e, requests.exceptions.HTTPError)
+            and hasattr(e, "response")
+            and e.response is not None
+            and e.response.status_code == 404
+        ):
             msg = f"ZIP file not found for URL: {zip_url} (HTTP 404)"
             print(msg)
             logger.warning(msg)

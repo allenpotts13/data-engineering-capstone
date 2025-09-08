@@ -1,4 +1,4 @@
-INSERT INTO analysis.silver_accident
+INSERT INTO analysis.analysis_accident
 SELECT
     TRY_CAST(STATE AS INTEGER) AS state,
     STATENAME AS state_name,
@@ -83,7 +83,7 @@ SELECT
 FROM bronze.bronze_accident
 WHERE ST_CASE IS NOT NULL AND YEAR IS NOT NULL
   AND NOT EXISTS (
-      SELECT 1 FROM analysis.silver_accident a
+      SELECT 1 FROM analysis.analysis_accident a
       WHERE a.st_case = TRY_CAST(bronze.bronze_accident.ST_CASE AS INTEGER)
         AND a.year = TRY_CAST(bronze.bronze_accident.YEAR AS INTEGER)
   );

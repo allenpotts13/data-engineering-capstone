@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_motorcycle_helmet_laws
+INSERT INTO analysis.analysis_motorcycle_helmet_laws
 SELECT
     LOWER(State) AS state,
     LOWER("Required to wear helmet") AS required_to_wear_helmet,
@@ -9,6 +7,6 @@ SELECT
 FROM bronze.bronze_motorcycle_helmet_laws
 WHERE State IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_motorcycle_helmet_laws a
+        SELECT 1 FROM analysis.analysis_motorcycle_helmet_laws a
         WHERE a.state = LOWER(bronze.bronze_motorcycle_helmet_laws.State)
     );

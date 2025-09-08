@@ -1,6 +1,4 @@
-CREATE SCHEMA IF NOT EXISTS analysis;
-
-INSERT INTO analysis.silver_midrvacc
+INSERT INTO analysis.analysis_midrvacc
 SELECT
     TRY_CAST(ST_CASE AS INTEGER) AS st_case,
     TRY_CAST(A1 AS INTEGER) AS a1,
@@ -16,6 +14,6 @@ SELECT
 FROM bronze.bronze_midrvacc
 WHERE ST_CASE IS NOT NULL
     AND NOT EXISTS (
-        SELECT 1 FROM analysis.silver_midrvacc a
+        SELECT 1 FROM analysis.analysis_midrvacc a
         WHERE a.st_case = TRY_CAST(bronze.bronze_midrvacc.ST_CASE AS INTEGER)
     );

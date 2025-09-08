@@ -105,7 +105,9 @@ def fars_data_to_duckdb():
             continue
 
         matched_files_sorted = sorted(
-            matched_files, key=lambda x: re.search(r"/([0-9]{4})/", x).group(1)
+            matched_files,
+            key=lambda x: re.search(r"/([0-9]{4})/", x).group(1),
+            reverse=True,
         )
         table_name = f"{schema_name}.bronze_{file_type.lower()}"
 

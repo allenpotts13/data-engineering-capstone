@@ -6,7 +6,7 @@ import duckdb
 from src.utils.logger import setup_logger
 
 DUCKDB_PATH = os.path.join(os.getcwd(), "data", "duckdb", "motorcycle_capstone.duckdb")
-SQL_DIR = os.path.join(os.getcwd(), "data", "sql")
+SQL_DIR = os.path.join(os.getcwd(), "data", "sql", "analysis")
 
 logger = setup_logger(__name__, log_file="src/logs/duckdb_transformation.log")
 
@@ -40,10 +40,13 @@ def main():
 
     if last_run:
         new_files = con.execute(
-            "SELECT COUNT(*) FROM config.ingest_config WHERE ingested_at > ?", [last_run]
+            "SELECT COUNT(*) FROM config.ingest_config WHERE ingested_at > ?",
+            [last_run],
         ).fetchone()[0]
     else:
-        new_files = con.execute("SELECT COUNT(*) FROM config.ingest_config;").fetchone()[0]
+        new_files = con.execute(
+            "SELECT COUNT(*) FROM config.ingest_config;"
+        ).fetchone()[0]
 
     if new_files > 0:
         logger.info(
