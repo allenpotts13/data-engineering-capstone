@@ -1,0 +1,19 @@
+INSERT INTO analysis.analysis_miacc
+SELECT
+    TRY_CAST(ST_CASE AS INTEGER) AS st_case,
+    TRY_CAST(A1 AS INTEGER) AS a1,
+    TRY_CAST(A2 AS INTEGER) AS a2,
+    TRY_CAST(A3 AS INTEGER) AS a3,
+    TRY_CAST(A4 AS INTEGER) AS a4,
+    TRY_CAST(A5 AS INTEGER) AS a5,
+    TRY_CAST(A6 AS INTEGER) AS a6,
+    TRY_CAST(A7 AS INTEGER) AS a7,
+    TRY_CAST(A8 AS INTEGER) AS a8,
+    TRY_CAST(A9 AS INTEGER) AS a9,
+    TRY_CAST(A10 AS INTEGER) AS a10
+FROM bronze.bronze_miacc
+WHERE ST_CASE IS NOT NULL
+    AND NOT EXISTS (
+        SELECT 1 FROM analysis.analysis_miacc a
+        WHERE a.st_case = TRY_CAST(bronze.bronze_miacc.ST_CASE AS INTEGER)
+    );
