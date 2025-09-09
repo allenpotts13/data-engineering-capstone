@@ -3,7 +3,16 @@
 # Potts Capstone Project
 
 ## Overview
-This repository contains a data engineering capstone project focused on ingesting, transforming, and analyzing motorcycle accident data using modern tools and cloud-native pipelines. The project leverages Airflow, DuckDB, MinIO, and Python for scalable, reproducible workflows.
+This repository is a comprehensive data engineering solution designed to ingest, transform, and analyze motorcycle accident data from multiple sources. Leveraging modern, cloud-native tools, this project enables scalable, reproducible, and automated data workflows for transportation safety analytics.
+
+Key components include:
+- **Data Ingestion:** Automated pipelines collect raw data from FTP servers, public APIs, and web scraping, ensuring up-to-date and diverse datasets.
+- **Data Lakehouse Architecture:** Data is staged in a bronze layer (raw), then cleaned and formatted into a gold layer using DuckDB for efficient querying and analytics.
+- **Orchestration:** Apache Airflow manages complex workflows, scheduling, and dependencies, allowing for modular and extensible pipeline design.
+- **Object Storage:** MinIO provides cloud-compatible storage for raw and processed data, supporting robust data management and sharing.
+- **Analytics & Visualization:** SQL-based analysis and Metabase dashboards empower users to explore trends, key performance indicators, and safety insights across states, years, and other dimensions.
+
+This project supports research, reporting, and decision-making for traffic safety professionals, policymakers, and data scientists. Its modular design makes it easy to extend for new data sources, transformations, or analytical needs.
 
 ## Features
 - Automated data ingestion from FTP, APIs, and web scraping
