@@ -64,7 +64,7 @@ def scrape_helmet_laws():
         print("Helmet laws table not found.")
         return None
 
-    state_names = [
+    state_names = (
         "Alabama",
         "Alaska",
         "Arizona",
@@ -116,7 +116,7 @@ def scrape_helmet_laws():
         "West Virginia",
         "Wisconsin",
         "Wyoming",
-    ]
+    )
     all_rows = table.find_all("tr")[1:]
     print(f"Found {len(all_rows)} data rows in table.")
     for row_index, row in enumerate(all_rows[:5]):
