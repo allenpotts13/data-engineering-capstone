@@ -38,6 +38,7 @@ services:
       - "3000:3000"
     volumes:
       - ./data/duckdb/motorcycle_capstone.duckdb:/duckdb/motorcycle_capstone.duckdb
+      - ./metabase-data:/metabase.db
     depends_on:
       - airflow
 

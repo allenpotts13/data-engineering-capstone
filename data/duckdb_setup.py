@@ -2,7 +2,7 @@ import os
 
 import duckdb
 
-DB_PATH = os.path.join(os.getcwd(), "data", "duckdb", "motorcycle_capstone.duckdb")
+DB_PATH = os.path.join(os.getcwd(), "data", "duckdb", "motorcycle_capstone_v2.duckdb")
 SCHEMAS = ["config", "bronze", "analysis"]
 SETUP_SQL_DIR = os.path.join(os.getcwd(), "data", "sql", "setup")
 

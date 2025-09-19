@@ -5,7 +5,9 @@ import duckdb
 
 from src.utils.logger import setup_logger
 
-DUCKDB_PATH = os.path.join(os.getcwd(), "data", "duckdb", "motorcycle_capstone.duckdb")
+DUCKDB_PATH = os.path.join(
+    os.getcwd(), "data", "duckdb", "motorcycle_capstone_v2.duckdb"
+)
 SQL_DIR = os.path.join(os.getcwd(), "data", "sql", "analysis")
 
 logger = setup_logger(__name__, log_file="src/logs/duckdb_transformation.log")
