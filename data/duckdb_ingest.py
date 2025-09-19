@@ -39,7 +39,17 @@ def is_file_ingested(con, file_path):
 def download_and_clean_data(minio_client, bucket_name, file_path, schema_columns):
     data = minio_client.get_object(bucket_name, file_path).read()
     imported_data = pd.read_parquet(io.BytesIO(data))
-    if schema_columns is None:
+    imported_data.columns = [
+        col.replace("ï»¿", "").lower() for col in imported_data.columns
+    ]
+    accident_expected_columns_path = os.path.join(
+        os.path.dirname(__file__), "..", "config", "accident_expected_columns.txt"
+    )
+    with open(accident_expected_columns_path, "r") as f:
+        accident_expected_columns = [line.strip() for line in f if line.strip()]
+    if "accident" in file_path.lower():
+        schema_columns = accident_expected_columns
+    elif schema_columns is None:
         schema_columns = imported_data.columns.tolist()
     missing_columns = [
         col for col in schema_columns if col not in imported_data.columns
@@ -65,6 +75,10 @@ def download_and_clean_data(minio_client, bucket_name, file_path, schema_columns
 
 
 def create_or_append_table(con, table_name, imported_data, first_file):
+    if not first_file:
+        table_info = con.execute(f"PRAGMA table_info('{table_name}')").fetchall()
+        table_columns = [col[1] for col in table_info]
+        imported_data = imported_data[table_columns]
     con.register("df", imported_data)
     if first_file:
         con.execute(f"DROP TABLE IF EXISTS {table_name}")
@@ -85,7 +99,7 @@ def record_ingestion(con, file_path):
 def fars_data_to_duckdb():
     duckdb_folder = os.path.join(os.getcwd(), "data", "duckdb")
     os.makedirs(duckdb_folder, exist_ok=True)
-    duckdb_path = os.path.join(duckdb_folder, "motorcycle_capstone.duckdb")
+    duckdb_path = os.path.join(duckdb_folder, "motorcycle_capstone_v2.duckdb")
 
     schema_name = "bronze"
     bucket_name = os.getenv("MINIO_BUCKET_NAME")
@@ -133,7 +147,7 @@ def fars_data_to_duckdb():
 def helmet_laws_to_duckdb():
     duckdb_folder = os.path.join(os.getcwd(), "data", "duckdb")
     os.makedirs(duckdb_folder, exist_ok=True)
-    duckdb_path = os.path.join(duckdb_folder, "motorcycle_capstone.duckdb")
+    duckdb_path = os.path.join(duckdb_folder, "motorcycle_capstone_v2.duckdb")
 
     schema_name = "bronze"
     bucket_name = os.getenv("MINIO_BUCKET_NAME")
